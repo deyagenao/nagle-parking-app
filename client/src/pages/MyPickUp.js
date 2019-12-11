@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import Subnav from '../components/Subnav';
 
 export default function MyPickUp() {
   return (
     <div>
-      <h2>My Pick Up</h2>
+      <Subnav />
     </div>
   );
 }
