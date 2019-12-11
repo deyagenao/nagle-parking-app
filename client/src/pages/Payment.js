@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import Subnav from '../components/Subnav';
 
 export default function Payment() {
   return (
     <div>
-      <h3>Payment</h3>
+      <Subnav />
     </div>
   );
 }

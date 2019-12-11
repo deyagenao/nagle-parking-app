@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import Subnav from '../components/Subnav';
 
 export default function MyMonthly() {
   return (
     <div>
-      <h2>My Monthly</h2>
+      <Subnav />
     </div>
   );
 }
