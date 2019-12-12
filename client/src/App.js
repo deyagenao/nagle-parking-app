@@ -1,25 +1,26 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect
-} from 'react-router-dom';
-import Books from './pages/Books';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import NoMatch from './pages/NoMatch';
-import Nav from './components/Nav';
-import Signin from './pages/Signin';
-import MyAccount from './pages/MyAccount';
-import Monthly from './pages/Monthly';
-import Payment from './pages/Payment';
-import MyPickUp from './pages/MyPickUp.js';
-import Contact from './pages/Contact';
-import MyMonthly from './pages/MyMonthly';
-import AboutUs from './pages/AboutUs';
+} from "react-router-dom";
+import Books from "./pages/Books";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Signin from "./pages/Signin";
+import MyAccount from "./pages/MyAccount";
+import Monthly from "./pages/Monthly";
+import Payment from "./pages/Payment";
+import MyPickUp from "./pages/MyPickUp.js";
+import Contact from "./pages/Contact";
+import MyMonthly from "./pages/MyMonthly";
+import AboutUs from "./pages/AboutUs";
 
-import { /* getCookie, */ authenticateUser } from './utils/handleSessions';
+import { /* getCookie, */ authenticateUser } from "./utils/handleSessions";
 
 class App extends React.Component {
   // check cookie
@@ -48,7 +49,7 @@ class App extends React.Component {
         ) : this.state.loading === true ? (
           <div></div>
         ) : (
-          <Redirect to='/myaccount' />
+          <Redirect to="/myaccount" />
         )
       }
     />
@@ -59,13 +60,14 @@ class App extends React.Component {
       <Router>
         <div>
           <Nav />
+
           <Switch>
             {/* /////////////////////////////////////////// */}
             {/* HOME ROUTE */}
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/'
+              path="/"
               render={props => (
                 <Login
                   {...props}
@@ -79,7 +81,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/signup'
+              path="/signup"
               render={props => (
                 <Signup
                   {...props}
@@ -93,7 +95,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/signin'
+              path="/signin"
               render={props => (
                 <Signin
                   {...props}
@@ -107,7 +109,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/myaccount'
+              path="/myaccount"
               render={props => (
                 <MyAccount
                   {...props}
@@ -121,7 +123,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/monthly'
+              path="/monthly"
               render={props => (
                 <Monthly
                   {...props}
@@ -135,7 +137,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/payment'
+              path="/payment"
               render={props => (
                 <Payment
                   {...props}
@@ -149,7 +151,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/mypickup'
+              path="/mypickup"
               render={props => (
                 <MyPickUp
                   {...props}
@@ -163,7 +165,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/contact'
+              path="/contact"
               render={props => (
                 <Contact
                   {...props}
@@ -177,7 +179,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/mymonthly'
+              path="/mymonthly"
               render={props => (
                 <MyMonthly
                   {...props}
@@ -191,7 +193,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             <Route
               exact
-              path='/aboutus'
+              path="/aboutus"
               render={props => (
                 <AboutUs
                   {...props}
@@ -201,9 +203,10 @@ class App extends React.Component {
               )}
             />
 
-            <this.PrivateRoute exact path='/books' component={Books} />
+            <this.PrivateRoute exact path="/books" component={Books} />
             <Route component={NoMatch} />
           </Switch>
+          <Footer />
         </div>
       </Router>
     );
