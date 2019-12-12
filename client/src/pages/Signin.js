@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 import API from '../utils/API';
-import { Redirect } from 'react-router-dom';
+
+// Link provides us a way to route within pages
+import { Redirect, Link } from 'react-router-dom';
 import { Col, Row, Container } from '../components/Grid';
 import { Input, FormBtn } from '../components/Form';
 
@@ -66,6 +68,12 @@ class Signin extends Component {
                 placeholder='(required)'
                 type='password'
               />
+              <FormBtn
+                // disabled={!(this.state.email && this.state.password)}
+                onClick={this.handleFormSubmit}
+              >
+                <Link to='/signup'> Sign up </Link>
+              </FormBtn>
 
               <FormBtn
                 // disabled={!(this.state.email && this.state.password)}
@@ -77,7 +85,7 @@ class Signin extends Component {
           </Col>
         </Row>
         {/* redirect on authenticated */}
-        {this.props.authenticated ? <Redirect to='/books' /> : <div></div>}
+        {this.props.authenticated ? <Redirect to='/myaccount' /> : <div></div>}
       </Container>
     );
   }
