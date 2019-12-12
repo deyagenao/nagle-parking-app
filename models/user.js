@@ -6,7 +6,8 @@ var UserSchema = new mongoose.Schema({
     type: String,
     unique: true,
     required: true,
-    trim: true
+    trim: true,
+    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address.']
   },
   username: {
     type: String,
@@ -17,6 +18,42 @@ var UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+  },
+  firstName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  lastName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  phoneNumber: {
+    type: String,
+    validate: {
+      validator: function(v) {
+        return /\d{3}-\d{3}-\d{4}/.test(v);
+      },
+      message: `Please fill a valid phone number.`
+    },
+    required: [true, 'User phone number required']
+  },
+  carMake: {
+    type: String,
+    trim: true
+  },
+  carModel: {
+    type: String,
+    trim: true
+  },
+  carColor: {
+    type: String,
+    trim: true
+  },
+  licencsePlate: {
+    type: String,
+    trim: true
   }
 });
 
