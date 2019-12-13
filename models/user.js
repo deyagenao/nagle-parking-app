@@ -7,17 +7,14 @@ var UserSchema = new mongoose.Schema({
     unique: true,
     required: true,
     trim: true,
-    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address.']
-  },
-  username: {
-    type: String,
-    unique: true,
-    required: true,
-    trim: true
+    match: [
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      'Please fill a valid email address.'
+    ]
   },
   password: {
     type: String,
-    required: true,
+    required: true
   },
   firstName: {
     type: String,
@@ -58,36 +55,35 @@ var UserSchema = new mongoose.Schema({
 });
 
 //hashing a password before saving it to the database
-UserSchema.pre('save', function (next) {
+UserSchema.pre('save', function(next) {
   var user = this;
-  bcrypt.hash(user.password, 14, function (err, hash){
+  bcrypt.hash(user.password, 14, function(err, hash) {
     if (err) {
       return next(err);
     }
     user.password = hash;
     next();
-  })
+  });
 });
 
 //authenticate input against database
-UserSchema.statics.authenticate = function (email, password, callback) {
-  User.findOne({ email: email })
-    .exec(function (err, user) {
-      if (err) {
-        return callback(err)
-      } else if (!user) {
-        var err = new Error('User not found.');
-        err.status = 401;
-        return callback(err);
+UserSchema.statics.authenticate = function(email, password, callback) {
+  User.findOne({ email: email }).exec(function(err, user) {
+    if (err) {
+      return callback(err);
+    } else if (!user) {
+      var err = new Error('User not found.');
+      err.status = 401;
+      return callback(err);
+    }
+    bcrypt.compare(password, user.password, function(err, result) {
+      if (result === true) {
+        return callback(null, user);
+      } else {
+        return callback();
       }
-      bcrypt.compare(password, user.password, function (err, result) {
-        if (result === true) {
-          return callback(null, user);
-        } else {
-          return callback();
-        }
-      })
     });
-}
+  });
+};
 var User = mongoose.model('User', UserSchema);
 module.exports = User;

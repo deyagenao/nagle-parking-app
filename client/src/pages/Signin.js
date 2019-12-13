@@ -10,9 +10,7 @@ import { Input, FormBtn } from '../components/Form';
 class Signin extends Component {
   state = {
     email: '',
-    username: '',
-    password: '',
-    passwordConf: ''
+    password: ''
   };
 
   componentDidMount() {}
@@ -28,10 +26,8 @@ class Signin extends Component {
     event.preventDefault();
     if (this.state.email && this.state.password) {
       API.signup({
-        username: this.state.username,
         email: this.state.email,
-        password: this.state.password,
-        passwordConf: this.state.passwordConf
+        password: this.state.password
       })
         .then(res => {
           if (res.status === 200) {
@@ -49,12 +45,6 @@ class Signin extends Component {
         <Row>
           <Col size='12'>
             <form>
-              <Input
-                value={this.state.username}
-                onChange={this.handleInputChange}
-                name='username'
-                placeholder='username (required)'
-              />
               <Input
                 value={this.state.email}
                 onChange={this.handleInputChange}
