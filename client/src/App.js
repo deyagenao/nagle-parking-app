@@ -34,7 +34,10 @@ class App extends React.Component {
 
   authenticate = () =>
     authenticateUser()
-      .then(auth => this.setState({ authenticated: auth.data, loading: false }))
+      .then(auth => {
+        console.log(auth.data);
+        this.setState({ authenticated: auth.data, loading: false });
+      })
       .catch(err => console.log(err));
 
   componentWillMount() {
@@ -141,17 +144,7 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             {/* MY PICK UP ROUTE */}
             {/* /////////////////////////////////////////// */}
-            <Route
-              exact
-              path='/mypickup'
-              render={props => (
-                <MyPickUp
-                  {...props}
-                  authenticate={this.authenticate}
-                  authenticated={this.state.authenticated}
-                />
-              )}
-            />
+            <this.PrivateRoute exact path='/mypickup' component={MyPickUp} />
             {/* /////////////////////////////////////////// */}
             {/* CONTACT ROUTE */}
             {/* /////////////////////////////////////////// */}
