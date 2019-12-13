@@ -50,7 +50,7 @@ class App extends React.Component {
         ) : this.state.loading === true ? (
           <div></div>
         ) : (
-          <Redirect to='/myaccount' />
+          <Redirect to='/' />
         )
       }
     />
@@ -98,7 +98,7 @@ class App extends React.Component {
               exact
               path='/signin'
               render={props => (
-                <Signin
+                <Login
                   {...props}
                   authenticate={this.authenticate}
                   authenticated={this.state.authenticated}
@@ -108,17 +108,8 @@ class App extends React.Component {
             {/* /////////////////////////////////////////// */}
             {/* MY-ACCOUNT ROUTE */}
             {/* /////////////////////////////////////////// */}
-            <Route
-              exact
-              path='/myaccount'
-              render={props => (
-                <MyAccount
-                  {...props}
-                  authenticate={this.authenticate}
-                  authenticated={this.state.authenticated}
-                />
-              )}
-            />
+            <this.PrivateRoute exact path='/myaccount' component={MyAccount} />
+            )} />
             {/* /////////////////////////////////////////// */}
             {/* MONTHLY ROUTE */}
             {/* /////////////////////////////////////////// */}
@@ -203,8 +194,7 @@ class App extends React.Component {
                 />
               )}
             />
-
-            <this.PrivateRoute exact path='/books' component={Books} />
+            {/* <this.PrivateRoute exact path='/books' component={Books} /> */}
             <Route component={NoMatch} />
           </Switch>
           <Footer />

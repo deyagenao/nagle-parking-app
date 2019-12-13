@@ -8,9 +8,11 @@ import { Input, FormBtn } from '../components/Form';
 class Signup extends Component {
   state = {
     email: '',
-    username: '',
     password: '',
-    passwordConf: ''
+    passwordConf: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: ''
   };
 
   componentDidMount() {}
@@ -26,15 +28,17 @@ class Signup extends Component {
     event.preventDefault();
     if (this.state.email && this.state.password) {
       API.signup({
-        username: this.state.username,
         email: this.state.email,
         password: this.state.password,
-        passwordConf: this.state.passwordConf
+        passwordConf: this.state.passwordConf,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        phoneNumber: this.state.phoneNumber
       })
         .then(res => {
           if (res.status === 200) {
             this.props.authenticate();
-            return <Redirect to='/books' />;
+            return <Redirect to='/myaccount' />;
           }
         })
         .catch(err => console.log(err));
@@ -48,12 +52,6 @@ class Signup extends Component {
           <Col size='12'>
             <form>
               <Input
-                value={this.state.username}
-                onChange={this.handleInputChange}
-                name='username'
-                placeholder='username (required)'
-              />
-              <Input
                 value={this.state.email}
                 onChange={this.handleInputChange}
                 name='email'
@@ -63,15 +61,33 @@ class Signup extends Component {
                 value={this.state.password}
                 onChange={this.handleInputChange}
                 name='password'
-                placeholder='(required)'
+                placeholder='password (required)'
                 type='password'
               />
               <Input
                 value={this.state.passwordConf}
                 onChange={this.handleInputChange}
                 name='passwordConf'
-                placeholder='(required)'
+                placeholder='password (required)'
                 type='password'
+              />
+              <Input
+                value={this.state.firstName}
+                onChange={this.handleInputChange}
+                name='firstName'
+                placeholder='first name(required)'
+              />
+              <Input
+                value={this.state.lastName}
+                onChange={this.handleInputChange}
+                name='lastName'
+                placeholder='last name(required)'
+              />
+              <Input
+                value={this.state.phoneNumber}
+                onChange={this.handleInputChange}
+                name='phoneNumber'
+                placeholder='xxx-xxx-xxxx'
               />
 
               <FormBtn
