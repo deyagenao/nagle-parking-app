@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Subnav() {
   return (
@@ -18,19 +19,21 @@ function Subnav() {
       <div className='collapse navbar-collapse' id='navbarSupportedContent'>
         <ul className='navbar-nav mr-auto'>
           <li className='nav-item active'>
-            <a className='nav-link' href='/myaccount'>
-              My Account <span class='sr-only'>(current)</span>
-            </a>
+            <Link to='/myaccount'>
+              <a className='nav-link'>
+                My Account <span class='sr-only'>(current)</span>
+              </a>
+            </Link>
           </li>
           <li className='nav-item'>
-            <a className='nav-link' href='/mymonthly'>
-              My Monthly
-            </a>
+            <Link to='/mymonthly'>
+              <a className='nav-link'>My Monthly</a>
+            </Link>
           </li>
           <li className='nav-item'>
-            <a className='nav-link' href='/mypickup'>
-              My Pickup
-            </a>
+            <Link to='/mypickup'>
+              <a className='nav-link'>My Pickup</a>
+            </Link>
           </li>
         </ul>
       </div>
