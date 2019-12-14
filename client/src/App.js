@@ -12,7 +12,6 @@ import Signup from './pages/Signup';
 import NoMatch from './pages/NoMatch';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Signin from './pages/Signin';
 import MyAccount from './pages/MyAccount';
 import Monthly from './pages/Monthly';
 import Payment from './pages/Payment';
@@ -66,9 +65,7 @@ class App extends React.Component {
           <Nav />
 
           <Switch>
-            {/* /////////////////////////////////////////// */}
             {/* HOME ROUTE */}
-            {/* /////////////////////////////////////////// */}
             <Route
               exact
               path='/'
@@ -80,9 +77,7 @@ class App extends React.Component {
                 />
               )}
             />
-            {/* /////////////////////////////////////////// */}
             {/* SIGN-UP ROUTE */}
-            {/* /////////////////////////////////////////// */}
             <Route
               exact
               path='/signup'
@@ -94,9 +89,7 @@ class App extends React.Component {
                 />
               )}
             />
-            {/* /////////////////////////////////////////// */}
             {/* SIGN-IN ROUTE */}
-            {/* /////////////////////////////////////////// */}
             <Route
               exact
               path='/signin'
@@ -108,14 +101,7 @@ class App extends React.Component {
                 />
               )}
             />
-            {/* /////////////////////////////////////////// */}
-            {/* MY-ACCOUNT ROUTE */}
-            {/* /////////////////////////////////////////// */}
-            <this.PrivateRoute exact path='/myaccount' component={MyAccount} />
-            )} />
-            {/* /////////////////////////////////////////// */}
             {/* MONTHLY ROUTE */}
-            {/* /////////////////////////////////////////// */}
             <Route
               exact
               path='/monthly'
@@ -127,27 +113,7 @@ class App extends React.Component {
                 />
               )}
             />
-            {/* /////////////////////////////////////////// */}
-            {/* PAYMENT ROUTE */}
-            {/* /////////////////////////////////////////// */}
-            <Route
-              exact
-              path='/payment'
-              render={props => (
-                <Payment
-                  {...props}
-                  authenticate={this.authenticate}
-                  authenticated={this.state.authenticated}
-                />
-              )}
-            />
-            {/* /////////////////////////////////////////// */}
-            {/* MY PICK UP ROUTE */}
-            {/* /////////////////////////////////////////// */}
-            <this.PrivateRoute exact path='/mypickup' component={MyPickUp} />
-            {/* /////////////////////////////////////////// */}
             {/* CONTACT ROUTE */}
-            {/* /////////////////////////////////////////// */}
             <Route
               exact
               path='/contact'
@@ -159,35 +125,19 @@ class App extends React.Component {
                 />
               )}
             />
-            {/* /////////////////////////////////////////// */}
+
+            {/* MY-ACCOUNT ROUTE */}
+            <this.PrivateRoute exact path='/myaccount' component={MyAccount} />
+
+            {/* PAYMENT ROUTE */}
+            <this.PrivateRoute exact path='/payment' component={Payment} />
+
+            {/* MY PICK UP ROUTE  */}
+            <this.PrivateRoute exact path='/mypickup' component={MyPickUp} />
+
             {/* MY MONTHLY ROUTE */}
-            {/* /////////////////////////////////////////// */}
-            <Route
-              exact
-              path='/mymonthly'
-              render={props => (
-                <MyMonthly
-                  {...props}
-                  authenticate={this.authenticate}
-                  authenticated={this.state.authenticated}
-                />
-              )}
-            />
-            {/* /////////////////////////////////////////// */}
-            {/* ABOUT US ROUTE */}
-            {/* /////////////////////////////////////////// */}
-            <Route
-              exact
-              path='/aboutus'
-              render={props => (
-                <AboutUs
-                  {...props}
-                  authenticate={this.authenticate}
-                  authenticated={this.state.authenticated}
-                />
-              )}
-            />
-            {/* <this.PrivateRoute exact path='/books' component={Books} /> */}
+            <this.PrivateRoute exact path='/mymonthly' component={MyMonthly} />
+
             <Route component={NoMatch} />
           </Switch>
           <Footer />

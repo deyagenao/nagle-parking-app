@@ -35,6 +35,11 @@ function Subnav() {
               <a className='nav-link'>My Pickup</a>
             </Link>
           </li>
+          <li className='nav-item'>
+            <Link to='/payment'>
+              <a className='nav-link'>Pay My Bill</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
