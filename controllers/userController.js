@@ -94,7 +94,7 @@ module.exports = {
   },
 
   findUserById: function(req, res) {
-    db.User.findById(req.params.id)
+    db.User.findById({_id: req.session.userId})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }

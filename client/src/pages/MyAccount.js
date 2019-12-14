@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Subnav from '../components/Subnav';
 import Cookies from 'js-cookie';
+import API from '../utils/API';
 import handleSessions from '../utils/handleSessions';
 
-export default function MyAccount() {
-  const cookie = Cookies.get('userId');
-  console.log(cookie);
+class MyAccount extends Component {
+  state = {
+    userData: {}
+  }
 
-  return (
-    <div>
-      <Subnav />
-    </div>
-  );
+  componentDidMount(){
+    API.getUser()
+      .then(res => 
+        this.setState({userData: res.data}))
+      .catch(err => console.log(err));
+  }
+
+  render() {
+    return (
+      <div>
+        <Subnav />
+      <p>{this.state.userData.firstName}</p>
+      </div>
+    );
+  }
 }
+
+export default MyAccount;
