@@ -57,7 +57,6 @@ module.exports = {
           req.session.userId = user._id;
           console.log('redirect');
           return res.redirect('/myaccount');
-          return res.redirect('/api/profile');
         }
       });
     } else {
@@ -94,7 +93,7 @@ module.exports = {
   },
 
   findUserById: function(req, res) {
-    db.User.findById({_id: req.session.userId})
+    db.User.findById({ _id: req.session.userId })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }

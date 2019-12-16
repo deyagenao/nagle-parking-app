@@ -6,13 +6,12 @@ import handleSessions from '../utils/handleSessions';
 
 class MyAccount extends Component {
   state = {
-    userData: {}
-  }
+    user: {}
+  };
 
-  componentDidMount(){
+  componentDidMount() {
     API.getUser()
-      .then(res => 
-        this.setState({userData: res.data}))
+      .then(res => this.setState({ user: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -20,7 +19,8 @@ class MyAccount extends Component {
     return (
       <div>
         <Subnav />
-      <p>{this.state.userData.firstName}</p>
+        <p>{this.state.user.firstName}</p>
+        <p>{this.state.user.email}</p>
       </div>
     );
   }

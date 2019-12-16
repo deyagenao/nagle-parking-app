@@ -29,7 +29,7 @@ export default {
     return axios.post('/api/user/', user, xhrHeader);
   },
   signup: function(user) {
-    return axios.post('/api/user/signup', user, xhrHeader);
+    return axios.post('/api/signup', user, xhrHeader);
   },
   authenticateUser: function() {
     return axios.post('/api/user/authenticate/', xhrHeader);
