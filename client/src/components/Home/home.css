@@ -1,0 +1,29 @@
+.main-img {
+  background: url("./img/parking2.jpg");
+  height: 850px;
+  margin-top: -20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.main-quote {
+  font-size: 72px;
+  color: white;
+  display: block;
+  padding-top: 150px;
+}
+
+.section-two {
+  margin-top: 50px;
+  height: 800px;
+}
+
+.side-img {
+  background: url('./img/parking3.jpg');
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 60px;
+}
