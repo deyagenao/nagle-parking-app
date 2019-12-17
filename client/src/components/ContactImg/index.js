@@ -20,51 +20,31 @@ export default function ContactImg() {
           {/* Column 1 */}
           <div className='col-lg-4 '>
             {/* Row 1 */}
-            {/* <div className='row'> */}
             <p className='title '>Contact us</p>
-            {/* </div> */}
-            {/* <div className='row'> */}
             <p className='titleContent'>646-964-4949</p>
-            {/* </div> */}
-            {/* <div className='row'> */}
             <p className='titleContent'>Sunday-Monday</p>
-            {/* </div> */}
-            {/* <div className='row'> */}
             <p className='titleContent'>Open 24 hours</p>
-            {/* </div> */}
           </div>
 
           {/* Column 2 */}
           <div className='col-lg-4'>
             {/* Row 2 */}
-            {/* <div className='row'> */}
             <p className='title'>Corporate Office</p>
-            {/* </div> */}
 
-            {/* <div className='row'> */}
             <p className='titleContent'>31 Nagle Ave, New York, NY 10040</p>
-            {/* </div> */}
           </div>
 
           {/* Column 3 */}
           <div className='col-lg-4'>
             {/* Row 3 */}
-            {/* <div className='row'> */}
             <p className='title'>Our Locations</p>
-            {/* </div> */}
-            {/* <div className='row'> */}
             <p className='titleContent'>31 Nagle Ave, New York, NY 10040</p>
-            {/* </div> */}
-            {/* <div className='row'> */}
             <p className='titleContent'>
               266 West 231st Street, Bronx, NY 10463
             </p>
-            {/* </div> */}
-            {/* <div className='row'> */}
             <p className='titleContent'>
               266 West 231st Street, Bronx, NY 10463
             </p>
-            {/* </div> */}
           </div>
         </div>
       </div>
@@ -87,13 +67,11 @@ export default function ContactImg() {
             </a>
 
             <a target='_blank' href='https://www.instagram.com/nagleparking/'>
-              <i className='sendMessageFavi fab fa-instagram'></i>
+              <i className='sendMessageFavi2 fab fa-instagram'></i>
             </a>
           </div>
         </div>
       </div>
-
-      {/* </div> */}
     </div>
   );
 }
