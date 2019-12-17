@@ -36,7 +36,7 @@ nav {
 }
 
 .navbar-brand span {
-  color: crimson;
+  color: blue;
 }
 
 nav ul {
@@ -80,7 +80,7 @@ nav ul li a::before, nav ul li a::after {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: crimson;
+  background-color: blue;
   left: 0;
   transform: scaleX(0);
   transition: all .5s;
