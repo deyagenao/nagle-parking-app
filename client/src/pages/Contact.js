@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import ContactImg from '../components/ContactImg';
 
 export default function Contact() {
   return (
     <div>
-      <h2>Contact</h2>
+      <ContactImg />
     </div>
   );
 }
