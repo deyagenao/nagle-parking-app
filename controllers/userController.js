@@ -35,6 +35,14 @@ module.exports = {
     }
   },
 
+  signout: function(req, res, next) {
+    console.log('User Id', req.user._id);
+    db.User.findByIdAndRemove(req.user._id, function(err){
+      if(err) next(err);
+      res.json({ message: 'User Deleted!'});
+    });
+  },
+
   login: function(req, res, next) {
     console.log('login');
 
