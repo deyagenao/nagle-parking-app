@@ -1,11 +1,13 @@
 import React from 'react';
+import Navcss from './nav.css';
+import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
-      <a className='navbar-brand' href='/'>
-        Logo
-      </a>
+      <Link to='/'>
+        <a className='navbar-brand'>Logo</a>
+      </Link>
       <button
         className='navbar-toggler'
         type='button'
@@ -21,24 +23,26 @@ function Nav() {
       <div className='collapse navbar-collapse' id='navbarSupportedContent'>
         <ul className='navbar-nav mr-auto'>
           <li className='nav-item active'>
-            <a className='nav-link' href='/'>
-              Home <span class='sr-only'>(current)</span>
-            </a>
+            <Link to='/'>
+              <a className='nav-link'>
+                Home <span class='sr-only'>(current)</span>
+              </a>
+            </Link>
           </li>
           <li className='nav-item'>
-            <a className='nav-link' href='/contact'>
-              Contact Us
-            </a>
+            <Link to='/contact'>
+              <a className='nav-link'>Contact Us</a>
+            </Link>
           </li>
           <li className='nav-item'>
-            <a className='nav-link' href='/monthly'>
-              Monthly
-            </a>
+            <Link to='/monthly'>
+              <a className='nav-link'>Monthly</a>
+            </Link>
           </li>
           <li className='nav-item'>
-            <a className='nav-link' href='/signin'>
-              Sign in
-            </a>
+            <Link to='/signin'>
+              <a className='nav-link'>Sign in</a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,0 +1,47 @@
+.main-img {
+  background: url("./img/parking2.jpg");
+  height: 850px;
+  margin-top: -20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.main-quote {
+  font-size: 65px;
+  color: white;
+}
+
+.main-quote-margin {
+  padding-top: 150px;
+}
+
+/* section 2 */
+
+.section-two {
+  margin-top: 50px;
+  height: 550px;
+}
+
+.side-img {
+  background: url('./img/parking3.jpg');
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 60px;
+}
+
+/* section 3 */
+
+.section-three {
+  height: 800px;
+  background-color: lightgrey;
+}
+
+.title-section-three {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 40px;
+}
