@@ -9,15 +9,19 @@
 }
 
 .main-quote {
-  font-size: 72px;
+  font-size: 65px;
   color: white;
-  display: block;
+}
+
+.main-quote-margin {
   padding-top: 150px;
 }
 
+/* section 2 */
+
 .section-two {
   margin-top: 50px;
-  height: 800px;
+  height: 550px;
 }
 
 .side-img {
@@ -26,4 +30,17 @@
   background-repeat: no-repeat;
   background-size: 100%;
   margin-left: 60px;
+}
+
+/* section 3 */
+
+.section-three {
+  height: 800px;
+  background-color: lightgrey;
+}
+
+.title-section-three {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 40px;
 }
