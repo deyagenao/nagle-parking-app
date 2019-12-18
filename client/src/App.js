@@ -125,6 +125,18 @@ class App extends React.Component {
                 />
               )}
             />
+            {/* ABOUT-US ROUTE */}
+            <Route
+              exact
+              path='/aboutus'
+              render={props => (
+                <AboutUs
+                  {...props}
+                  authenticate={this.authenticate}
+                  authenticated={this.state.authenticated}
+                />
+              )}
+            />
 
             {/* MY-ACCOUNT ROUTE */}
             <this.PrivateRoute exact path='/myaccount' component={MyAccount} />

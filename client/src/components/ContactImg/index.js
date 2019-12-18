@@ -1,5 +1,6 @@
 import React from 'react';
 import './ContactCSS.css';
+import SocialMedia from '../SocialMedia';
 
 export default function ContactImg() {
   return (
@@ -54,20 +55,7 @@ export default function ContactImg() {
         </div>
 
         {/* Container 3 */}
-        <div className='row'>
-          <div className='col-lg-12 text-center'>
-            <a
-              target='_blank'
-              href='https://www.facebook.com/Nagle-Parking-Inc-792360457528201/'
-            >
-              <i className='sendMessageFavi fab fa-facebook-square'></i>
-            </a>
-
-            <a target='_blank' href='https://www.instagram.com/nagleparking/'>
-              <i className='sendMessageFavi2 fab fa-instagram'></i>
-            </a>
-          </div>
-        </div>
+        <SocialMedia />
       </div>
     </div>
   );

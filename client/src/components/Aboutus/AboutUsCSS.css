@@ -1,0 +1,42 @@
+.AboutBg {
+  background-image: url('https://vasturavirajblog.files.wordpress.com/2016/11/parking-lot.jpg');
+  background-size: cover;
+  height: 369px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.keepDark {
+  background: rgba(255, 255, 255, 0.123);
+  padding-bottom: 100px;
+  color: white;
+  height: 369px;
+  background-color: black;
+  opacity: 0.6;
+}
+.aboutImgText {
+  font-size: 45px;
+  padding-top: 9%;
+  text-align: center;
+}
+.aboutQuote {
+  font-size: 20px;
+  text-align: center;
+}
+.pushAboutInfoDown {
+  padding-top: 50px;
+}
+.followUsAbout {
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: rgb(30, 76, 160);
+}
+.aboutText {
+  /* Place Font-Family */
+}
+.naglePText {
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: rgb(30, 76, 160);
+}
