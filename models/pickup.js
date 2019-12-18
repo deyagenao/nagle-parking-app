@@ -7,7 +7,6 @@ var PickUpSchema = new mongoose.Schema({
     },
     pickUpTime: {
         type: Date,
-        // default: Date.now,
         required: true
     }
 })
