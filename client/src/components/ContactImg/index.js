@@ -42,9 +42,6 @@ export default function ContactImg() {
             <p className='titleContent'>
               266 West 231st Street, Bronx, NY 10463
             </p>
-            <p className='titleContent'>
-              266 West 231st Street, Bronx, NY 10463
-            </p>
           </div>
         </div>
       </div>
