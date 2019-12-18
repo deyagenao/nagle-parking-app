@@ -25,7 +25,9 @@ class Useraccount extends Component {
             <div className='col-md-8'>
               <div className='row align-self-center'>
                 <h4 className='userNameOnAccount'>
-                  {this.state.userData.firstName}'s Account Info
+                  {this.state.userData.firstName}
+                  {''} {this.state.userData.lastName}
+                  's Account Info
                 </h4>
               </div>
 
@@ -43,7 +45,10 @@ class Useraccount extends Component {
                     <tbody>
                       <tr>
                         <th scope='row'>Name:</th>
-                        <td>{this.state.userData.firstName}</td>
+                        <td>
+                          {this.state.userData.firstName} {''}
+                          {this.state.userData.lastName}
+                        </td>
                         <td></td>
                       </tr>
                       <tr>
