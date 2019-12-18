@@ -12,12 +12,13 @@ var MonthlySchema = new mongoose.Schema({
     startDate: {
         type: Date,
         required: true,
-        // default: Date.now
+        default: Date.now
     },
     balance: Number,
     paid: {
         type: Boolean, 
-        required: true
+        required: true,
+        default: false
     },
     billingCycle: {
         type: String,

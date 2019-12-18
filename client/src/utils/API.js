@@ -17,14 +17,6 @@ export default {
   getUser: function() {
     return axios.get('/api/user/info');
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete('/api/books/' + id);
-  },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post('/api/books', bookData);
-  },
   loginUser: function(user) {
     return axios.post('/api/user/', user, xhrHeader);
   },
@@ -33,5 +25,13 @@ export default {
   },
   authenticateUser: function() {
     return axios.post('/api/user/authenticate/', xhrHeader);
+  }, 
+  // Deletes the book with the given id
+  deleteBook: function(id) {
+    return axios.delete('/api/books/' + id);
+  },
+  // Saves a book to the database
+  saveBook: function(bookData) {
+    return axios.post('/api/books', bookData);
   }
 };
