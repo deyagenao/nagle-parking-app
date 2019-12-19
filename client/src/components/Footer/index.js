@@ -17,15 +17,15 @@ function Footer() {
             </div>
 
             <div className='row social-control'>
-              <Link to='/aboutus'>
+              <a href='/aboutus'>
                 <p>About Us</p>
-              </Link>
+              </a>
             </div>
 
             <div className='row social-control'>
-              <Link to='/contact'>
+              <a href='/contact'>
                 <p>Contact Us</p>
-              </Link>
+              </a>
             </div>
           </div>
           <div className='col-md-6'>
@@ -47,10 +47,7 @@ function Footer() {
         <div className='row'>
           <div className='col-md-12 copyright-row'>
             <p className='footerlogo'>
-              <Logo />
-            </p>
-            <p className='copyright'>
-              © 2019 Nagle Parking All Rights Reserved
+              <Logo /> © 2019 Nagle Parking All Rights Reserved
             </p>
           </div>
         </div>
