@@ -3,13 +3,36 @@ a {
   color: #eee;
 }
 
+a:hover {
+  text-decoration: none;
+  color: yellow;
+}
+
+.nav-bar-margin {
+  margin-left: 45%;
+}
+
+.logo-brand {
+  margin-left: 25px;
+}
+
+/* 
+.navbar-toggler-icon {
+  margin-right: 30px;
+  padding-right: 20px;
+} */
+
+.navbutton {
+  margin-right: 30px;
+}
+
 .container {
   max-width: 120rem;
   width: 90%;
   margin: 0 auto;
 }
 
-.menu-toggle {
+/* .menu-toggle {
   position: fixed;
   top: 2.5rem;
   right: 2.5rem;
@@ -18,11 +41,9 @@ a {
   cursor: pointer;
   z-index: 1000;
   display: none;
-}
+} */
 
 nav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   font-size: 1.6rem;
@@ -39,9 +60,9 @@ nav {
   color: blue;
 }
 
-nav ul {
+/* nav ul {
   display: flex;
-}
+} */
 
 nav ul li {
   list-style: none;
@@ -66,7 +87,7 @@ nav ul li:nth-child(4) {
 }
 
 nav ul li a {
-  margin: 0 3rem;
+  margin: 0 2rem;
   position: relative;
   letter-spacing: 2px;
 }
@@ -96,7 +117,7 @@ nav ul li a::after {
   transform-origin: right;
 }
 
-.overlay {
+/* .overlay {
   background-color: rgba(0, 0, 0, .95);
   position: fixed;
   right: 0;
@@ -107,7 +128,7 @@ nav ul li a::after {
   transform: scale(0);
   opacity: 0;
   display: none;
-}
+} */
 
 nav ul li a:hover::before, nav ul li a:hover::after {
   transform: scaleX(1);
@@ -121,33 +142,13 @@ nav ul li a:hover::before, nav ul li a:hover::after {
 }
 
 @media screen and (max-width: 700px) {
-  .menu-toggle {
-    display: block;
+  .nav-bar-margin {
+    margin-left: 0px;
   }
-  nav {
-    display: none;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+  .navbar-toggler-icon {
+    margin-left: 0px;
   }
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    margin-top: 5rem;
-  }
-  nav ul li a {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  .brand {
-    font-size: 5rem;
-  }
-  .overlay.menu-open, nav.menu-open {
-    display: flex;
-    transform: scale(1);
-    opacity: 1;
+  .logo-brand {
+    margin-left: 0px;
   }
 }
