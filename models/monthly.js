@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var MonthlySchema = new mongoose.Schema({
+var monthlySchema = new mongoose.Schema({
     _userId: {
         type: Schema.Types.ObjectId,
         ref: "User"
@@ -26,5 +26,5 @@ var MonthlySchema = new mongoose.Schema({
     }
 })
 
-var Monthly = mongoose.model('Monthly', MonthlySchema);
+var Monthly = mongoose.model('Monthly', monthlySchema);
 module.exports = Monthly;

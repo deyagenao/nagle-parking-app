@@ -63,7 +63,7 @@ class Useraccount extends Component {
                       </tr>
                       <tr>
                         <th scope='row'>Color:</th>
-                        <td>Bkack</td>
+                        <td>Black</td>
                         <td></td>
                       </tr>
                       <tr>
