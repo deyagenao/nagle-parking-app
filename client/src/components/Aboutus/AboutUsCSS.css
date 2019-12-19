@@ -5,6 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .keepDark {
   background: rgba(255, 255, 255, 0.123);
   padding-bottom: 100px;
@@ -13,55 +14,89 @@
   background-color: black;
   opacity: 0.6;
 }
+
+.carimage {
+  background-image: url('./carmodel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 600px;
+}
+
 .aboutImgText {
   font-size: 45px;
   padding-top: 3%;
   text-align: center;
 }
+
 .aboutQuote {
   font-size: 20px;
   text-align: center;
 }
+
 .pushAboutInfoDown {
   padding-top: 100px;
   padding-bottom: 60px;
 }
+
+.test {
+  border: black solid 1px;
+}
+
+.section-two-control {
+  margin-top: 50px;
+}
+
+.section-two-control-2 {
+  margin-top: 20px;
+}
+
 .followUsAbout {
   font-size: 42px;
   font-weight: bold;
   margin-top: 20px;
   color: rgb(30, 76, 160);
 }
+
 .aboutText {
   /* Place Font-Family */
 }
+
 .naglePText {
-  border-bottom: 1px solid grey;
+  border-bottom: 2px solid rgb(190, 190, 190);
   margin-bottom: 20px;
   font-weight: bold;
+  padding-bottom: 25px;
   color: rgb(30, 76, 160);
 }
+
 .pushAboutUsPointsDown {
   margin-top: 30px;
   background-color: rgb(241, 241, 241);
   /* height: 260px; */
 }
+
 .coreValuesText {
   padding-top: 40px;
   font-size: 39px;
   font-weight: bold;
   color: rgb(116, 152, 219);
 }
+
 .faviValues {
   font-size: 65px;
   padding-top: 10px;
 }
+
 .faviColor1 {
   color: rgb(231, 78, 78);
 }
+
 .faviColor2 {
   color: rgb(79, 165, 67);
 }
+
 .faviColor3 {
   color: blue;
 }
@@ -73,6 +108,7 @@
   font-size: 20px;
   font-weight: bold;
 }
+
 .faviInfo {
   margin-bottom: 30%;
 }
