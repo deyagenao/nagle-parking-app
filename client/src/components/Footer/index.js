@@ -47,7 +47,9 @@ function Footer() {
         <div className='row'>
           <div className='col-md-12 copyright-row'>
             <p className='footerlogo'>
-              <Logo />
+              <a href='/'>
+                <Logo />
+              </a>
             </p>
             <p className='copyright'>
               © 2019 Nagle Parking All Rights Reserved
