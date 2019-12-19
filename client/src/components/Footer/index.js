@@ -1,6 +1,7 @@
 import React from 'react';
 // CSS Footer
 import style from './footerstyle.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -20,7 +21,9 @@ function Footer() {
             <div className='row'>Test</div>
           </div>
           <div className='col-md-3'>
-            <div className='row'>About</div>
+            <Link to='/aboutus'>
+              <div className='row'>About us</div>
+            </Link>
 
             <div className='row'>Test</div>
             <div className='row'>Test</div>
