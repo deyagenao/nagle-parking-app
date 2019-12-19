@@ -11,8 +11,12 @@
   padding-top: 20px;
 }
 
+.footerlogo {
+  margin-top: 15px;
+}
+
 .copyright {
-  /* margin-top: 20px; */
+  margin-top: 25px;
 }
 
 .social-control {

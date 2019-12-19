@@ -4,6 +4,7 @@ import './footerstyle.css';
 import { Link } from 'react-router-dom';
 import instagram from './instagram.png';
 import facebook from './facebook.png';
+import Logo from '../Logo/logo.js';
 
 function Footer() {
   return (
@@ -45,7 +46,9 @@ function Footer() {
 
         <div className='row'>
           <div className='col-md-12 copyright-row'>
-            <p className='copyright'>Brand</p>
+            <p className='footerlogo'>
+              <Logo />
+            </p>
             <p className='copyright'>
               © 2019 Nagle Parking All Rights Reserved
             </p>

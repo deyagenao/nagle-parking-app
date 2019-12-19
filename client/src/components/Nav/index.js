@@ -1,12 +1,15 @@
 import React from 'react';
 import Navcss from './nav.css';
 import { Link } from 'react-router-dom';
+import Logo from '../Logo/logo.js';
 
 function Nav() {
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
       <Link to='/'>
-        <a className='navbar-brand'>Logo</a>
+        <a className='navbar-brand'>
+          <Logo />
+        </a>
       </Link>
       <button
         className='navbar-toggler'
