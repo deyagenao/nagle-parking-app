@@ -1,7 +1,9 @@
 import React from 'react';
 // CSS Footer
-import style from './footerstyle.css';
+import './footerstyle.css';
 import { Link } from 'react-router-dom';
+import instagram from './instagram.png';
+import facebook from './facebook.png';
 
 function Footer() {
   return (
@@ -12,19 +14,32 @@ function Footer() {
             <div className='row'>
               <h1 className='footer-title'>Who We Are</h1>
             </div>
-            <Link to='/aboutus'>
-              <div className='row social-control'>About Us</div>
-            </Link>
-            <Link to='/contact'>
-              <div className='row social-control'>Contact Us</div>
-            </Link>
+
+            <div className='row social-control'>
+              <Link to='/aboutus'>
+                <p>About Us</p>
+              </Link>
+            </div>
+
+            <div className='row social-control'>
+              <Link to='/contact'>
+                <p>Contact Us</p>
+              </Link>
+            </div>
           </div>
           <div className='col-md-6'>
             <div className='row'>
               <h1 className='footer-title'>Follow Us On</h1>
             </div>
-            <div className='row social-control'>Facebook</div>
-            <div className='row'>Instagram</div>
+            <div className='row social-control'>
+              <Link to='https://www.facebook.com/Nagle-Parking-Inc-792360457528201/'>
+                <img src={facebook} className='facebook' />
+              </Link>
+              <Link to='https://www.instagram.com/nagleparking/'>
+                <img src={instagram} className='instagram' alt='instagram' />
+              </Link>
+            </div>
+            <div className='row'></div>
           </div>
         </div>
 

@@ -2,6 +2,7 @@
   padding: 60px 0px;
   background-color: #3a3a49;
   color: white;
+  margin-top: 150px;
 }
 
 .copyright-row {
@@ -22,4 +23,22 @@
   font-size: 30px;
   font-weight: bold;
   padding-bottom: 10px;
+}
+
+.instagram {
+  /* background-image: url('./img/instagram.png'); */
+  width: 37px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.facebook {
+  /* background-image: url('./img/instagram.png'); */
+  width: auto;
+  height: 35px;
+}
+
+.facebook:hover, .instagram:hover {
+  height: 45px;
+  width: auto;
 }
