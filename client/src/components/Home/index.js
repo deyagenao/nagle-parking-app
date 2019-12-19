@@ -11,7 +11,7 @@ export default function HomeComponent() {
         <p className='main-quote col-md-12'>and valet services</p>
       </div>
 
-      <div className='section-two container-fluid'>
+      <div className='section-two'>
         <div className='row'>
           <div className='col-md-6'>
             <h1 className='text-center'> Title </h1>

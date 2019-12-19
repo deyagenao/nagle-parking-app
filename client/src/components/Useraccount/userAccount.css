@@ -1,13 +1,16 @@
 .card {
   width: 18rem;
 }
+
 .userNameOnAccount {
   font-size: 39px;
-  margin-left: 10%;
+  text-align: right;
+  /* margin-left: 10%; */
   /* padding-left: 5%; */
   padding-top: 3%;
   margin-bottom: 5%;
 }
+
 .accountUserImg {
   background-image: url('https://rescuemissionalliance.org/wp-content/uploads/2015/09/temp-guy-smiling.jpg');
   background-size: cover;
@@ -20,24 +23,31 @@
   margin-right: 10px;
 }
 
-.userImgFav {
-  font-size: 50px;
+.userEditAccFav {
+  font-size: 20px;
+  /* margin-left: 21%; */
+  /* text-align: right;  */
 }
+
 .contactBtn {
   text-align: center;
   padding-top: 10%;
 }
+
 .contactText {
   color: white;
   font-weight: bold;
   text-align: center;
 }
+
 .extendEmail {
   width: 150px;
 }
+
 .pushDownTopCon {
   padding-top: 20px;
 }
+
 .pushDownBottomConContent {
   padding-top: 20px;
 }
@@ -45,10 +55,13 @@
 .accountInfo {
   padding-bottom: 10px;
 }
+
 .accountInfoCon {
   border: 2px solid rgb(128, 128, 128);
-  margin-top: 30px;
+  margin-top: 125px;
+  margin-bottom: 250px;
 }
+
 /* .table-hover:focus:hover {
   background-color: blue;
 } */
