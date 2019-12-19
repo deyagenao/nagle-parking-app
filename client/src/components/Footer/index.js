@@ -17,15 +17,15 @@ function Footer() {
             </div>
 
             <div className='row social-control'>
-              <Link to='/aboutus'>
+              <a href='/aboutus'>
                 <p>About Us</p>
-              </Link>
+              </a>
             </div>
 
             <div className='row social-control'>
-              <Link to='/contact'>
+              <a href='/contact'>
                 <p>Contact Us</p>
-              </Link>
+              </a>
             </div>
           </div>
           <div className='col-md-6'>
