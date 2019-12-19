@@ -7,12 +7,12 @@ function Nav() {
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
       <Link to='/'>
-        <a className='navbar-brand'>
+        <a className='navbar-brand logo-brand'>
           <Logo />
         </a>
       </Link>
       <button
-        className='navbar-toggler'
+        className='navbar-toggler navbutton'
         type='button'
         data-toggle='collapse'
         data-target='#navbarSupportedContent'
@@ -23,7 +23,10 @@ function Nav() {
         <span className='navbar-toggler-icon'></span>
       </button>
 
-      <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+      <div
+        className='collapse navbar-collapse nav-bar-margin'
+        id='navbarSupportedContent'
+      >
         <ul className='navbar-nav mr-auto'>
           <li className='nav-item active'>
             <Link to='/'>
