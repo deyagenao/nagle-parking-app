@@ -1,3 +1,19 @@
 .footer {
-  padding-top: 60px;
+  padding: 60px 0px;
+  background-color: #3a3a49;
+  color: white;
+}
+
+.copyright-row {
+  margin-top: 50px;
+  border-top: dotted white 1px;
+  padding-top: 20px;
+}
+
+.copyright {
+  /* margin-top: 20px; */
+}
+
+.followus-control {
+  margin-top: 10px;
 }

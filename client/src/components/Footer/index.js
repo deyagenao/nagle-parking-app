@@ -1,44 +1,45 @@
-import React from "react";
+import React from 'react';
 // CSS Footer
-import style from "./footerstyle.css";
+import style from './footerstyle.css';
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="/">
-          Logo
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <footer className='footer'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-md-3'>
+            <div className='row'>Title 1</div>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="/contact">
-                Contact
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/monthly">
-                Monthly
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/aboutus">
-                About Us
-              </a>
-            </li>
-          </ul>
+            <div className='row'>Test</div>
+            <div className='row'>Test</div>
+          </div>
+          <div className='col-md-3'>
+            <div className='row'>Title 2</div>
+
+            <div className='row'>Test</div>
+            <div className='row'>Test</div>
+          </div>
+          <div className='col-md-3'>
+            <div className='row'>About</div>
+
+            <div className='row'>Test</div>
+            <div className='row'>Test</div>
+          </div>
+          <div className='col-md-3'>
+            <div className='row'>Follow us</div>
+
+            <div className='row ocial-control'>facebook</div>
+            <div className='row'>instagram</div>
+          </div>
+        </div>
+
+        <div className='row'>
+          <div className='col-md-12 copyright-row'>
+            <p className='copyright'>Brand</p>
+            <p className='copyright'>
+              © 2019 Nagle Parking All Rights Reserved
+            </p>
+          </div>
         </div>
       </div>
     </footer>
