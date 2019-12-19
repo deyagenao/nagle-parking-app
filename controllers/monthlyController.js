@@ -18,7 +18,7 @@ module.exports = {
     },
     // function for retrieving information about a monthly commitment 
     find: function(req, res) {
-        db.Monthly.find({ _userId: req.session.userId})
+        db.Monthly.findOne({ _userId: req.session.userId})
             .then(dbMonthly => res.json(dbMonthly))
             .catch(err => res.status(422).json(err));
     },
