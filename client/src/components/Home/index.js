@@ -1,5 +1,5 @@
 import React from 'react';
-import CSS from './home.css';
+import './home.css';
 
 export default function HomeComponent() {
   return (
@@ -46,6 +46,28 @@ export default function HomeComponent() {
               <h1 className='title-section-three'>
                 What are our customers saying
               </h1>
+            </div>
+          </div>
+          <div className='row reviews'>
+            <div className='col-md-4'>
+              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+            <div className='col-md-4'>
+              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+            <div className='col-md-4'>
+              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+          </div>
+          <div className='row reviews-two'>
+            <div className='col-md-4'>
+              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+            <div className='col-md-4'>
+              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            </div>
+            <div className='col-md-4'>
+              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
             </div>
           </div>
         </div>
