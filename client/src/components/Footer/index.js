@@ -8,31 +8,23 @@ function Footer() {
     <footer className='footer'>
       <div className='container'>
         <div className='row'>
-          <div className='col-md-3'>
-            <div className='row'>Title 1</div>
-
-            <div className='row'>Test</div>
-            <div className='row'>Test</div>
-          </div>
-          <div className='col-md-3'>
-            <div className='row'>Title 2</div>
-
-            <div className='row'>Test</div>
-            <div className='row'>Test</div>
-          </div>
-          <div className='col-md-3'>
+          <div className='col-md-6'>
+            <div className='row'>
+              <h1 className='footer-title'>Who We Are</h1>
+            </div>
             <Link to='/aboutus'>
-              <div className='row'>About us</div>
+              <div className='row social-control'>About Us</div>
             </Link>
-
-            <div className='row'>Test</div>
-            <div className='row'>Test</div>
+            <Link to='/contact'>
+              <div className='row social-control'>Contact Us</div>
+            </Link>
           </div>
-          <div className='col-md-3'>
-            <div className='row'>Follow us</div>
-
-            <div className='row ocial-control'>facebook</div>
-            <div className='row'>instagram</div>
+          <div className='col-md-6'>
+            <div className='row'>
+              <h1 className='footer-title'>Follow Us On</h1>
+            </div>
+            <div className='row social-control'>Facebook</div>
+            <div className='row'>Instagram</div>
           </div>
         </div>
 
