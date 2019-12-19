@@ -38,6 +38,49 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+      {/* About Us Points */}
+      <div className='container-fluid pushAboutUsPointsDown'>
+        <div className='row text-center'>
+          <p className=' col-lg-12 coreValuesText'>Core Values</p>
+
+          <div className='container'>
+            <div className='row'>
+              <div className='col-md-4'>
+                <i class='fas fa-hand-holding-heart faviValues faviColor1 '></i>
+                <h2 className='faviText'>Passion & Care</h2>
+                <p className='faviInfo'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  id lectus velit. Sed consequat faucibus mauris, vel accumsan
+                  ex lobortis sed. Etiam nisl quam, hendrerit at urna eu, tempor
+                  sodales justo.
+                </p>
+              </div>
+
+              <div className='col-md-4'>
+                <i class='fas fa-handshake  faviValues faviColor2'></i>
+                <h2 className='faviText'>Integrity</h2>
+                <p className='faviInfo'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  id lectus velit. Sed consequat faucibus mauris, vel accumsan
+                  ex lobortis sed. Etiam nisl quam, hendrerit at urna eu, tempor
+                  sodales justo.
+                </p>
+              </div>
+
+              <div className='col-md-4'>
+                <i class='fas fa-parking faviValues faviColor3'></i>
+                <h2 className='faviText'>Excellent Service</h2>
+                <p className='faviInfo'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  id lectus velit. Sed consequat faucibus mauris, vel accumsan
+                  ex lobortis sed. Etiam nisl quam, hendrerit at urna eu, tempor
+                  sodales justo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
