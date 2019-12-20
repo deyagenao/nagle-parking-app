@@ -4,7 +4,7 @@ var bcrypt = require('bcrypt');
 var UserSchema = new mongoose.Schema({
   email: {
     type: String,
-    unique: true,
+    unique: {index: { unique: true } },
     required: true,
     trim: true,
     match: [

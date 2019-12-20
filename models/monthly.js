@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var monthlySchema = new mongoose.Schema({
+var monthlySchema = new Schema({
     _userId: {
         type: Schema.Types.ObjectId,
         ref: "User"
