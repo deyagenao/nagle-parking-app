@@ -3,12 +3,11 @@ import API from '../../utils/API';
 import { Redirect } from 'react-router-dom';
 import { Col, Row, Container } from '../Grid';
 import { Input, FormBtn } from '../Form';
+const moment = require('moment');
 
 class MonthlyForm extends Component {
   state = {
     priceRate: '',
-    startDate: '',
-    paid: '',
   };
 
   componentDidMount() {}
@@ -24,10 +23,10 @@ class MonthlyForm extends Component {
     event.preventDefault();
     if(this.state.priceRate == 169.00 || this.state.priceRate == 199.00) {
       console.log('Attempting to add new monthly customer');
-      API.newMonthly({
+      API.updateUser({
         priceRate: this.state.priceRate,
-        startDate: Date.now,
-        paid: false,
+        billingCycle: Date.now,
+        isMonthly: true
       })
       .then(res => {
         if (res.status === 200){

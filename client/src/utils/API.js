@@ -26,6 +26,9 @@ export default {
   authenticateUser: function() {
     return axios.post('/api/user/authenticate/', xhrHeader);
   }, 
+  updateUser: function(user) {
+    return axios.put('/api/user/update', user);
+  },
   // Monthly Routes 
   newMonthly: function(monthly) {
     return axios.post('/api/monthly/', monthly);
