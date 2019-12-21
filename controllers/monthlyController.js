@@ -6,11 +6,12 @@ module.exports = {
     // function for making a new monthly commitment
     create: function(req, res) {
         const monthlyInfo = {
-            _userId: req.session.userId,
-            priceRate: req.body.priceRate,
-            startDate: req.body.startDate || Date.now,
-            paid: req.body.paid || false,
-            billingCycle: startDate + ' - ' + moment(startDate).add(1, 'months')
+            // _userId: req.session.userId,
+            priceRate: req.body.priceRate
+            // ,
+            // startDate: req.body.startDate || Date.now,
+            // paid: req.body.paid || false,
+            // billingCycle: this.startDate + ' - ' + moment(this.startDate).add(1, 'months')
         };
         db.Monthly.create(monthlyInfo)
             .then(dbMonthly => res.json(dbMonthly))

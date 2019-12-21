@@ -6,16 +6,16 @@ import API from '../utils/API';
 
 class MyMonthly extends Component {
   state = {
-    monthlyData: {},
+    userData: {},
     isMonthly: false
   }
 
   componentDidMount() {
-    API.getMonthly()
+    API.getUser()
       .then(res => {
         console.log(res.data);
-        typeof res.data === Object ?
-        (this.setState({ monthlyData: res.data, isMonthly: true})) :
+        res.data.isMonthly ?
+        (this.setState({ userData: res.data, isMonthly: true})) :
         (this.setState({isMonthly: false}))
       })
       .catch(err => console.log(err));
@@ -35,15 +35,15 @@ class MyMonthly extends Component {
                     <tbody>
                       <tr>
                         <th scope='row'>Billing Cycle:</th>
-                        <td>{this.state.monthlyData.billingCycle}</td>
+                        <td>{this.state.userData.billingCycle}</td>
                       </tr>
                       <tr>
                         <th scope='row'>Monthly Parking Price Rate:</th>
-                        <td>${this.state.monthlyData.priceRate}</td>
+                        <td>${this.state.userData.priceRate}</td>
                       </tr>
                       <tr>
                         <th scope='row'>Paid?</th>
-                        {this.state.monthlyData.paid ? 
+                        {this.state.userData.paid ? 
                           (<td>Paid!</td>)
                           : (<td>Not paid!</td>)
                         }

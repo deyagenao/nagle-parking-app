@@ -94,7 +94,13 @@ module.exports = {
 
   findUserById: function(req, res) {
     db.User.findById({ _id: req.session.userId })
-      .then(dbModel => res.json(dbModel))
+      .then(dbUser => res.json(dbUser))
+      .catch(err => res.status(422).json(err));
+  },
+
+  update: function(req, res) {
+    db.User.updateOne({ _id: req.session.userId}, { $set: req.body}, { new: true})
+      .then(dbUser => res.json(dbUser))
       .catch(err => res.status(422).json(err));
   }
 };
