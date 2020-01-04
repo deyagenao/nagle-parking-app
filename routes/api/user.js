@@ -16,5 +16,8 @@ router.route('/authenticate').post(userController.authenticate);
 // Matches with "/api/user"
 router.route('/').post(userController.login);
 
+// Matches with '/api/user/update'
+router.route('/update').put(userController.update);
+
 // TO-DO: logout route (delete cookie and session - req.session.destroy)
 module.exports = router;

@@ -4,7 +4,7 @@ var bcrypt = require('bcrypt');
 var UserSchema = new mongoose.Schema({
   email: {
     type: String,
-    unique: true,
+    unique: {index: { unique: true } },
     required: true,
     trim: true,
     match: [
@@ -51,7 +51,18 @@ var UserSchema = new mongoose.Schema({
   licencsePlate: {
     type: String,
     trim: true
-  }
+  },
+  isMonthly: {
+    type: Boolean,
+    default: false
+  },
+  priceRate:  Number,
+  balance: Number,
+  paid: {
+    type: Boolean,
+    default: false
+  },
+  billingCycle: String
 });
 
 //hashing a password before saving it to the database

@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const bookRoutes = require('./books');
 const userRoutes = require('./user');
-
-// // /api/book routes
-// router.use("/books", bookRoutes);
+const monthlyRoutes = require('./monthly');
+const pickUpRoutes = require('./pickup');
 
 // /api/user routes
 router.use('/user', userRoutes);
+router.use('/monthly', monthlyRoutes);
+router.use('/pickup', pickUpRoutes);
+
 
 module.exports = router;

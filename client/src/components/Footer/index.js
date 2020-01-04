@@ -1,44 +1,60 @@
-import React from "react";
+import React from 'react';
 // CSS Footer
-import style from "./footerstyle.css";
+import './footerstyle.css';
+import { Link } from 'react-router-dom';
+import instagram from './instagram.png';
+import facebook from './facebook.png';
+import Logo from '../Logo/logo.js';
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="/">
-          Logo
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <footer className='footer'>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-md-6'>
+            <div className='row'>
+              <h1 className='footer-title'>Who We Are</h1>
+            </div>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="/contact">
-                Contact
+            <div className='row social-control'>
+              <a href='/aboutus'>
+                <p>About Us</p>
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/monthly">
-                Monthly
+            </div>
+
+            <div className='row social-control'>
+              <a href='/contact'>
+                <p>Contact Us</p>
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/aboutus">
-                About Us
+            </div>
+          </div>
+          <div className='col-md-6'>
+            <div className='row'>
+              <h1 className='footer-title'>Follow Us On</h1>
+            </div>
+            <div className='row social-control'>
+              <Link to='https://www.facebook.com/Nagle-Parking-Inc-792360457528201/'>
+                <img src={facebook} className='facebook' />
+              </Link>
+              <Link to='https://www.instagram.com/nagleparking/'>
+                <img src={instagram} className='instagram' alt='instagram' />
+              </Link>
+            </div>
+            <div className='row'></div>
+          </div>
+        </div>
+
+        <div className='row'>
+          <div className='col-md-12 copyright-row'>
+            <p className='footerlogo'>
+              <a href='/'>
+                <Logo />
               </a>
-            </li>
-          </ul>
+            </p>
+            <p className='copyright'>
+              © 2019 Nagle Parking All Rights Reserved
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,13 +1,13 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var PickUpSchema = new mongoose.Schema({
+var PickUpSchema = new Schema({
     _userId: {
         type: Schema.Types.ObjectId,
         ref: "User"
     },
     pickUpTime: {
         type: Date,
-        // default: Date.now,
         required: true
     }
 })

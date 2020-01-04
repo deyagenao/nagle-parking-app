@@ -5,7 +5,6 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
-import Books from './pages/Books';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -131,6 +130,18 @@ class App extends React.Component {
               path='/contact'
               render={props => (
                 <Contact
+                  {...props}
+                  authenticate={this.authenticate}
+                  authenticated={this.state.authenticated}
+                />
+              )}
+            />
+            {/* ABOUT-US ROUTE */}
+            <Route
+              exact
+              path='/aboutus'
+              render={props => (
+                <AboutUs
                   {...props}
                   authenticate={this.authenticate}
                   authenticated={this.state.authenticated}
