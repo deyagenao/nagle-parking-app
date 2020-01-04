@@ -1,0 +1,133 @@
+import React, { Component } from 'react';
+import API from '../../utils/API';
+import './updateuser.css';
+import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Col, Row, Container } from '../Grid';
+import { Input, FormBtn } from '../Form';
+
+class UpdateUser extends Component {
+  state = {
+    email: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    displayFirstName: '',
+    displayLastName: ''
+  };
+
+  componentDidMount() {
+    API.getUser()
+      .then(res =>
+        this.setState({
+          email: res.data.email,
+          firstName: res.data.firstName,
+          lastName: res.data.lastName,
+          phoneNumber: res.data.phoneNumber,
+          displayFirstName: res.data.firstName,
+          displayLastName: res.data.lastName
+        })
+      )
+      .catch(err => console.log(err));
+  }
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    {
+      API.updateUser({
+        email: this.state.email,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        phoneNumber: this.state.phoneNumber
+      })
+        .then(res => {
+          if (res.status === 200) {
+            this.props.authenticate();
+            return <Redirect to='/myaccount' />;
+          }
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
+  render() {
+    return (
+      <div className='container accountInfoCon'>
+        <div className='row'>
+          <div className='col-md-4'>
+            <div className='accountUserImg'>{/* Users picture */}</div>
+          </div>
+          <div className='col-md-8'>
+            <div className='row align-self-center'>
+              <h4 className='col-sm-10 userNameOnAccount'>
+                {this.state.displayFirstName} {this.state.displayLastName}
+                's Account Info
+                <Link to='/update-user'>
+                  <i className=' col-sm-2 userEditAccFav fas fa-pen'></i>
+                </Link>
+              </h4>
+            </div>
+            <Container fluid>
+              <Row>
+                <Col size='12'>
+                  <h1 className='text-center update-your-info'>
+                    {' '}
+                    Update your information{' '}
+                  </h1>
+                  <form>
+                    <Input
+                      name='firstName'
+                      onChange={this.handleInputChange}
+                      value={this.state.firstName}
+                      placeholder='first name(required)'
+                    />
+                    <Input
+                      name='lastName'
+                      value={this.state.lastName}
+                      onChange={this.handleInputChange}
+                      placeholder='last name(required)'
+                    />
+                    <Input
+                      name='phoneNumber'
+                      value={this.state.phoneNumber}
+                      onChange={this.handleInputChange}
+                      placeholder='xxx-xxx-xxxx'
+                    />
+                    <Input
+                      name='email'
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                      placeholder='email (required)'
+                    />
+
+                    <FormBtn
+                      // disabled={!(this.state.email && this.state.password)}
+                      onClick={this.handleFormSubmit}
+                    >
+                      Update
+                    </FormBtn>
+                  </form>
+                </Col>
+              </Row>
+              {/* redirect on authenticated */}
+              {this.props.authenticated ? (
+                <Redirect to='/myaccount' />
+              ) : (
+                <div></div>
+              )}
+            </Container>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default UpdateUser;

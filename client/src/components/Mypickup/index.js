@@ -38,6 +38,7 @@ class MyPickUp extends Component {
         isMonthly: true
       })
         .then(res => {
+
           console.log(res);
           console.log(this.state.userData);
           // if (res.status === 200) {
