@@ -47,16 +47,7 @@ export default function ContactImg() {
         </div>
       </div>
 
-      {/* Container 2 */}
-
-      <div className='sendMessage-section'>
-        <div className='col-lg-12'>
-          <h1 className='sendMessage text-center'>Send A Message</h1>
-        </div>
-
-        {/* Container 3 */}
-        <SocialMedia />
-      </div>
+      {/* Container 3 */}
     </div>
   );
 }
