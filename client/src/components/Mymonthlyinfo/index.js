@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
+import './monthlyinfo.css';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { Col, Row, Container } from '../Grid';
 
@@ -27,38 +29,54 @@ class MonthlyInfo extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <h2> My Monthly</h2>
+      <div>
+        <div className='container-fluid'>
+          <div className='row'>
+            <h2 className='monthlyTitle col-md-6'>
+              {' '}
+              Welcome glad to have you {this.state.userData.firstName}{' '}
+              {this.state.userData.lastName}
+            </h2>
+          </div>
 
-        <div className='row'>
-          <table className='table table-hover'>
-            <tbody>
-              {/* <tr>
+          <div className='row'>
+            <table className='table table-hover tableCon'>
+              <tbody>
+                {/* <tr>
                 <th scope='row'>Car Type:</th>
                 <td>{this.state.userData.carType}</td>
               </tr> */}
-              <tr>
-                <th scope='row'>Car Make:</th>
-                <td>{this.state.userData.carMake}</td>
-              </tr>
-              <tr>
-                <th scope='row'>Car Model:</th>
-                <td>{this.state.userData.carModel}</td>
-              </tr>
-              <tr>
-                <th scope='row'>Car Color:</th>
-                <td>{this.state.userData.carColor}</td>
-              </tr>
-              <tr>
-                <th scope='row'>License Plate:</th>
-                <td>{this.state.userData.licensePlate}</td>
-              </tr>
+                <tr>
+                  <th scope='row'> Make:</th>
+                  <td>{this.state.userData.carMake}</td>
+                </tr>
+                <tr>
+                  <th scope='row'> Model:</th>
+                  <td>{this.state.userData.carModel}</td>
+                </tr>
+                <tr>
+                  <th scope='row'> Color:</th>
+                  <td>{this.state.userData.carColor}</td>
+                </tr>
+                <tr>
+                  <th scope='row'>License Plate:</th>
+                  <td>{this.state.userData.licensePlate}</td>
+                </tr>
 
-              <tr>
+                {/* <tr>
                 {this.state.userData.paid ? <td>Paid!</td> : <td>Not paid!</td>}
-              </tr>
-            </tbody>
-          </table>
+              </tr> */}
+              </tbody>
+            </table>
+          </div>
+          <div className='container-fluid secondconforText'>
+            <div className='row '>
+              <h3 className='secondconText'>
+                Thanks for joing Nagle Parking Monthly membership. We sincerely
+                appreciate you, {this.state.userData.firstName}
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
     );
