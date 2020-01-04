@@ -1,6 +1,6 @@
 import React from 'react';
 import Navcss from './nav.css';
-import API from '../utils/API';
+// import API from '../utils/API';
 import { Link } from 'react-router-dom';
 import Logo from '../Logo/logo.js';
 
@@ -47,9 +47,11 @@ function Nav() {
               Sign in
             </Link>
           </li>
-          <li className='nav-item'>
-            <a className='nav-link' onClick={API.signout()}>Log out</a>
-          </li>
+          {/* <li className='nav-item'>
+            <a className='nav-link' onClick={API.signout()}>
+              Log out
+            </a>
+          </li> */}
         </ul>
       </div>
     </nav>
