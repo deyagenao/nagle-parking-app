@@ -8,7 +8,6 @@ import {
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import Signout from './pages/Signout';
 import NoMatch from './pages/NoMatch';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -95,17 +94,6 @@ class App extends React.Component {
               path='/signin'
               render={props => (
                 <Login
-                  {...props}
-                  authenticate={this.authenticate}
-                  authenticated={this.state.authenticated}
-                />
-              )}
-            />
-            <Route
-              exact
-              path='/signout'
-              render={props => (
-                <Signout
                   {...props}
                   authenticate={this.authenticate}
                   authenticated={this.state.authenticated}
