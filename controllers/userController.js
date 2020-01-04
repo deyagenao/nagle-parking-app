@@ -36,10 +36,12 @@ module.exports = {
   },
 
   signout: function(req, res, next) {
-    console.log('User Id', req.user._id);
-    db.User.findByIdAndRemove(req.user._id, function(err){
-      if(err) next(err);
-      res.json({ message: 'User Deleted!'});
+    req.session.destroy(function(err) {
+      if(err) {
+        return next(err);
+      } else {
+        return res.redirect('/');
+      }
     });
   },
 
