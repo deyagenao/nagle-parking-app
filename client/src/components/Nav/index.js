@@ -1,5 +1,6 @@
 import React from 'react';
 import Navcss from './nav.css';
+import API from '../utils/API';
 import { Link } from 'react-router-dom';
 import Logo from '../Logo/logo.js';
 
@@ -45,6 +46,9 @@ function Nav() {
             <Link to='/signin' className='nav-link'>
               Sign in
             </Link>
+          </li>
+          <li className='nav-item'>
+            <a className='nav-link' onClick={API.signout()}>Log out</a>
           </li>
         </ul>
       </div>

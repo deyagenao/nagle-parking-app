@@ -35,6 +35,16 @@ module.exports = {
     }
   },
 
+  signout: function(req, res, next) {
+    req.session.destroy(function(err) {
+      if(err) {
+        return next(err);
+      } else {
+        return res.redirect('/');
+      }
+    });
+  },
+
   login: function(req, res, next) {
     console.log('login');
 
