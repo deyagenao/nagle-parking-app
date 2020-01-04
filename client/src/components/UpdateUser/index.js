@@ -12,6 +12,7 @@ class UpdateUser extends Component {
     firstName: '',
     lastName: '',
     phoneNumber: '',
+    carMake: '',
     displayFirstName: '',
     displayLastName: ''
   };
@@ -24,6 +25,7 @@ class UpdateUser extends Component {
           firstName: res.data.firstName,
           lastName: res.data.lastName,
           phoneNumber: res.data.phoneNumber,
+          carMake: res.data.carMake,
           displayFirstName: res.data.firstName,
           displayLastName: res.data.lastName
         })
@@ -45,7 +47,8 @@ class UpdateUser extends Component {
         email: this.state.email,
         firstName: this.state.firstName,
         lastName: this.state.lastName,
-        phoneNumber: this.state.phoneNumber
+        phoneNumber: this.state.phoneNumber,
+        carMake: this.state.carMake
       })
         .then(res => {
           if (res.status === 200) {
@@ -105,6 +108,12 @@ class UpdateUser extends Component {
                       value={this.state.email}
                       onChange={this.handleInputChange}
                       placeholder='email (required)'
+                    />
+                    <Input
+                      name='carMake'
+                      value={this.state.carMake}
+                      onChange={this.handleInputChange}
+                      placeholder='Car Make'
                     />
 
                     <FormBtn
