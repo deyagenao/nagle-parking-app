@@ -39,7 +39,7 @@ class MyPickUp extends Component {
         .then(res => {
           console.log('redirecting');
           if (res.status === 200) {
-            return <Redirect to='/myaccount' />;
+            return <Redirect to='/mypickup' />;
           }
         })
         .catch(err => console.log(err));
