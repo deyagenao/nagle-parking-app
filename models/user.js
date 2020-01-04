@@ -4,7 +4,7 @@ var bcrypt = require('bcrypt');
 var UserSchema = new mongoose.Schema({
   email: {
     type: String,
-    unique: {index: { unique: true } },
+    unique: { index: { unique: true } },
     required: true,
     trim: true,
     match: [
@@ -56,7 +56,15 @@ var UserSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  priceRate:  Number,
+  pickUpTime: {
+    type: String,
+    trim: true
+  },
+  pickUpDate: {
+    type: String,
+    trim: true
+  },
+  priceRate: Number,
   balance: Number,
   paid: {
     type: Boolean,

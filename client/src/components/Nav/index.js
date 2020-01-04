@@ -6,10 +6,8 @@ import Logo from '../Logo/logo.js';
 function Nav() {
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
-      <Link to='/'>
-        <a className='navbar-brand logo-brand'>
-          <Logo />
-        </a>
+      <Link to='/' className='navbar-brand logo-brand'>
+        <Logo />
       </Link>
       <button
         className='navbar-toggler navbutton'
@@ -29,25 +27,23 @@ function Nav() {
       >
         <ul className='navbar-nav mr-auto'>
           <li className='nav-item active'>
-            <Link to='/'>
-              <a className='nav-link'>
-                Home <span class='sr-only'>(current)</span>
-              </a>
+            <Link to='/' className='nav-link'>
+              Home <span className='sr-only'>(current)</span>
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/contact'>
-              <a className='nav-link'>Contact Us</a>
+            <Link to='/contact' className='nav-link'>
+              Contact Us
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/monthly'>
-              <a className='nav-link'>Monthly</a>
+            <Link to='/monthly' className='nav-link'>
+              Monthly
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/signin'>
-              <a className='nav-link'>Sign in</a>
+            <Link to='/signin' className='nav-link'>
+              Sign in
             </Link>
           </li>
         </ul>
