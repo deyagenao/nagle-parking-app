@@ -46,31 +46,20 @@ class MypickupForm extends Component {
   render() {
     return (
       <Container fluid>
+        {/* <Row>
+          <Col size='12'>
+            <h2 className='signupmemberText'>
+              Please sign up as a Monthly member to enjoy more benefits!
+            </h2>
+          </Col>
+        </Row> */}
         <Row>
           <Col size='12'>
-            <h2>Please sign up as a Monthly member to enjoy more benefits!</h2>
-            {/* <form className='formCol'>
-              <p>Enter pick up time:</p>
-              <Input
-                value={this.state.pickUpDate}
-                onChange={this.handleInputChange}
-                type='date'
-                name='pickUpDate'
-                placeholder='Date (required)'
-              />
-              <Input
-                value={this.state.pickUpTime}
-                onChange={this.handleInputChange}
-                type='time'
-                name='pickUpTime'
-                placeholder='Time (required)'
-              />
-              <FormBtn className='scheduleBtn' onClick={this.handleFormSubmit}>
-                Schedule
-              </FormBtn>
-
-              {/* </label> */}
-            {/* </form>  */}
+            <div className='signupmemberImg'>
+              <h2 className='signupmemberText'>
+                Please sign up as a Monthly member to enjoy more benefits!
+              </h2>
+            </div>
           </Col>
         </Row>
       </Container>

@@ -37,7 +37,7 @@ module.exports = {
 
   signout: function(req, res, next) {
     req.session.destroy(function(err) {
-      if(err) {
+      if (err) {
         return next(err);
       } else {
         return res.redirect('/');

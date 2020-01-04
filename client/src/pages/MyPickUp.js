@@ -30,7 +30,6 @@ class MyPickup extends Component {
       <div>
         <Subnav />
 
-        <h2 className='pickUpText'>Pick Ups</h2>
         {this.state.isMonthly === false ? <Mypickupform /> : <MypickUp />}
       </div>
     );
