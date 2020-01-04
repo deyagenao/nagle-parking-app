@@ -18,26 +18,24 @@ function Subnav() {
 
       <div className='collapse navbar-collapse' id='navbarSupportedContent'>
         <ul className='navbar-nav mr-auto'>
-          <li className='nav-item active'>
-            <Link to='/myaccount'>
-              <a className='nav-link'>
-                My Account <span class='sr-only'>(current)</span>
-              </a>
+          <li className='nav-item active '>
+            <Link className='nav-link ' to='/myaccount'>
+              My Account <span className='sr-only'>(current)</span>
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/mymonthly'>
-              <a className='nav-link'>My Monthly</a>
+          <li className='nav-item '>
+            <Link className='nav-link ' to='/mymonthly'>
+              My Monthly
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/mypickup'>
-              <a className='nav-link'>My Pickup</a>
+          <li className='nav-item '>
+            <Link className='nav-link ' to='/mypickup'>
+              My Pickup
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/payment'>
-              <a className='nav-link'>Pay My Bill</a>
+          <li className='nav-item '>
+            <Link className='nav-link ' to='/payment'>
+              Pay My Bill
             </Link>
           </li>
         </ul>

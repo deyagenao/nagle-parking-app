@@ -99,7 +99,11 @@ module.exports = {
   },
 
   update: function(req, res) {
-    db.User.updateOne({ _id: req.session.userId}, { $set: req.body}, { new: true})
+    db.User.updateOne(
+      { _id: req.session.userId },
+      { $set: req.body },
+      { new: true }
+    )
       .then(dbUser => res.json(dbUser))
       .catch(err => res.status(422).json(err));
   }
