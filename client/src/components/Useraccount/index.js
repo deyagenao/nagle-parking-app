@@ -28,7 +28,9 @@ class Useraccount extends Component {
                   {this.state.userData.firstName}
                   {''} {this.state.userData.lastName}
                   's Account Info
-                  <i className=' col-sm-2 userEditAccFav fas fa-pen'></i>
+                  <Link to='/update-user'>
+                    <i className=' col-sm-2 userEditAccFav fas fa-pen'></i>
+                  </Link>
                 </h4>
               </div>
 
