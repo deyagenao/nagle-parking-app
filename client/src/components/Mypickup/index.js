@@ -4,7 +4,8 @@ import { Redirect } from 'react-router-dom';
 import { Col, Row, Container } from '../Grid';
 import { Input, FormBtn } from '../Form';
 import './mypickup.css';
-
+import { Link } from 'react-router-dom';
+import PickupInfo from '../pickupInfo';
 class MyPickUp extends Component {
   state = {
     userData: {},
@@ -37,10 +38,12 @@ class MyPickUp extends Component {
         isMonthly: true
       })
         .then(res => {
-          console.log('redirecting');
-          if (res.status === 200) {
-            return <Redirect to='/mypickup' />;
-          }
+
+          console.log(res);
+          console.log(this.state.userData);
+          // if (res.status === 200) {
+          //   this.setState({ userData: res.data });
+          // }
         })
         .catch(err => console.log(err));
     }
@@ -49,6 +52,8 @@ class MyPickUp extends Component {
   render() {
     return (
       <div>
+        <h2 className='pickUpText'>Pick Ups</h2>
+
         <Container fluid>
           <Row>
             <Col size='12'>
@@ -81,26 +86,8 @@ class MyPickUp extends Component {
           </Row>
         </Container>
 
-        {/* Render of table with data */}
-        <div className='container'>
-          <div className='row'>
-            <table className='table table-hover'>
-              <tbody>
-                <tr>
-                  <th scope='row'>
-                    Date:
-                    <td>{this.state.userData.pickUpDate}</td>
-                  </th>
-                  {/* {''} */}
-                  <th scope='row'>
-                    Time:
-                    <td>{this.state.userData.pickUpTime}</td>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        {/* Displays Users pick up times */}
+        <PickupInfo />
       </div>
     );
   }
