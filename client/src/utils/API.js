@@ -23,30 +23,30 @@ export default {
   signup: function(user) {
     return axios.post('/api/user/signup', user, xhrHeader);
   },
-  signout: function() {
-    return axios.post('/api/user/signout', xhrHeader);
-  },
+  // signout: function() {
+  //   return axios.post('/api/user/signout', xhrHeader);
+  // },
   authenticateUser: function() {
     return axios.post('/api/user/authenticate/', xhrHeader);
-  }, 
+  },
   updateUser: function(user) {
     return axios.put('/api/user/update', user);
   },
-  // Monthly Routes 
+  // Monthly Routes
   newMonthly: function(monthly) {
     return axios.post('/api/monthly/', monthly);
   },
   getMonthly: function() {
     return axios.get('/api/monthly/info');
   },
-  updateMonthly: function(monthly){
+  updateMonthly: function(monthly) {
     return axios.put('/api/monthly/update', monthly);
   },
-  // Pick Up Routes 
+  // Pick Up Routes
   newPickUp: function(pickUp) {
     return axios.post('/api/pickup/new', pickUp);
   },
-  getPickUp: function(){
+  getPickUp: function() {
     return axios.get('/api/pickup/info');
   },
   updatePickUp: function(pickUp) {
