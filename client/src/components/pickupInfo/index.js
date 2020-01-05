@@ -24,6 +24,23 @@ class PickUpInfo extends Component {
     });
   };
 
+  handleDelete = event => {
+    event.preventDefault();
+    {
+      API.deletePickUp({
+        pickUpTime: this.state.pickUpTime,
+        pickUpDate: this.state.pickUpDate
+      })
+        .then(res => {
+          console.log('deleting pick up');
+          if (res.status === 200) {
+            return <Redirect to='/mypickup' />;
+          }
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.pickUpTime && this.state.pickUpDate) {
@@ -65,6 +82,12 @@ class PickUpInfo extends Component {
                         <th scope='row'>
                           Time:
                           <td>{this.state.userData.pickUpTime}</td>
+                        </th>
+                        <th scope='row'>
+                          Delete Pickup:
+                          <td>
+                            <button onClick={this.handleDelete}>Delete</button>
+                          </td>
                         </th>
                       </tr>
                     </tbody>
