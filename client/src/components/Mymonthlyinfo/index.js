@@ -32,9 +32,9 @@ class MonthlyInfo extends Component {
       <div>
         <div className='container-fluid'>
           <div className='row'>
-            <h2 className='monthlyTitle col-md-6'>
+            <h2 className='monthlyTitle col-md-12'>
               {' '}
-              Welcome glad to have you {this.state.userData.firstName}{' '}
+              Welcome, glad to have you {this.state.userData.firstName}{' '}
               {this.state.userData.lastName}
             </h2>
           </div>

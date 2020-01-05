@@ -13,6 +13,9 @@ class UpdateUser extends Component {
     lastName: '',
     phoneNumber: '',
     carMake: '',
+    carModel: '',
+    carColor: '',
+    licensePlate: '',
     displayFirstName: '',
     displayLastName: ''
   };
@@ -26,6 +29,9 @@ class UpdateUser extends Component {
           lastName: res.data.lastName,
           phoneNumber: res.data.phoneNumber,
           carMake: res.data.carMake,
+          carModel: res.data.carModel,
+          carColor: res.data.carColor,
+          licensePlate: res.data.licensePlate,
           displayFirstName: res.data.firstName,
           displayLastName: res.data.lastName
         })
@@ -48,7 +54,10 @@ class UpdateUser extends Component {
         firstName: this.state.firstName,
         lastName: this.state.lastName,
         phoneNumber: this.state.phoneNumber,
-        carMake: this.state.carMake
+        carMake: this.state.carMake,
+        carModel: this.state.carModel,
+        carColor: this.state.carColor,
+        licensePlate: this.state.licensePlate
       })
         .then(res => {
           if (res.status === 200) {
@@ -113,7 +122,25 @@ class UpdateUser extends Component {
                       name='carMake'
                       value={this.state.carMake}
                       onChange={this.handleInputChange}
-                      placeholder='Car Make'
+                      placeholder='Make'
+                    />
+                    <Input
+                      name='carModel'
+                      value={this.state.carModel}
+                      onChange={this.handleInputChange}
+                      placeholder='Model'
+                    />
+                    <Input
+                      name='carColor'
+                      value={this.state.carColor}
+                      onChange={this.handleInputChange}
+                      placeholder='Color'
+                    />
+                    <Input
+                      name='licensePlate'
+                      value={this.state.licensePlate}
+                      onChange={this.handleInputChange}
+                      placeholder='License Plate'
                     />
 
                     <FormBtn
