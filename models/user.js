@@ -64,10 +64,10 @@ var UserSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
-  // carType: {
-  //   type: String,
-  //   trim: true
-  // },
+  carType: {
+    type: String,
+    trim: true
+  },
   billingCycle: String,
   default: false
 });

@@ -9,7 +9,7 @@ const moment = require('moment');
 class MonthlyForm extends Component {
   state = {
     userData: {},
-    // carType: '',
+    carType: '',
     carMake: '',
     carModel: '',
     carColor: '',
@@ -66,32 +66,19 @@ class MonthlyForm extends Component {
             <h1 className='monthlysignUp'> Sign up to be a monthly member! </h1>
             <form className='monthlysignUp'>
               <p>Please Enter:</p>
-              {/* <select
+              <select
                 className='selectType'
-                name='carType'
                 type='text'
+                name='carType'
+                value={this.state.carType}
                 required=''
+                onChange={this.handleInputChange}
               >
                 <option disabled>Car Type (required)</option>
-                <option
-                  value={this.state.carType}
-                  onChange={this.handleInputChange}
-                >
-                  Sedan $250
-                </option>
-                <option
-                  value={this.state.carType}
-                  onChange={this.handleInputChange}
-                >
-                  Coupé $200
-                </option>
-                <option
-                  value={this.state.carType}
-                  onChange={this.handleInputChange}
-                >
-                  SUV $300
-                </option>
-              </select> */}
+                <option value='Sedan $250'>Sedan $250</option>
+                <option value='Coupé $200'>Coupé $200</option>
+                <option value='SUV $300'>SUV $300</option>
+              </select>
               <Input
                 value={this.state.carMake}
                 onChange={this.handleInputChange}
