@@ -3,7 +3,7 @@ import React from 'react';
 
 import { StripeProvider } from 'react-stripe-elements';
 
-import MyStoreCheckout from '../MyStoreCheckout';
+import MyStoreCheckout from './MyStoreCheckout';
 
 export default function Payment() {
   return (
