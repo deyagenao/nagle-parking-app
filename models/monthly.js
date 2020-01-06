@@ -6,10 +6,10 @@ var monthlySchema = new Schema({
   //     type: Schema.Types.ObjectId,
   //     ref: "User"
   // },
-  //   carType: {
-  //     type: String,
-  //     required: true
-  //   },
+  carType: {
+    type: String,
+    required: true
+  },
   carMake: {
     type: String,
     trim: true

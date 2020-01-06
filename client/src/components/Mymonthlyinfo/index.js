@@ -9,7 +9,7 @@ class MonthlyInfo extends Component {
   state = {
     userData: {},
     isMonthly: false,
-    // carType: '',
+    carType: '',
     carMake: '',
     carModel: '',
     carColor: '',
@@ -42,10 +42,10 @@ class MonthlyInfo extends Component {
           <div className='row'>
             <table className='table table-hover tableCon'>
               <tbody>
-                {/* <tr>
-                <th scope='row'>Car Type:</th>
-                <td>{this.state.userData.carType}</td>
-              </tr> */}
+                <tr>
+                  <th scope='row'>Car Type:</th>
+                  <td>{this.state.userData.carType}</td>
+                </tr>
                 <tr>
                   <th scope='row'> Make:</th>
                   <td>{this.state.userData.carMake}</td>
