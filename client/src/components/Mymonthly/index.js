@@ -4,7 +4,6 @@ import { Redirect } from 'react-router-dom';
 import { Col, Row, Container } from '../Grid';
 import { Input, FormBtn } from '../Form';
 import './mymonthly.css';
-const moment = require('moment');
 
 class MonthlyForm extends Component {
   state = {
@@ -32,7 +31,6 @@ class MonthlyForm extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (
-      // this.state.carType &&
       this.state.carMake &&
       this.state.carModel &&
       this.state.carColor &&
@@ -47,12 +45,24 @@ class MonthlyForm extends Component {
         licensePlate: this.state.licensePlate,
         isMonthly: true
       })
+
         .then(res => {
           console.log(res);
-          console.log(this.state.userData);
-          // if (res.status === 200) {
-          //   return <Redirect to='/mymonthly' />;
-          // }
+
+          this.setState({
+            userData: {
+              carType: this.state.carType,
+              carMake: this.state.carMake,
+              carModel: this.state.carModel,
+              carColor: this.state.carColor,
+              licensePlate: this.state.licensePlate
+            }
+          });
+          if (res.status === 200) {
+            console.log('redirecting');
+
+            return <Redirect to='/mymonthlyinformation' />;
+          }
         })
         .catch(err => console.log(err));
     }
@@ -74,7 +84,6 @@ class MonthlyForm extends Component {
                 required=''
                 onChange={this.handleInputChange}
               >
-                <option disabled>Car Type (required)</option>
                 <option value='Sedan $250'>Sedan $250</option>
                 <option value='Coupé $200'>Coupé $200</option>
                 <option value='SUV $300'>SUV $300</option>
@@ -112,6 +121,11 @@ class MonthlyForm extends Component {
             </form>
           </Col>
         </Row>
+        {this.state.userData.licensePlate ? (
+          <Redirect to='/mymonthlyinformation' />
+        ) : (
+          <div></div>
+        )}
       </Container>
     );
   }
