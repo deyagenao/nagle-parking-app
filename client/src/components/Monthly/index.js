@@ -1,5 +1,5 @@
 import React from 'react';
-import './Monthly.css';
+import './monthly.css';
 
 export default function MonthlyInfo() {
   return (
