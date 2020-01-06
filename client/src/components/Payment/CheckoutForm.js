@@ -2,7 +2,7 @@ import React from 'react';
 import { injectStripe } from 'react-stripe-elements';
 
 // import AddressSection from './AddressSection';
-import CardSection from '../CardSection';
+import CardSection from './CardSection';
 
 class CheckoutForm extends React.Component {
   handleSubmit = ev => {
@@ -41,7 +41,7 @@ class CheckoutForm extends React.Component {
     // You can also use confirmCardSetup with the SetupIntents API.
     // See our confirmCardSetup documentation for more:
     // https://stripe.com/docs/stripe-js/reference#stripe-confirm-card-setup
-    this.props.stripe.confirmCardSetpu('{PAYMENT_INTENT_CLIENT_SECRET}', {
+    this.props.stripe.confirmCardSetup('{PAYMENT_INTENT_CLIENT_SECRET}', {
       payment_method: {
         card: cardElement
       }

@@ -1,3 +1,6 @@
+import React from 'react';
+import { injectStripe } from 'react-stripe-elements';
+
 class PaymentRequestForm extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +12,7 @@ class PaymentRequestForm extends React.Component {
       currency: 'usd',
       total: {
         label: 'Demo total',
-        amount: 1000
+        amount: 2000
       }
     });
 
