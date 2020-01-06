@@ -5,7 +5,7 @@ import { Col, Row, Container } from '../Grid';
 import { Input, FormBtn } from '../Form';
 import './mypickup.css';
 import { Link } from 'react-router-dom';
-import PickupInfo from '../pickupInfo';
+import PickUpInfo from '../pickupInfo';
 class MyPickUp extends Component {
   state = {
     userData: {},
@@ -15,7 +15,11 @@ class MyPickUp extends Component {
 
   componentDidMount() {
     API.getUser()
-      .then(res => this.setState({ userData: res.data }))
+      .then(res =>
+        this.setState({
+          userData: res.data
+        })
+      )
       .catch(err => console.log(err));
   }
 
@@ -33,14 +37,17 @@ class MyPickUp extends Component {
       API.updateUser({
         pickUpTime: this.state.pickUpTime,
         pickUpDate: this.state.pickUpDate,
-
         today: Date.now,
         isMonthly: true
       })
         .then(res => {
-
           console.log(res);
-          console.log(this.state.userData);
+          this.setState({
+            userData: {
+              pickUpTime: this.state.pickUpTime,
+              pickUpDate: this.state.pickUpDate
+            }
+          });
           // if (res.status === 200) {
           //   this.setState({ userData: res.data });
           // }
@@ -87,7 +94,10 @@ class MyPickUp extends Component {
         </Container>
 
         {/* Displays Users pick up times */}
-        <PickupInfo />
+        <PickUpInfo
+          pickUpDate={this.state.userData.pickUpDate}
+          pickUpTime={this.state.userData.pickUpTime}
+        />
       </div>
     );
   }

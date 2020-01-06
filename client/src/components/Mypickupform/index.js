@@ -13,8 +13,6 @@ class MypickupForm extends Component {
     pickUpDate: ''
   };
 
-  componentDidMount() {}
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
