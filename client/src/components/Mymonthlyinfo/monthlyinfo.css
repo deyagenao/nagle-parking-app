@@ -24,18 +24,17 @@
   padding-right: 0;
 }
 
-.secondconforText {
+.secondconforTextImg {
   height: 300px;
   width: 100%;
   margin-top: 100px;
-
   background-image: url('https://www.geek.com/wp-content/uploads/2016/08/parking_lot_02-625x352.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.8;
 }
-.secondconText {
+.secondCText {
   color: white;
   text-align: center;
   font-weight: bold;

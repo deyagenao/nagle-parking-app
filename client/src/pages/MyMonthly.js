@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Subnav from '../components/Subnav';
 import Mymonthly from '../components/Mymonthly';
+import { Redirect } from 'react-router-dom';
 import Mymonthlyinfo from '../components/Mymonthlyinfo';
 import API from '../utils/API';
 
@@ -25,7 +26,11 @@ class MyMonthly extends Component {
     return (
       <div>
         <Subnav />
-        {this.state.isMonthly === false ? <Mymonthly /> : <Mymonthlyinfo />}
+        {this.state.isMonthly === false ? (
+          <Mymonthly />
+        ) : (
+          <Redirect to='MyMonthlyInformation' />
+        )}
       </div>
     );
   }

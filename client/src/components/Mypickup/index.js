@@ -48,9 +48,6 @@ class MyPickUp extends Component {
               pickUpDate: this.state.pickUpDate
             }
           });
-          // if (res.status === 200) {
-          //   this.setState({ userData: res.data });
-          // }
         })
         .catch(err => console.log(err));
     }

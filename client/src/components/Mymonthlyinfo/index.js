@@ -30,16 +30,16 @@ class MonthlyInfo extends Component {
   render() {
     return (
       <div>
-        <div className='container-fluid'>
-          <div className='row'>
+        <Container fluid>
+          <Row>
             <h2 className='monthlyTitle col-md-12'>
               {' '}
               Welcome, glad to have you {this.state.userData.firstName}{' '}
               {this.state.userData.lastName}
             </h2>
-          </div>
+          </Row>
 
-          <div className='row'>
+          <Row>
             <table className='table table-hover tableCon'>
               <tbody>
                 <tr>
@@ -68,16 +68,17 @@ class MonthlyInfo extends Component {
               </tr> */}
               </tbody>
             </table>
-          </div>
-          <div className='container-fluid secondconforText'>
-            <div className='row '>
-              <h3 className='secondconText'>
+          </Row>
+
+          <Row>
+            <div className='secondconforTextImg'>
+              <h3 className='secondCText'>
                 Thanks for joing Nagle Parking Monthly membership. We sincerely
                 appreciate you, {this.state.userData.firstName}
               </h3>
             </div>
-          </div>
-        </div>
+          </Row>
+        </Container>
       </div>
     );
   }
