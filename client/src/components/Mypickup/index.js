@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
-import { Redirect } from 'react-router-dom';
 import { Col, Row, Container } from '../Grid';
 import { Input, FormBtn } from '../Form';
 import './mypickup.css';
-import { Link } from 'react-router-dom';
+import DeleteBtn from '../DeleteBtn';
+
 import PickUpInfo from '../pickupInfo';
 class MyPickUp extends Component {
   state = {
@@ -14,6 +14,7 @@ class MyPickUp extends Component {
   };
 
   componentDidMount() {
+    this.loadPickUps();
     API.getUser()
       .then(res =>
         this.setState({
@@ -22,6 +23,20 @@ class MyPickUp extends Component {
       )
       .catch(err => console.log(err));
   }
+
+  loadPickUps = () => {
+    API.getUser()
+      .then(res =>
+        this.setState({ userData: res.data, pickUpDate: '', pickUpTime: '' })
+      )
+      .catch(err => console.log(err));
+  };
+
+  deletePickUp = PickUpInfo => {
+    API.deletePickUp(PickUpInfo)
+      .then(res => this.loadPickUps())
+      .catch(err => console.log(err));
+  };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -62,7 +77,19 @@ class MyPickUp extends Component {
           <Row>
             <Col size='12'>
               <form className='formCol'>
-                <p>Enter pick up time:</p>
+                <Row>
+                  <p className='timeText col-md-10'>Enter pick up time:</p>
+
+                  <div className='deleteBtnRight col-md-2'>
+                    <DeleteBtn
+                      className='btn delete-btn'
+                      onClick={() =>
+                        this.deletePickUp(this.pickUpDate, this.pickUpTime)
+                      }
+                    />
+                  </div>
+                </Row>
+
                 <Input
                   value={this.state.pickUpDate}
                   onChange={this.handleInputChange}
@@ -77,6 +104,7 @@ class MyPickUp extends Component {
                   name='pickUpTime'
                   placeholder='Time (required)'
                 />
+
                 <FormBtn
                   className='scheduleBtn'
                   onClick={this.handleFormSubmit}
