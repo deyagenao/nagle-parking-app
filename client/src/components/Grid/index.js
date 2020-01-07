@@ -1,6 +1,6 @@
 import React from 'react';
 // CSS for Grid
-import Grid from './grid.css';
+import './grid.css';
 
 // Exporting the Container, Row, and Col components from this file
 

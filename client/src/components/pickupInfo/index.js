@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Row, Container } from '../Grid';
-import { Input, FormBtn } from '../Form';
 
 export default function PickUpInfo({ pickUpDate, pickUpTime }) {
   return (
@@ -23,12 +22,6 @@ export default function PickUpInfo({ pickUpDate, pickUpTime }) {
                         Time:
                         <td>{pickUpTime}</td>
                       </th>
-                      {/* <th scope='row'>
-                  Delete Pickup:
-                  <td>
-                    <button onClick={props.handleDelete}>Delete</button>
-                  </td>
-                </th> */}
                     </tr>
                   </tbody>
                 </table>

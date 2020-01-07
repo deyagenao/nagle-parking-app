@@ -34,10 +34,10 @@ function Footer() {
             </div>
             <div className='row social-control'>
               <Link to='https://www.facebook.com/Nagle-Parking-Inc-792360457528201/'>
-                <img src={facebook} className='facebook' />
+                <img src={facebook} className='facebook' alt='Facebook' />
               </Link>
               <Link to='https://www.instagram.com/nagleparking/'>
-                <img src={instagram} className='instagram' alt='instagram' />
+                <img src={instagram} className='instagram' alt='Instagram' />
               </Link>
             </div>
             <div className='row'></div>

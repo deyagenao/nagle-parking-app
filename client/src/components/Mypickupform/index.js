@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Col, Row, Container } from '../Grid';
 import './mypickupForm.css';
 
-const moment = require('moment');
-
 class MypickupForm extends Component {
   render() {
     return (

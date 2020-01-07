@@ -1,6 +1,5 @@
 import React from 'react';
 import './ContactCSS.css';
-import SocialMedia from '../SocialMedia';
 
 export default function ContactImg() {
   return (

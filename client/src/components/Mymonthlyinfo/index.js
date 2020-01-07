@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
 import './monthlyinfo.css';
-import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
-import { Col, Row, Container } from '../Grid';
+
+import { Row, Container } from '../Grid';
 
 class MonthlyInfo extends Component {
   state = {

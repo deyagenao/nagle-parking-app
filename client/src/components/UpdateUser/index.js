@@ -48,25 +48,24 @@ class UpdateUser extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    {
-      API.updateUser({
-        email: this.state.email,
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        phoneNumber: this.state.phoneNumber,
-        carMake: this.state.carMake,
-        carModel: this.state.carModel,
-        carColor: this.state.carColor,
-        licensePlate: this.state.licensePlate
+
+    API.updateUser({
+      email: this.state.email,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      phoneNumber: this.state.phoneNumber,
+      carMake: this.state.carMake,
+      carModel: this.state.carModel,
+      carColor: this.state.carColor,
+      licensePlate: this.state.licensePlate
+    })
+      .then(res => {
+        if (res.status === 200) {
+          this.props.authenticate();
+          return <Redirect to='/myaccount' />;
+        }
       })
-        .then(res => {
-          if (res.status === 200) {
-            this.props.authenticate();
-            return <Redirect to='/myaccount' />;
-          }
-        })
-        .catch(err => console.log(err));
-    }
+      .catch(err => console.log(err));
   };
 
   render() {
