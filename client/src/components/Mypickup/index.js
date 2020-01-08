@@ -32,8 +32,8 @@ class MyPickUp extends Component {
       .catch(err => console.log(err));
   };
 
-  deletePickUp = PickUpInfo => {
-    API.deletePickUp(PickUpInfo)
+  deletePickUp = PickUp => {
+    API.deletePickUp(PickUp)
       .then(res => this.loadPickUps())
       .catch(err => console.log(err));
   };

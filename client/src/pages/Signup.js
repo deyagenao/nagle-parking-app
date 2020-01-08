@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../components/SignIn-UpStyle/signup.css';
 import API from '../utils/API';
 import { Redirect } from 'react-router-dom';
 import { Col, Row, Container } from '../components/Grid';
@@ -49,56 +49,73 @@ class Signup extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size='12'>
-            <form>
-              <Input
-                value={this.state.email}
-                onChange={this.handleInputChange}
-                name='email'
-                placeholder='email (required)'
-              />
-              <Input
-                value={this.state.password}
-                onChange={this.handleInputChange}
-                name='password'
-                placeholder='password (required)'
-                type='password'
-              />
-              <Input
-                value={this.state.passwordConf}
-                onChange={this.handleInputChange}
-                name='passwordConf'
-                placeholder='password (required)'
-                type='password'
-              />
-              <Input
-                value={this.state.firstName}
-                onChange={this.handleInputChange}
-                name='firstName'
-                placeholder='first name(required)'
-              />
-              <Input
-                value={this.state.lastName}
-                onChange={this.handleInputChange}
-                name='lastName'
-                placeholder='last name(required)'
-              />
-              <Input
-                value={this.state.phoneNumber}
-                onChange={this.handleInputChange}
-                name='phoneNumber'
-                placeholder='xxx-xxx-xxxx'
-              />
-
-              <FormBtn
-                // disabled={!(this.state.email && this.state.password)}
-                onClick={this.handleFormSubmit}
-              >
-                sign up
-              </FormBtn>
-            </form>
-          </Col>
+          <div className='signUpFormCon'>
+            <Container>
+              <Row>
+                <Col size='3'></Col>
+                <Col size='6 centered'>
+                  <form className='signUpformWidth '>
+                    {/* <i className='form-control far fa-envelope'></i> */}
+                    <Input
+                      className='form-control form-control far fa-envelope'
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                      name='email'
+                      placeholder='Email (required)'
+                    />
+                    <Input
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                      name='password'
+                      placeholder='Password (required)'
+                      type='password'
+                    />
+                    <Input
+                      value={this.state.passwordConf}
+                      onChange={this.handleInputChange}
+                      name='passwordConf'
+                      placeholder='Confirm Password (required)'
+                      type='password'
+                    />
+                    <Input
+                      value={this.state.firstName}
+                      onChange={this.handleInputChange}
+                      name='firstName'
+                      placeholder='First Name(required)'
+                    />
+                    <Input
+                      value={this.state.lastName}
+                      onChange={this.handleInputChange}
+                      name='lastName'
+                      placeholder='Last Name(required)'
+                    />
+                    <Input
+                      value={this.state.phoneNumber}
+                      onChange={this.handleInputChange}
+                      name='phoneNumber'
+                      placeholder='xxx-xxx-xxxx'
+                    />
+                    <Row>
+                      <FormBtn
+                        className='btn btn-warning signUpButton'
+                        onClick={this.handleFormSubmit}
+                      >
+                        Sign Up
+                      </FormBtn>
+                    </Row>
+                    <p className='signInTextinForm'>
+                      <a target='' href='/signin'>
+                        Already have an account? Sign In
+                      </a>
+                    </p>
+                  </form>
+                </Col>
+                <Col size='3'></Col>
+              </Row>
+            </Container>
+          </div>
         </Row>
+
         {/* redirect on authenticated */}
         {this.props.authenticated ? <Redirect to='/myaccount' /> : <div></div>}
       </Container>
