@@ -47,126 +47,149 @@ class Signup extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <div className='signUpFormCon'>
-            {/* FORM */}
-            <form className='signUpformWidth '>
-              {/* EMAIL */}
-              <Row>
-                <Col size='2'>
-                  <i className='fas fa-envelope faviconPosition'></i>
-                </Col>
-                <Col size='10'>
-                  <Input
-                    value={this.state.email}
-                    onChange={this.handleInputChange}
-                    name='email'
-                    placeholder='Email (required)'
-                  />
-                </Col>
-              </Row>
+      <div className='signUpFormCon'>
+        <Container fluid>
+          <Row>
+            <form className='input-controlSignUp'>
+              <div className='formWidth'>
+                <p className='signUpTextTop'>Sign Up</p>
+                {/* FIRST NAME */}
+                <div className='form-group'>
+                  <div className='cols-sm-10'>
+                    <div className='input-group'>
+                      {/* <span className='input-group-addon'> */}
+                      <i className='fa fa-user fa-lg faviconPositionSignUp2'>
+                        {'   '}
+                        Your First Name
+                      </i>
+                      {/* </span> */}
+                      <Input
+                        className='form-control'
+                        value={this.state.firstName}
+                        onChange={this.handleInputChange}
+                        name='firstName'
+                        placeholder='First Name(required)'
+                      />
+                    </div>
+                  </div>
+                </div>
+                {/* LastName */}
+                <div className='form-group'>
+                  <div className='cols-sm-10'>
+                    <div className='input-group'>
+                      <i className='fa fa-user fa-lg faviconPositionSignUp2'>
+                        {'   '}
+                        Your Last Name
+                      </i>
+                      <Input
+                        className='form-control'
+                        value={this.state.lastName}
+                        onChange={this.handleInputChange}
+                        name='lastName'
+                        placeholder='Last Name(required)'
+                      />
+                    </div>
+                  </div>
+                </div>
 
-              {/* PASSWORD */}
-              <Row>
-                <Col size='2'>
-                  <i className='fas fa-key faviconPosition'></i>
-                </Col>
-                <Col size='10'>
-                  <Input
-                    value={this.state.password}
-                    onChange={this.handleInputChange}
-                    name='password'
-                    placeholder='Password (required)'
-                    type='password'
-                  />
-                </Col>
-              </Row>
+                <div className='form-group'>
+                  <div className='cols-sm-10'>
+                    <div className='input-group'>
+                      <i className='fas fa-mobile fa-lg faviconPositionSignUp2'>
+                        {'   '}
+                        Phone Number
+                      </i>
+                      <Input
+                        className='form-control'
+                        value={this.state.phoneNumber}
+                        onChange={this.handleInputChange}
+                        name='phoneNumber'
+                        placeholder='xxx-xxx-xxxx'
+                      />
+                    </div>
+                  </div>
+                </div>
 
-              {/* PASSWORD CONFIRMATION */}
-              <Row>
-                {' '}
-                <Col size='2'>
-                  <i className='fas fa-key faviconPosition '></i>
-                </Col>
-                <Col size='10'>
-                  <Input
-                    value={this.state.passwordConf}
-                    onChange={this.handleInputChange}
-                    name='passwordConf'
-                    placeholder='Confirm Password (required)'
-                    type='password'
-                  />
-                </Col>
-              </Row>
+                <div className='form-group'>
+                  <div className='cols-sm-10'>
+                    <div className='input-group'>
+                      <i className='fa fa-envelope fa-lg faviconPositionSignUp2'>
+                        {'   '}
+                        Your Email
+                      </i>
+                      <Input
+                        className='form-control'
+                        value={this.state.email}
+                        onChange={this.handleInputChange}
+                        name='email'
+                        type='email'
+                        placeholder='Email (required)'
+                      />
+                    </div>
+                  </div>
+                </div>
 
-              {/* FIRST NAME */}
-              <Row>
-                {' '}
-                <Col size='2'>
-                  <i className='fas fa-user faviconPosition '></i>
-                </Col>
-                <Col size='10'>
-                  <Input
-                    value={this.state.firstName}
-                    onChange={this.handleInputChange}
-                    name='firstName'
-                    placeholder='First Name(required)'
-                  />
-                </Col>
-              </Row>
-
-              {/* LAST NAME */}
-              <Row>
-                {' '}
-                <Col size='2'>
-                  <i className='fas fa-user faviconPosition '></i>
-                </Col>
-                <Col size='10'>
-                  <Input
-                    value={this.state.lastName}
-                    onChange={this.handleInputChange}
-                    name='lastName'
-                    placeholder='Last Name(required)'
-                  />
-                </Col>
-              </Row>
-
-              {/* PHONE NUMBER */}
-              <Row>
-                {' '}
-                <Col size='2'>
-                  <i className='fas fa-mobile faviconPosition '></i>
-                </Col>
-                <Col size='10'>
-                  <Input
-                    value={this.state.phoneNumber}
-                    onChange={this.handleInputChange}
-                    name='phoneNumber'
-                    placeholder='xxx-xxx-xxxx'
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <FormBtn
-                  className='btn btn-warning signUpButton'
-                  onClick={this.handleFormSubmit}
-                >
-                  Sign Up
-                </FormBtn>
-              </Row>
-              <p className='signInTextinForm'>
-                <a target='' href='/signin'>
-                  Already have an account? Sign In
-                </a>
-              </p>
+                <div className='form-group'>
+                  <div className='cols-sm-10'>
+                    <div className='input-group'>
+                      <i className='fa fa-unlock fa-lg faviconPositionSignUp2'>
+                        {'   '}
+                        Password
+                      </i>
+                      <Input
+                        className='form-control'
+                        value={this.state.password}
+                        onChange={this.handleInputChange}
+                        name='password'
+                        placeholder='Password (required)'
+                        type='password'
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className='form-group'>
+                  <div className='cols-sm-10'>
+                    <div className='input-group'>
+                      <i className='fa fa-lock fa-lg faviconPositionSignUp2'>
+                        {'   '}
+                        Confirm Password
+                      </i>
+                      <Input
+                        className='form-control'
+                        value={this.state.passwordConf}
+                        onChange={this.handleInputChange}
+                        name='passwordConf'
+                        placeholder='Confirm Password (required)'
+                        type='password'
+                      />
+                    </div>
+                  </div>
+                </div>
+                <Row>
+                  <FormBtn
+                    className='signInButton btn btn-warning'
+                    onClick={this.handleFormSubmit}
+                  >
+                    Sign Up
+                  </FormBtn>
+                </Row>
+                <p className='signUpTextinForm'>
+                  <a target='' href='/signin'>
+                    Don't have an account? Sign In
+                  </a>
+                </p>
+              </div>
             </form>
-          </div>
-        </Row>
+          </Row>
 
-        {/* redirect on authenticated */}
-        {this.props.authenticated ? <Redirect to='/myaccount' /> : <div></div>}
-      </Container>
+          {/* redirect on authenticated */}
+          {this.props.authenticated ? (
+            <Redirect to='/myaccount' />
+          ) : (
+            <div></div>
+          )}
+        </Container>
+      </div>
     );
   }
 }

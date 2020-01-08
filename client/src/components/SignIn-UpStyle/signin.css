@@ -71,11 +71,14 @@ form:before {
 .faviconPositionSignin {
   padding-top: 30px;
   font-size: 20px;
+  margin-right: 50%;
+
   /* color: rgb(112, 178, 216); */
 }
 .faviconPositionSignin2 {
-  padding-top: 10px;
   font-size: 20px;
+  margin: 0 auto;
+  margin-right: 50%;
   /* color: rgb(112, 178, 216); */
 }
 @media only screen and (max-width: 1680px) {
