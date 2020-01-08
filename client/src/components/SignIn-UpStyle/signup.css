@@ -1,12 +1,12 @@
-.signInFormCon {
-  background-image: url('http://www.superiorlight.com/wp-content/uploads/2019/05/dark-parking-lot-having-low-uniformity-lighting.jpg');
+.signUpFormCon {
+  background-image: url('https://images.pexels.com/photos/2996/parking-parking-lot-underground-garage.jpg?cs=srgb&dl=parken-parkplatz-tiefgarage-2996.jpg&fm=jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 1000px;
 }
-.formWidth {
+.signUpformWidth {
   margin-top: 20%;
   border: 1px solid rgb(78, 78, 78);
   height: auto;
@@ -21,11 +21,11 @@
   margin: 30px auto;
 }
 
-.signUpTextinForm {
+.signInTextinForm {
   margin-top: 100px;
   text-align: center;
 }
-.signInButton {
+.signUpButton {
   width: 30%;
   margin: 10px auto;
 }

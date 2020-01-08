@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../components/SignUpStyle/signup.css';
+import '../components/SignIn-UpStyle/signin.css';
 
 import API from '../utils/API';
 import { Redirect, Link } from 'react-router-dom';
