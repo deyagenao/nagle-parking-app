@@ -1,12 +1,13 @@
 import React from 'react';
 import Subnav from '../components/Subnav';
-import Useraccount from '../components/Useraccount';
 
-export default function MyAccount() {
+import UpdateUser from '../components/UpdateUser';
+
+export default function Update() {
   return (
     <div>
       <Subnav />
-      <Useraccount />
+      <UpdateUser />
     </div>
   );
 }

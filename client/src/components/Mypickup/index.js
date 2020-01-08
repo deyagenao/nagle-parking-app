@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
-import { Redirect } from 'react-router-dom';
 import { Col, Row, Container } from '../Grid';
 import { Input, FormBtn } from '../Form';
 import './mypickup.css';
+import DeleteBtn from '../DeleteBtn';
 
+import PickUpInfo from '../pickupInfo';
 class MyPickUp extends Component {
   state = {
     userData: {},
@@ -13,10 +14,29 @@ class MyPickUp extends Component {
   };
 
   componentDidMount() {
+    this.loadPickUps();
     API.getUser()
-      .then(res => this.setState({ userData: res.data }))
+      .then(res =>
+        this.setState({
+          userData: res.data
+        })
+      )
       .catch(err => console.log(err));
   }
+
+  loadPickUps = () => {
+    API.getUser()
+      .then(res =>
+        this.setState({ userData: res.data, pickUpDate: '', pickUpTime: '' })
+      )
+      .catch(err => console.log(err));
+  };
+
+  deletePickUp = PickUpInfo => {
+    API.deletePickUp(PickUpInfo)
+      .then(res => this.loadPickUps())
+      .catch(err => console.log(err));
+  };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -32,15 +52,17 @@ class MyPickUp extends Component {
       API.updateUser({
         pickUpTime: this.state.pickUpTime,
         pickUpDate: this.state.pickUpDate,
-
         today: Date.now,
         isMonthly: true
       })
         .then(res => {
-          console.log('redirecting');
-          if (res.status === 200) {
-            return <Redirect to='/myaccount' />;
-          }
+          console.log(res);
+          this.setState({
+            userData: {
+              pickUpTime: this.state.pickUpTime,
+              pickUpDate: this.state.pickUpDate
+            }
+          });
         })
         .catch(err => console.log(err));
     }
@@ -49,11 +71,25 @@ class MyPickUp extends Component {
   render() {
     return (
       <div>
+        <h2 className='pickUpText'>Pick Ups</h2>
+
         <Container fluid>
           <Row>
             <Col size='12'>
               <form className='formCol'>
-                <p>Enter pick up time:</p>
+                <Row>
+                  <p className='timeText col-md-10'>Enter pick up time:</p>
+
+                  <div className='deleteBtnRight col-md-2'>
+                    <DeleteBtn
+                      className='btn delete-btn'
+                      onClick={() =>
+                        this.deletePickUp(this.pickUpDate, this.pickUpTime)
+                      }
+                    />
+                  </div>
+                </Row>
+
                 <Input
                   value={this.state.pickUpDate}
                   onChange={this.handleInputChange}
@@ -68,6 +104,7 @@ class MyPickUp extends Component {
                   name='pickUpTime'
                   placeholder='Time (required)'
                 />
+
                 <FormBtn
                   className='scheduleBtn'
                   onClick={this.handleFormSubmit}
@@ -81,26 +118,11 @@ class MyPickUp extends Component {
           </Row>
         </Container>
 
-        {/* Render of table with data */}
-        <div className='container'>
-          <div className='row'>
-            <table className='table table-hover'>
-              <tbody>
-                <tr>
-                  <th scope='row'>
-                    Date:
-                    <td>{this.state.userData.pickUpDate}</td>
-                  </th>
-                  {/* {''} */}
-                  <th scope='row'>
-                    Time:
-                    <td>{this.state.userData.pickUpTime}</td>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        {/* Displays Users pick up times */}
+        <PickUpInfo
+          pickUpDate={this.state.userData.pickUpDate}
+          pickUpTime={this.state.userData.pickUpTime}
+        />
       </div>
     );
   }

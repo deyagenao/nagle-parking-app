@@ -28,7 +28,9 @@ class Useraccount extends Component {
                   {this.state.userData.firstName}
                   {''} {this.state.userData.lastName}
                   's Account Info
-                  <i className=' col-sm-2 userEditAccFav fas fa-pen'></i>
+                  <Link to='/update-user'>
+                    <i className=' col-sm-2 userEditAccFav fas fa-pen'></i>
+                  </Link>
                 </h4>
               </div>
 
@@ -64,22 +66,22 @@ class Useraccount extends Component {
                       </tr>
                       <tr>
                         <th scope='row'>Make:</th>
-                        <td>Ford</td>
+                        <td>{this.state.userData.carMake}</td>
                         <td></td>
                       </tr>
                       <tr>
                         <th scope='row'>Model:</th>
-                        <td>Mustang</td>
+                        <td>{this.state.userData.carModel}</td>
                         <td></td>
                       </tr>
                       <tr>
                         <th scope='row'>Color:</th>
-                        <td>Black</td>
+                        <td>{this.state.userData.carColor}</td>
                         <td></td>
                       </tr>
                       <tr>
                         <th scope='row'>License Plate:</th>
-                        <td>T123R1</td>
+                        <td>{this.state.userData.licensePlate}</td>
                         <td></td>
                       </tr>
                       <tr>

@@ -19,6 +19,9 @@ import Contact from './pages/Contact';
 import MyMonthly from './pages/MyMonthly';
 import AboutUs from './pages/AboutUs';
 import AdminView from './pages/AdminView';
+import Update from './pages/Update';
+import MyMonthlyInformation from './pages/MyMonthlyInformation';
+
 
 import { /* getCookie, */ authenticateUser } from './utils/handleSessions';
 
@@ -141,6 +144,12 @@ class App extends React.Component {
             {/* MY-ACCOUNT ROUTE */}
             <this.PrivateRoute exact path='/myaccount' component={MyAccount} />
 
+            <this.PrivateRoute
+              exact
+              path='/mymonthlyinformation'
+              component={MyMonthlyInformation}
+            />
+
             {/* PAYMENT ROUTE */}
             <this.PrivateRoute exact path='/payment' component={Payment} />
 
@@ -149,6 +158,9 @@ class App extends React.Component {
 
             {/* MY MONTHLY ROUTE */}
             <this.PrivateRoute exact path='/mymonthly' component={MyMonthly} />
+
+            {/* MY MONTHLY ROUTE */}
+            <this.PrivateRoute exact path='/update-user' component={Update} />
 
             {/* ADMIN VIEW ROUTE*/}
             <Route exact path='/admin' component={AdminView} />

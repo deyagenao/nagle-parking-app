@@ -1,6 +1,5 @@
 import React from 'react';
-import Navcss from './nav.css';
-// import API from '../utils/API';
+import './nav.css';
 import { Link } from 'react-router-dom';
 import Logo from '../Logo/logo.js';
 

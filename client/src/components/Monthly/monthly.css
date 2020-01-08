@@ -1,0 +1,11 @@
+.monthlyBg {
+  background-image: url(./img/1.jpeg);
+  background-size: cover;
+  height: 369px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info-control {
+  padding-top: 55px;
+}

@@ -48,7 +48,7 @@ var UserSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
-  licencsePlate: {
+  licensePlate: {
     type: String,
     trim: true
   },
@@ -68,13 +68,12 @@ var UserSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
-  priceRate: Number,
-  balance: Number,
-  paid: {
-    type: Boolean,
-    default: false
+  carType: {
+    type: String,
+    trim: true
   },
-  billingCycle: String
+  billingCycle: String,
+  default: false
 });
 
 //hashing a password before saving it to the database

@@ -1,0 +1,17 @@
+.monthlysignUp {
+  text-align: center;
+  margin-top: 20px;
+}
+.selectType {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 35px;
+}
+.monthlyBottomImg {
+  background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}

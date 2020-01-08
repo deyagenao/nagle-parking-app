@@ -1,6 +1,5 @@
 import React from 'react';
 import './AboutUsCSS.css';
-import SocialMedia from '../SocialMedia';
 
 export default function AboutUs() {
   return (
