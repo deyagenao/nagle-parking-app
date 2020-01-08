@@ -50,69 +50,117 @@ class Signup extends Component {
       <Container fluid>
         <Row>
           <div className='signUpFormCon'>
-            <Container>
+            {/* FORM */}
+            <form className='signUpformWidth '>
+              {/* EMAIL */}
               <Row>
-                <Col size='3'></Col>
-                <Col size='6 centered'>
-                  <form className='signUpformWidth '>
-                    {/* <i className='form-control far fa-envelope'></i> */}
-                    <Input
-                      className='form-control form-control far fa-envelope'
-                      value={this.state.email}
-                      onChange={this.handleInputChange}
-                      name='email'
-                      placeholder='Email (required)'
-                    />
-                    <Input
-                      value={this.state.password}
-                      onChange={this.handleInputChange}
-                      name='password'
-                      placeholder='Password (required)'
-                      type='password'
-                    />
-                    <Input
-                      value={this.state.passwordConf}
-                      onChange={this.handleInputChange}
-                      name='passwordConf'
-                      placeholder='Confirm Password (required)'
-                      type='password'
-                    />
-                    <Input
-                      value={this.state.firstName}
-                      onChange={this.handleInputChange}
-                      name='firstName'
-                      placeholder='First Name(required)'
-                    />
-                    <Input
-                      value={this.state.lastName}
-                      onChange={this.handleInputChange}
-                      name='lastName'
-                      placeholder='Last Name(required)'
-                    />
-                    <Input
-                      value={this.state.phoneNumber}
-                      onChange={this.handleInputChange}
-                      name='phoneNumber'
-                      placeholder='xxx-xxx-xxxx'
-                    />
-                    <Row>
-                      <FormBtn
-                        className='btn btn-warning signUpButton'
-                        onClick={this.handleFormSubmit}
-                      >
-                        Sign Up
-                      </FormBtn>
-                    </Row>
-                    <p className='signInTextinForm'>
-                      <a target='' href='/signin'>
-                        Already have an account? Sign In
-                      </a>
-                    </p>
-                  </form>
+                <Col size='2'>
+                  <i className='fas fa-envelope faviconPosition'></i>
                 </Col>
-                <Col size='3'></Col>
+                <Col size='10'>
+                  <Input
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                    name='email'
+                    placeholder='Email (required)'
+                  />
+                </Col>
               </Row>
-            </Container>
+
+              {/* PASSWORD */}
+              <Row>
+                <Col size='2'>
+                  <i className='fas fa-key faviconPosition'></i>
+                </Col>
+                <Col size='10'>
+                  <Input
+                    value={this.state.password}
+                    onChange={this.handleInputChange}
+                    name='password'
+                    placeholder='Password (required)'
+                    type='password'
+                  />
+                </Col>
+              </Row>
+
+              {/* PASSWORD CONFIRMATION */}
+              <Row>
+                {' '}
+                <Col size='2'>
+                  <i className='fas fa-key faviconPosition '></i>
+                </Col>
+                <Col size='10'>
+                  <Input
+                    value={this.state.passwordConf}
+                    onChange={this.handleInputChange}
+                    name='passwordConf'
+                    placeholder='Confirm Password (required)'
+                    type='password'
+                  />
+                </Col>
+              </Row>
+
+              {/* FIRST NAME */}
+              <Row>
+                {' '}
+                <Col size='2'>
+                  <i className='fas fa-user faviconPosition '></i>
+                </Col>
+                <Col size='10'>
+                  <Input
+                    value={this.state.firstName}
+                    onChange={this.handleInputChange}
+                    name='firstName'
+                    placeholder='First Name(required)'
+                  />
+                </Col>
+              </Row>
+
+              {/* LAST NAME */}
+              <Row>
+                {' '}
+                <Col size='2'>
+                  <i className='fas fa-user faviconPosition '></i>
+                </Col>
+                <Col size='10'>
+                  <Input
+                    value={this.state.lastName}
+                    onChange={this.handleInputChange}
+                    name='lastName'
+                    placeholder='Last Name(required)'
+                  />
+                </Col>
+              </Row>
+
+              {/* PHONE NUMBER */}
+              <Row>
+                {' '}
+                <Col size='2'>
+                  <i className='fas fa-mobile faviconPosition '></i>
+                </Col>
+                <Col size='10'>
+                  <Input
+                    value={this.state.phoneNumber}
+                    onChange={this.handleInputChange}
+                    name='phoneNumber'
+                    placeholder='xxx-xxx-xxxx'
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <FormBtn
+                  className='btn btn-warning signUpButton'
+                  onClick={this.handleFormSubmit}
+                >
+                  Sign Up
+                </FormBtn>
+              </Row>
+              <p className='signInTextinForm'>
+                <a target='' href='/signin'>
+                  Already have an account? Sign In
+                </a>
+              </p>
+            </form>
           </div>
         </Row>
 

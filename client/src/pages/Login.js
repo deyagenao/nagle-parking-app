@@ -44,43 +44,52 @@ class Login extends Component {
       <Container fluid>
         <Row>
           <div className='signInFormCon'>
-            <Container>
+            <form className='formWidth'>
+              {/* EMAIL */}
               <Row>
-                <Col size='3'></Col>
-                <Col size='6 centered'>
-                  <form className='formWidth '>
-                    <Input
-                      className='form-control'
-                      value={this.state.email}
-                      onChange={this.handleInputChange}
-                      name='email'
-                      placeholder='Email (required)'
-                    />
-                    <Input
-                      value={this.state.password}
-                      onChange={this.handleInputChange}
-                      name='password'
-                      placeholder='Password (required)'
-                      type='password'
-                    />
-                    <Row>
-                      <FormBtn
-                        className='signInButton btn btn-warning'
-                        onClick={this.handleFormSubmit}
-                      >
-                        Sign In
-                      </FormBtn>
-                    </Row>
-                    <p className='signUpTextinForm'>
-                      <a target='' href='/signup'>
-                        Don't have an account? Sign Up
-                      </a>
-                    </p>
-                  </form>
+                <Col size='2'>
+                  <i className='fas fa-envelope faviconPositionSignin'></i>
                 </Col>
-                <Col size='3'></Col>
+                <Col size='10'>
+                  <Input
+                    className='form-control'
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                    name='email'
+                    placeholder='Email (required)'
+                  />
+                </Col>
               </Row>
-            </Container>
+              {/* PASSWORD */}
+              <Row>
+                {' '}
+                <Col size='2'>
+                  <i className='fas fa-key faviconPositionSignin'></i>
+                </Col>
+                <Col size='10'>
+                  <Input
+                    value={this.state.password}
+                    onChange={this.handleInputChange}
+                    name='password'
+                    placeholder='Password (required)'
+                    type='password'
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <FormBtn
+                  className='signInButton btn btn-warning'
+                  onClick={this.handleFormSubmit}
+                >
+                  Sign In
+                </FormBtn>
+              </Row>
+              <p className='signUpTextinForm'>
+                <a target='' href='/signup'>
+                  Don't have an account? Sign Up
+                </a>
+              </p>
+            </form>
           </div>
         </Row>
 
