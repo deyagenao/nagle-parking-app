@@ -5,8 +5,7 @@
 .userNameOnAccount {
   font-size: 39px;
   text-align: right;
-  /* margin-left: 10%; */
-  /* padding-left: 5%; */
+
   padding-top: 3%;
   margin-bottom: 5%;
 }
@@ -29,8 +28,6 @@
 
 .userEditAccFav {
   font-size: 20px;
-  /* margin-left: 21%; */
-  /* text-align: right;  */
 }
 
 .contactBtn {
@@ -65,7 +62,3 @@
   margin-top: 125px;
   margin-bottom: 250px;
 }
-
-/* .table-hover:focus:hover {
-  background-color: blue;
-} */
