@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import API from '../../utils/API';
 import './userAccount.css';
 import { Link } from 'react-router-dom';
+import ReviewLink from '../ReviewLink';
 
 class Useraccount extends Component {
   state = {
@@ -91,26 +92,9 @@ class Useraccount extends Component {
                       </tr>
                     </tbody>
                   </table>
-                  {/* <div className='row'>
-                  <p className='accountInfo'>
-                    {this.state.userData.firstName}'s Account Info
-                  </p>
-                </div>
-                <div className='row'>
-                  <p className='accountInfo'>
-                    {this.state.userData.firstName}'s Account Info
-                  </p>
-                </div>
-                <div className='row'>
-                  <p className='accountInfo'>
-                    {this.state.userData.firstName}'s Account Info
-                  </p>
-                </div>
-                <div className='row'>
-                  <p className='accountInfo'>
-                    {this.state.userData.firstName}'s Account Info
-                  </p>
-                </div> */}
+
+                  {/* reviews */}
+                  <ReviewLink />
                 </div>
               </div>
             </div>
