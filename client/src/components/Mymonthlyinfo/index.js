@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
 import './monthlyinfo.css';
+import ReviewLink from '../ReviewLink';
 
 import { Row, Container } from '../Grid';
 
@@ -68,6 +69,10 @@ class MonthlyInfo extends Component {
               </tbody>
             </table>
           </Row>
+          <div className='col-md-12'>
+            {/* reviews */}
+            <ReviewLink />
+          </div>
 
           <Row>
             <div className='secondconforTextImg'>
