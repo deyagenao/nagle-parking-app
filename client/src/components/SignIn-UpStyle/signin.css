@@ -14,21 +14,26 @@
   width: 100%;
   padding: 20px;
   border-radius: 30px;
+
+  border: 1px solid #0a192a;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .input-control {
   margin: 13em auto 0;
   width: 22%;
 }
-form {
+/* form {
   background-color: grey;
   border-radius: 30px;
   border: 1px solid #0a192a;
   overflow: hidden;
   position: relative;
   box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
-}
-form:after {
+} */
+.formWidth:after {
   content: '';
   display: block;
   position: absolute;
@@ -38,7 +43,7 @@ form:after {
   top: 0;
 }
 
-form:before {
+.formWidth:before {
   content: '';
   display: block;
   position: absolute;
@@ -67,11 +72,12 @@ form:before {
 .signInButton {
   width: 189px;
   margin: 30px auto;
+  font-weight: bold;
 }
 .faviconPositionSignin {
   padding-top: 30px;
   font-size: 20px;
-  margin-right: 50%;
+  margin-right: 60%;
 
   /* color: rgb(112, 178, 216); */
 }

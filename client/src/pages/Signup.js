@@ -54,7 +54,7 @@ class Signup extends Component {
               <div className='formWidth'>
                 <p className='signUpTextTop'>Sign Up</p>
                 {/* FIRST NAME */}
-                <div className='form-group'>
+                <div className='form'>
                   <div className='cols-sm-10'>
                     <div className='input-group'>
                       {/* <span className='input-group-addon'> */}
@@ -74,7 +74,7 @@ class Signup extends Component {
                   </div>
                 </div>
                 {/* LastName */}
-                <div className='form-group'>
+                <div className='form '>
                   <div className='cols-sm-10'>
                     <div className='input-group'>
                       <i className='fa fa-user fa-lg faviconPositionSignUp2'>
@@ -92,7 +92,7 @@ class Signup extends Component {
                   </div>
                 </div>
 
-                <div className='form-group'>
+                <div className='form '>
                   <div className='cols-sm-10'>
                     <div className='input-group'>
                       <i className='fas fa-mobile fa-lg faviconPositionSignUp2'>
@@ -110,7 +110,7 @@ class Signup extends Component {
                   </div>
                 </div>
 
-                <div className='form-group'>
+                <div className='form'>
                   <div className='cols-sm-10'>
                     <div className='input-group'>
                       <i className='fa fa-envelope fa-lg faviconPositionSignUp2'>
@@ -129,7 +129,7 @@ class Signup extends Component {
                   </div>
                 </div>
 
-                <div className='form-group'>
+                <div className='form'>
                   <div className='cols-sm-10'>
                     <div className='input-group'>
                       <i className='fa fa-unlock fa-lg faviconPositionSignUp2'>
@@ -147,7 +147,7 @@ class Signup extends Component {
                     </div>
                   </div>
                 </div>
-                <div className='form-group'>
+                <div className='form'>
                   <div className='cols-sm-10'>
                     <div className='input-group'>
                       <i className='fa fa-lock fa-lg faviconPositionSignUp2'>
