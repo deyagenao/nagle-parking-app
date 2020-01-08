@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../components/SignUpStyle/signup.css';
 
 import API from '../utils/API';
 import { Redirect, Link } from 'react-router-dom';
@@ -42,36 +43,45 @@ class Login extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size='12'>
-            <form>
-              <Input
-                value={this.state.email}
-                onChange={this.handleInputChange}
-                name='email'
-                placeholder='email (required)'
-              />
-              <Input
-                value={this.state.password}
-                onChange={this.handleInputChange}
-                name='password'
-                placeholder='(required)'
-                type='password'
-              />
-              <FormBtn
-                // disabled={!(this.state.email && this.state.password)}
-                onClick={this.handleFormSubmit}
-              >
-                <Link to='/signup'> Sign up </Link>
-              </FormBtn>
-
-              <FormBtn
-                // disabled={!(this.state.email && this.state.password)}
-                onClick={this.handleFormSubmit}
-              >
-                sign in
-              </FormBtn>
-            </form>
-          </Col>
+          <div className='signInFormCon'>
+            <Container>
+              <Row>
+                <Col size='3'></Col>
+                <Col size='6 centered'>
+                  <form className='formWidth '>
+                    <Input
+                      className='form-control'
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                      name='email'
+                      placeholder='Email (required)'
+                    />
+                    <Input
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                      name='password'
+                      placeholder='Password (required)'
+                      type='password'
+                    />
+                    <Row>
+                      <FormBtn
+                        className='signInButton btn btn-warning'
+                        onClick={this.handleFormSubmit}
+                      >
+                        Sign In
+                      </FormBtn>
+                    </Row>
+                    <p className='signUpTextinForm'>
+                      <a target='' href='/signup'>
+                        Don't have an account? Sign Up
+                      </a>
+                    </p>
+                  </form>
+                </Col>
+                <Col size='3'></Col>
+              </Row>
+            </Container>
+          </div>
         </Row>
 
         {/* Redirect on authentication */}
