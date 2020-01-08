@@ -72,6 +72,10 @@ var UserSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
+  reviews: {
+    type: String,
+    trim: true
+  },
   billingCycle: String,
   default: false
 });
