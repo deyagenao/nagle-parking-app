@@ -108,6 +108,27 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
+  findAllUsers: function(req, res) {
+    db.User.find()
+      .sort({lastName: 1})
+      .then(dbUsers => res.json(dbUsers))
+      .catch(err => res.status(422).json(err));
+  },
+
+  findMonthlyUsers: function(req, res) {
+    db.User.find({isMonthly: true})
+      .sort({ lastName: 1 })
+      .then(dbMonthly => res.json(dbMonthly))
+      .catch(err => res.status(422).json(err));
+  }, 
+
+  findPickUps: function (req, res) {
+    db.User.find({pickUpActive: true})
+      .sort({ pickUpDate: 1, pickUpTime: 1})
+      .then(dbPickUp => res.json(dbPickUp))
+      .catch( err => res.status(422).json(err));
+  },
+
   update: function(req, res) {
     db.User.updateOne(
       { _id: req.session.userId },

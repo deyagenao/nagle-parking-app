@@ -29,7 +29,7 @@ class MypickupForm extends Component {
       API.updateUser({
         pickUpTime: this.state.pickUpTime,
         pickUpDate: this.state.pickUpDate,
-
+        pickUpActive: true,
         today: Date.now,
         isMonthly: true
       })

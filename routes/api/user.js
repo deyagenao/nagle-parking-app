@@ -19,5 +19,15 @@ router.route('/').post(userController.login);
 // Matches with '/api/user/update'
 router.route('/update').put(userController.update);
 
+// Matches with '/api/user/findAllUsers'
+router.route('/findAllUsers').get(userController.findAllUsers);
+
+// Matches with '/api/user/findMonthlyUsers'
+router.route('/findMonthlyUsers').get(userController.findMonthlyUsers);
+
+// Matches with '/api/user/findPickUps'
+router.route('/findPickUps').get(userController.findPickUps);
+
+
 // TO-DO: logout route (delete cookie and session - req.session.destroy)
 module.exports = router;
