@@ -25,6 +25,12 @@ module.exports = {
     db.User.updateOne({ _id: req.params.id }, { $set: req.body }, { new: true })
       .then(dbModel => res.json(User))
       .catch(err => res.status(422).json(err));
+  },
+
+  findReviews: function(req, res) {
+    db.User.find({ hasReviews: true })
+      .then(dbUser => res.json(dbUsers))
+      .catch(err => res.status(422).json(err));
   }
 
   // function for "canceling" a monthly commitment (should be the same as an update to commitment, so user cannot delete completely but maybe just make the monthly inactive)
