@@ -5,37 +5,149 @@
   background-repeat: no-repeat;
   width: 100%;
   height: auto;
-  padding-bottom: 10%;
+  padding-bottom: 30%;
 }
-.signUpformWidth {
-  margin-top: 10%;
-  margin-left: 25%;
-  text-align: center;
-
-  border: 1px solid rgb(78, 78, 78);
-  height: auto;
-  background-color: grey;
-  width: 49%;
-  padding: 20px;
-  border-radius: 30px;
+.input-controlSignUp {
+  margin: 13em auto 0;
+  width: 22%;
 }
 
 .form-control {
   width: 75%;
   margin: 30px auto;
 }
+.formWidth {
+  margin-top: 10%;
+  text-align: center;
+  height: auto;
+  background-color: grey;
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+}
+.form-group {
+  text-align: center;
+  height: auto;
+  width: 100%;
+  border-radius: 30px;
+}
 
 .signInTextinForm {
   margin-top: 30px;
   text-align: center;
 }
+.signUpTextTop {
+  font-weight: bold;
+  font-size: 39px;
+  padding-bottom: 30px;
+  color: rgb(255, 255, 255);
+}
 .signUpButton {
   width: 185px;
   margin: 30px auto;
+  font-weight: bold;
 }
-.faviconPosition {
-  padding-top: 35px;
+.faviconPositionSignUp2 {
   font-size: 20px;
-  padding-left: 10px;
+  margin: 0 auto;
+  margin-left: 100px;
+
   /* color: rgb(112, 178, 216); */
+}
+.form-groupSignUp {
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 40px 40px;
+  /* margin: 13em auto 0;
+  width: 22%; */
+}
+
+@media only screen and (max-width: 1680px) {
+  .input-controlSignUp {
+    margin: 15em auto 0;
+  }
+  .copy-right p {
+    padding: 0em 0;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .input-controlSignUp {
+    margin: 11em auto 0;
+    width: 63%;
+  }
+  .copy-right p {
+    padding: 3em 0;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .input-controlSignUp {
+    margin: 10em auto 0;
+    width: 63%;
+  }
+  .copy-right p {
+    padding: 3.5em 0;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .input-controlSignUp {
+    margin: 11em auto 0;
+    width: 63%;
+  }
+  .copy-right p {
+    padding: 4.3em 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .input-controlSignUp {
+    margin: 12em auto 0;
+    width: 51%;
+  }
+  .copy-right p {
+    padding: 6em 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .input-controlSignUp {
+    margin: 14em auto 0;
+    width: 63%;
+  }
+  .copy-right p {
+    padding: 6em 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .input-controlSignUp {
+    margin: 14em auto 0;
+    width: 80%;
+  }
+  .faviconPositionSignUp2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .copy-right p {
+    padding: 6em 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .input-controlSignUp {
+    margin: 12em auto 0;
+    width: 84%;
+  }
+  .faviconPositionSignUp2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .copy-right p {
+    padding: 6em 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .input-controlSignUp {
+    margin: 7em auto 0;
+    width: 96%;
+  }
+
+  .copy-right p {
+    padding: 1em 0;
+  }
 }
