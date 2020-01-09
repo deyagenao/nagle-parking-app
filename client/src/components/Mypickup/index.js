@@ -6,6 +6,7 @@ import './mypickup.css';
 import DeleteBtn from '../DeleteBtn';
 
 import PickUpInfo from '../pickupInfo';
+
 class MyPickUp extends Component {
   state = {
     userData: {},
@@ -53,7 +54,8 @@ class MyPickUp extends Component {
         pickUpTime: this.state.pickUpTime,
         pickUpDate: this.state.pickUpDate,
         today: Date.now,
-        isMonthly: true
+        isMonthly: true,
+        pickUpActive: true
       })
         .then(res => {
           console.log(res);
