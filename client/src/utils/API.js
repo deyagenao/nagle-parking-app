@@ -36,6 +36,15 @@ export default {
     return axios.put('/api/user/delete', pickUp);
   },
 
+  // Reviews
+  postReviews: function() {
+    return axios.post('/api/user/reviews');
+  },
+
+  getReviews: function() {
+    return axios.get('/api/user/findreviews');
+  },
+
   // Admin Users
   getAllUsers: function() {
     return axios.get('/api/user/findAllUsers');
