@@ -63,6 +63,17 @@ body {
   color: rgb(53, 53, 53);
 }
 
+.home-signup {
+  margin-top: 30px;
+  width: 150px;
+}
+
+.scrolldown {
+  margin-top: 420px;
+  color: white;
+  /* border: red 2px solid; */
+}
+
 @media screen and (max-width: 700px) {
   .side-img {
     height: 200px;
