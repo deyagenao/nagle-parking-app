@@ -39,22 +39,27 @@ function Nav(props) {
           </li>
           <li className='nav-item'>
             {props.authenticated ? (
-              <div>
-                <li>
-                  <Link to='/myaccount' className='nav-link'>
-                    My Account
-                  </Link>
-                </li>
-                <li>
-                  <p onClick={props.signout} className='nav-link'>
-                    Sign Out
-                  </p>
-                </li>
-              </div>
+              <li>
+                <Link to='/myaccount' className='nav-link'>
+                  My Account
+                </Link>
+              </li>
             ) : (
               <Link to='/signin' className='nav-link'>
-                Sign In
+                <li> Sign In </li>
               </Link>
+            )}
+          </li>
+
+          <li className='nav-item' onClick={props.signout}>
+            {props.authenticated ? (
+              <li>
+                <Link to='/' className='nav-link'>
+                  Sign Out
+                </Link>
+              </li>
+            ) : (
+              <div></div>
             )}
           </li>
         </ul>
