@@ -10,3 +10,14 @@
   padding-left: 10px;
   text-align: left;
 }
+.mapPic {
+  background-image: url('./img/NagleParking.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 510px;
+}
+.pickupInformation {
+  /* text-align: center; */
+  margin: 0 auto;
+}

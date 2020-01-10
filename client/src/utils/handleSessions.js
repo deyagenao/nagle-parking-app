@@ -13,5 +13,5 @@ export const authenticateUser = () => {
 };
 
 export const logOut = () => {
-  Cookies.remove();
+  Cookies.remove('userId');
 };

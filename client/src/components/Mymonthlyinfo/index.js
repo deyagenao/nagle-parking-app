@@ -32,43 +32,45 @@ class MonthlyInfo extends Component {
       <div>
         <Container fluid>
           <Row>
-            <h2 className='monthlyTitle col-md-12'>
+            <h2 className='monthlyTitle '>
               {' '}
               Welcome, glad to have you {this.state.userData.firstName}{' '}
               {this.state.userData.lastName}
             </h2>
           </Row>
+          <Container className='tableCon'>
+            <Row>
+              <table className='table table-hover '>
+                <tbody>
+                  <tr>
+                    <th scope='row'>Car Type:</th>
+                    <td>{this.state.userData.carType}</td>
+                  </tr>
+                  <tr>
+                    <th scope='row'> Make:</th>
+                    <td>{this.state.userData.carMake}</td>
+                  </tr>
+                  <tr>
+                    <th scope='row'> Model:</th>
+                    <td>{this.state.userData.carModel}</td>
+                  </tr>
+                  <tr>
+                    <th scope='row'> Color:</th>
+                    <td>{this.state.userData.carColor}</td>
+                  </tr>
+                  <tr>
+                    <th scope='row'>License Plate:</th>
+                    <td>{this.state.userData.licensePlate}</td>
+                  </tr>
 
-          <Row>
-            <table className='table table-hover tableCon'>
-              <tbody>
-                <tr>
-                  <th scope='row'>Car Type:</th>
-                  <td>{this.state.userData.carType}</td>
-                </tr>
-                <tr>
-                  <th scope='row'> Make:</th>
-                  <td>{this.state.userData.carMake}</td>
-                </tr>
-                <tr>
-                  <th scope='row'> Model:</th>
-                  <td>{this.state.userData.carModel}</td>
-                </tr>
-                <tr>
-                  <th scope='row'> Color:</th>
-                  <td>{this.state.userData.carColor}</td>
-                </tr>
-                <tr>
-                  <th scope='row'>License Plate:</th>
-                  <td>{this.state.userData.licensePlate}</td>
-                </tr>
-
-                {/* <tr>
+                  {/* <tr>
                 {this.state.userData.paid ? <td>Paid!</td> : <td>Not paid!</td>}
               </tr> */}
-              </tbody>
-            </table>
-          </Row>
+                </tbody>
+              </table>
+            </Row>
+          </Container>
+
           <div className='col-md-12'>
             {/* reviews */}
             <ReviewLink />
