@@ -19,11 +19,13 @@ import Contact from './pages/Contact';
 import MyMonthly from './pages/MyMonthly';
 import AboutUs from './pages/AboutUs';
 import AdminView from './pages/AdminView';
+import ViewUserDetail from './pages/ViewUserDetail';
 import Update from './pages/Update';
 import MyMonthlyInformation from './pages/MyMonthlyInformation';
 
 
-import { /* getCookie, */ authenticateUser } from './utils/handleSessions';
+import { logOut, authenticateUser } from './utils/handleSessions';
+import API from './utils/API';
 
 class App extends React.Component {
   // check cookie
@@ -61,11 +63,19 @@ class App extends React.Component {
     />
   );
 
+  signout = () => {
+    logOut()
+      .then(
+        console.log('hmm')
+      )
+  }
+
   render() {
     return (
       <Router>
         <div>
-          <Nav />
+          <Nav authenticated={this.state.authenticated}
+           signout={this.signout}/>
 
           <Switch>
             {/* HOME ROUTE */}
@@ -164,6 +174,9 @@ class App extends React.Component {
 
             {/* ADMIN VIEW ROUTE*/}
             <Route exact path='/admin' component={AdminView} />
+            
+            {/* ADMIN VIEW USER DETAIL ROUTE*/}
+            <Route path='/admin/customer/:id' component={ViewUserDetail} />
 
             <Route component={NoMatch} />
           </Switch>

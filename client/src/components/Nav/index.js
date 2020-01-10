@@ -3,7 +3,7 @@ import './nav.css';
 import { Link } from 'react-router-dom';
 import Logo from '../Logo/logo.js';
 
-function Nav() {
+function Nav(props) {
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
       <Link to='/' className='navbar-brand logo-brand'>
@@ -42,15 +42,25 @@ function Nav() {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/signin' className='nav-link'>
-              Sign in
-            </Link>
+            {props.authenticated ? 
+            (
+            <div>
+              <li>
+              <Link to='/myaccount' className='nav-link'>
+                My Account
+              </Link>
+              </li>
+              <li >
+                <p onClick={props.signout} className='nav-link'>Sign Out</p>
+              </li>
+            </div>) :
+            (
+              <Link to='/signin' className='nav-link'>
+                Sign In
+              </Link>
+            )}
+            
           </li>
-          {/* <li className='nav-item'>
-            <a className='nav-link' onClick={API.signout()}>
-              Log out
-            </a>
-          </li> */}
         </ul>
       </div>
     </nav>
