@@ -3,25 +3,33 @@ import API from '../../utils/API';
 
 class Reviews extends Component {
   state = {
-    reviews: [],
-    firstName: ''
+    reviews: []
   };
 
   componentDidMount() {
     API.getReviews()
-      .then(res =>
-        // this.setState({
-        //   reviews: res.data.reviews,
-        //   firstName: res.data.firstName
-        // })
-        console.log('componentDidMount', res)
-      )
+      .then(res => {
+        console.log(res.data);
+
+        this.setState({
+          reviews: res.data
+        });
+      })
       .catch(err => console.log(err));
   }
 
-  //random 6 users where hasreview = true
-  //unique true
-  //no reviews found generate from an array of reviews
+  handleReview = reviews => {
+    const shufftledReview = this.shuffleArray(reviews);
+    this.setState({ reviews: this.shuffleArray });
+  };
+
+  shuffleArray = reviewArray => {
+    for (let i = reviewArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [reviewArray[i], reviewArray[j]] = [reviewArray[j], reviewArray[i]];
+    }
+    return reviewArray;
+  };
 
   render() {
     return (
@@ -37,30 +45,25 @@ class Reviews extends Component {
             </div>
             <div className='row reviews'>
               <div className='col-md-4 reviewstyle'>
-                <p>{this.state.reviews}</p>
+                <p>{this.state.reviews[0]}</p>
               </div>
               <div className='col-md-4 reviewstyle'>
-                <p>"Wil be coming back here, this is my go to parking lot!"</p>
+                <p>{this.state.reviews[1]}</p>
               </div>
               <div className='col-md-4 reviewstyle'>
-                <p>"What a great experience we had"</p>
+                <p>{this.state.reviews[2]}</p>
               </div>
             </div>
+
             <div className='row reviews-two'>
               <div className='col-md-4 reviewstyle'>
-                <p>"5 stars! 5 stars!!!"</p>
+                <p>{this.state.reviews[3]}</p>
               </div>
               <div className='col-md-4 reviewstyle'>
-                <p>
-                  "Best Parking experience uptown, I felt like my needs was
-                  taken care of."
-                </p>
+                <p>{this.state.reviews[4]}</p>
               </div>
               <div className='col-md-4 reviewstyle'>
-                <p>
-                  "Will recommend this business to anyone who is looking for
-                  parking!"
-                </p>
+                <p>{this.state.reviews[5]}</p>
               </div>
             </div>
           </div>

@@ -30,7 +30,14 @@ module.exports = {
   findReviews: function(req, res) {
     console.log('1');
     db.User.find({ hasReviews: true })
-      .then(dbUser => res.json(dbUsers))
+      .limit(6)
+      .then(dbUser => {
+        console.log('find reviews');
+        const reviews = dbUser.map(user => user.reviews);
+        console.log(reviews);
+
+        res.json(reviews);
+      })
       .catch(err => res.status(422).json(err));
   }
 
