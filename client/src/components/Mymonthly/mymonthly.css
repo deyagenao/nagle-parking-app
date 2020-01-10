@@ -1,12 +1,20 @@
 .monthlysignUp {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  padding: 10px;
+  color: rgb(41, 123, 216);
+  font-weight: bold;
+}
+.card-title {
+  color: rgb(41, 123, 216);
+  font-weight: bold;
 }
 .selectType {
-  width: 100%;
+  width: 75%;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   height: 35px;
+  border: 1px solid rgb(228, 228, 228);
 }
 .monthlyBottomImg {
   background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
@@ -14,4 +22,20 @@
   height: 200px;
   background-position: center;
   background-repeat: no-repeat;
+}
+.cardStyleMyMonthly {
+  background-color: rgb(233, 233, 233);
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.monthlyBtn {
+  margin: 20px;
+}
+.cartypeLocation {
+  text-align: left;
+  margin-left: 12%;
+  color: rgb(88, 189, 63);
 }

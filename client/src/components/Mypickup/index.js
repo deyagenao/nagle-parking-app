@@ -108,7 +108,7 @@ class MyPickUp extends Component {
                 />
 
                 <FormBtn
-                  className='scheduleBtn'
+                  className='scheduleBtn btn btn-warning'
                   onClick={this.handleFormSubmit}
                 >
                   Schedule
