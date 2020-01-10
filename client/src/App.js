@@ -24,8 +24,6 @@ import Update from './pages/Update';
 import ReviewPage from './pages/Review';
 import MyMonthlyInformation from './pages/MyMonthlyInformation';
 import { logOut, authenticateUser } from './utils/handleSessions';
-import API from './utils/API';
-
 
 class App extends React.Component {
   // check cookie
@@ -44,10 +42,6 @@ class App extends React.Component {
       })
       .catch(err => console.log(err));
 
-  componentWillMount() {
-    this.authenticate();
-  }
-
   PrivateRoute = ({ component: Component, ...rest }) => (
     <Route
       {...rest}
@@ -64,18 +58,18 @@ class App extends React.Component {
   );
 
   signout = () => {
-    logOut()
-      .then(
-        console.log('hmm')
-      )
-  }
+    logOut();
+    this.setState({ authenticated: false });
+  };
 
   render() {
     return (
       <Router>
         <div>
-          <Nav authenticated={this.state.authenticated}
-           signout={this.signout}/>
+          <Nav
+            authenticated={this.state.authenticated}
+            signout={this.signout}
+          />
 
           <Switch>
             {/* HOME ROUTE */}
@@ -177,7 +171,7 @@ class App extends React.Component {
 
             {/* ADMIN VIEW ROUTE*/}
             <Route exact path='/admin' component={AdminView} />
-            
+
             {/* ADMIN VIEW USER DETAIL ROUTE*/}
             <Route path='/admin/customer/:id' component={ViewUserDetail} />
 
