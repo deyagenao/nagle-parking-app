@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import API from '../../utils/API';
 import './userAccount.css';
 import { Link } from 'react-router-dom';
+import ReviewLink from '../ReviewLink';
 
 class Useraccount extends Component {
   state = {
@@ -21,6 +22,12 @@ class Useraccount extends Component {
           <div className='row'>
             <div className='col-md-4'>
               <div className='accountUserImg'>{/* Users picture */}</div>
+
+              <input
+                type='file'
+                class='form-control-file'
+                id='exampleFormControlFile1'
+              ></input>
             </div>
             <div className='col-md-8'>
               <div className='row align-self-center'>
@@ -91,26 +98,9 @@ class Useraccount extends Component {
                       </tr>
                     </tbody>
                   </table>
-                  {/* <div className='row'>
-                  <p className='accountInfo'>
-                    {this.state.userData.firstName}'s Account Info
-                  </p>
-                </div>
-                <div className='row'>
-                  <p className='accountInfo'>
-                    {this.state.userData.firstName}'s Account Info
-                  </p>
-                </div>
-                <div className='row'>
-                  <p className='accountInfo'>
-                    {this.state.userData.firstName}'s Account Info
-                  </p>
-                </div>
-                <div className='row'>
-                  <p className='accountInfo'>
-                    {this.state.userData.firstName}'s Account Info
-                  </p>
-                </div> */}
+
+                  {/* reviews */}
+                  <ReviewLink />
                 </div>
               </div>
             </div>

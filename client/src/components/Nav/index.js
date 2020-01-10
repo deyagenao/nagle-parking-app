@@ -31,11 +31,7 @@ function Nav(props) {
               Home <span className='sr-only'>(current)</span>
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/contact' className='nav-link'>
-              Contact Us
-            </Link>
-          </li>
+
           <li className='nav-item'>
             <Link to='/monthly' className='nav-link'>
               Monthly

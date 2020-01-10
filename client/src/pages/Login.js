@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import '../components/SignIn-UpStyle/signin.css';
 
 import API from '../utils/API';
-import { Redirect, Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
-import { Col, Row, Container } from '../components/Grid';
+import { Row, Container } from '../components/Grid';
 import { Input, FormBtn } from '../components/Form';
 
 class Login extends Component {
@@ -40,43 +41,70 @@ class Login extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size='12'>
-            <form>
-              <Input
-                value={this.state.email}
-                onChange={this.handleInputChange}
-                name='email'
-                placeholder='email (required)'
-              />
-              <Input
-                value={this.state.password}
-                onChange={this.handleInputChange}
-                name='password'
-                placeholder='(required)'
-                type='password'
-              />
-              <FormBtn
-                // disabled={!(this.state.email && this.state.password)}
-                onClick={this.handleFormSubmit}
-              >
-                <Link to='/signup'> Sign up </Link>
-              </FormBtn>
-
-              <FormBtn
-                // disabled={!(this.state.email && this.state.password)}
-                onClick={this.handleFormSubmit}
-              >
-                sign in
-              </FormBtn>
+      <div className='signInFormCon'>
+        <Container fluid>
+          <Row>
+            <form className='input-control '>
+              <div className='formWidth'>
+                <p className='signInTextTop'>Sign In</p>
+                {/* EMAIL */}
+                <div>
+                  <p>
+                    <i className='fas fa-envelope faviconPositionSignin '>
+                      {' '}
+                      Email
+                    </i>
+                    <Input
+                      // className='form-control'
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                      name='email'
+                      type='text'
+                      placeholder='Email (required)'
+                    />
+                  </p>
+                </div>
+                {/* PASSWORD */}
+                <div>
+                  <p>
+                    <i className='fas fa-key faviconPositionSignin2'>
+                      {' '}
+                      Password
+                    </i>
+                    <Input
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                      name='password'
+                      placeholder='Password (required)'
+                      type='password'
+                    />
+                  </p>
+                </div>
+                <Row>
+                  <FormBtn
+                    className='signInButton btn btn-warning'
+                    onClick={this.handleFormSubmit}
+                  >
+                    Sign In
+                  </FormBtn>
+                </Row>
+                <p className='signUpTextinForm'>
+                  <a target='' href='/signup'>
+                    Don't have an account? Sign Up
+                  </a>
+                </p>
+              </div>
             </form>
-          </Col>
-        </Row>
+          </Row>
 
-        {/* Redirect on authentication */}
-        {this.props.authenticated ? <Redirect to='/myaccount' /> : <div></div>}
-      </Container>
+          {/* Redirect on authentication */}
+          {this.props.authenticated ? (
+            <Redirect to='/myaccount' />
+          ) : (
+            <div></div>
+          )}
+        </Container>
+      </div>
     );
   }
 }

@@ -32,8 +32,20 @@ export default {
   updateUser: function(user) {
     return axios.put('/api/user/update', user);
   },
+  deletePickUp: function(pickUp) {
+    return axios.put('/api/user/delete', pickUp);
+  },
 
-  // Admin Users 
+  // Reviews
+  postReviews: function() {
+    return axios.post('/api/user/reviews');
+  },
+
+  getReviews: function() {
+    return axios.get('/api/review/findreviews');
+  },
+
+  // Admin Users
   getAllUsers: function() {
     return axios.get('/api/user/findAllUsers');
   },

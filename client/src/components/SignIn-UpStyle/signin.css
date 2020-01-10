@@ -1,0 +1,169 @@
+.signInFormCon {
+  background-image: url('https://images.pexels.com/photos/2996/parking-parking-lot-underground-garage.jpg?cs=srgb&dl=parken-parkplatz-tiefgarage-2996.jpg&fm=jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1000px;
+}
+.formWidth {
+  margin-top: 10%;
+  text-align: center;
+  height: auto;
+  background-color: grey;
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+
+  border: 1px solid #0a192a;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-control {
+  margin: 13em auto 0;
+  width: 22%;
+}
+/* form {
+  background-color: grey;
+  border-radius: 30px;
+  border: 1px solid #0a192a;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+} */
+.formWidth:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  left: 20%;
+  top: 0;
+}
+
+.formWidth:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  border-radius: 50%;
+  left: 34%;
+  top: -7px;
+  box-shadow: 0 0 6px 4px #fff;
+}
+
+.form-control {
+  width: 100%;
+  margin: 30px auto;
+}
+.signInTextTop {
+  font-weight: bold;
+  font-size: 39px;
+  color: rgb(255, 255, 255);
+}
+
+.signUpTextinForm {
+  margin-top: 30px;
+  text-align: center;
+}
+.signInButton {
+  width: 189px;
+  margin: 30px auto;
+  font-weight: bold;
+}
+.faviconPositionSignin {
+  padding-top: 30px;
+  font-size: 20px;
+  margin-right: 60%;
+
+  /* color: rgb(112, 178, 216); */
+}
+.faviconPositionSignin2 {
+  font-size: 20px;
+  margin: 0 auto;
+  margin-right: 45%;
+  /* color: rgb(112, 178, 216); */
+}
+@media only screen and (max-width: 1680px) {
+  .input-control {
+    margin: 15em auto 0;
+  }
+  .copy-right p {
+    padding: 0em 0;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .input-control {
+    margin: 11em auto 0;
+    width: 24%;
+  }
+  .copy-right p {
+    padding: 3em 0;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .input-control {
+    margin: 10em auto 0;
+    width: 25%;
+  }
+  .copy-right p {
+    padding: 3.5em 0;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .input-control {
+    margin: 11em auto 0;
+    width: 27%;
+  }
+  .copy-right p {
+    padding: 4.3em 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .input-control {
+    margin: 12em auto 0;
+    width: 33%;
+  }
+  .copy-right p {
+    padding: 6em 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .input-control {
+    margin: 14em auto 0;
+    width: 43%;
+  }
+  .copy-right p {
+    padding: 6em 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .input-control {
+    margin: 14em auto 0;
+    width: 51%;
+  }
+  .copy-right p {
+    padding: 6em 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .input-control {
+    margin: 12em auto 0;
+    width: 68%;
+  }
+  .copy-right p {
+    padding: 6em 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .input-control {
+    margin: 7em auto 0;
+    width: 96%;
+  }
+  .copy-right p {
+    padding: 1em 0;
+  }
+}

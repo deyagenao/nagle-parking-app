@@ -21,11 +21,11 @@ import AboutUs from './pages/AboutUs';
 import AdminView from './pages/AdminView';
 import ViewUserDetail from './pages/ViewUserDetail';
 import Update from './pages/Update';
+import ReviewPage from './pages/Review';
 import MyMonthlyInformation from './pages/MyMonthlyInformation';
-
-
 import { logOut, authenticateUser } from './utils/handleSessions';
 import API from './utils/API';
+
 
 class App extends React.Component {
   // check cookie
@@ -171,6 +171,9 @@ class App extends React.Component {
 
             {/* MY MONTHLY ROUTE */}
             <this.PrivateRoute exact path='/update-user' component={Update} />
+
+            {/* MY MONTHLY ROUTE */}
+            <this.PrivateRoute exact path='/reviews' component={ReviewPage} />
 
             {/* ADMIN VIEW ROUTE*/}
             <Route exact path='/admin' component={AdminView} />
