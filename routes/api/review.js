@@ -6,3 +6,5 @@ router.route('/').post(reviewController.create);
 
 // Matches with '/api/user/findreviews'
 router.route('/findreviews').get(reviewController.findReviews);
+
+module.exports = router;
