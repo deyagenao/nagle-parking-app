@@ -24,9 +24,6 @@ export default {
   signup: function(user) {
     return axios.post('/api/user/signup', user, xhrHeader);
   },
-  // signout: function() {
-  //   return logOut;
-  // },
   authenticateUser: function() {
     return axios.post('/api/user/authenticate/', xhrHeader);
   },
@@ -43,7 +40,7 @@ export default {
   },
 
   getReviews: function() {
-    return axios.get('/api/user/findreviews');
+    return axios.get('/api/review/findreviews');
   },
 
   // Admin Users
@@ -55,6 +52,9 @@ export default {
   },
   getPickUps: function() {
     return axios.get('/api/user/findPickUps');
+  },
+  viewCustomerDetail: function(id) {
+    return axios.get('/api/user/viewCustomerInfo/' + id);
   },
   // Deletes the book with the given id
   deleteBook: function(id) {

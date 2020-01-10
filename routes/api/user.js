@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const userController = require('../../controllers/userController');
-
+const reviewController = require('../../controllers/reviewController');
 // Matches with "/api/user/signup"
 router.route('/signup').post(userController.create);
 
@@ -27,6 +27,12 @@ router.route('/findMonthlyUsers').get(userController.findMonthlyUsers);
 
 // Matches with '/api/user/findPickUps'
 router.route('/findPickUps').get(userController.findPickUps);
+
+
+// Matches with '/api/user/viewCustomerInfo/:id'
+router.route('/viewCustomerInfo/:id').get(userController.adminFindUserById);
+    // .put()
+    // .delete();
 
 // TO-DO: logout route (delete cookie and session - req.session.destroy)
 module.exports = router;
