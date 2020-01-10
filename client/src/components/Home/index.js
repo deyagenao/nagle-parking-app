@@ -34,10 +34,10 @@ export default function HomeComponent() {
               </p>
               <div className='row'>
                 <div className='col-md-3'>
-                  <button> Button </button>
+                  <button className='btn btn-warning'> Button </button>
                 </div>
                 <div className='col-md-3'>
-                  <button> Button </button>
+                  <button className='btn btn-warning'> Button </button>
                 </div>
               </div>
             </div>
