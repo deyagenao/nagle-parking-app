@@ -7,7 +7,7 @@
   font-weight: bold;
 }
 .monthlysignUpText {
-  background-image: url('http://www.ksj-energy.com/wp-content/uploads/2017/07/GE_MetLife_LEDOutdoorLighting_3.jpg');
+  background-color: rgb(143, 176, 199);
   width: 100%;
   height: 400px;
   background-position: center;
@@ -16,12 +16,15 @@
   text-align: center;
   margin-top: 40px;
   padding: 10px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 .monthlybenifts {
-  color: white;
+  color: rgb(255, 255, 255);
   margin-top: 20px;
+}
+.monthlybenCon {
+  /* padding-bottom: 50px; */
 }
 .AsMemberText {
   margin-top: 20px;
@@ -62,23 +65,33 @@
   color: rgb(88, 189, 63);
 }
 .pickupVechileImg1 {
-  background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
+  background-image: url('http://en.arsisvip.com/dosyalar/images/driver-with-car-turkey.jpg');
   width: 100%;
-  height: 50px;
-  background-position: center;
+  height: 200px;
+  background-position: top;
+  background-size: cover;
+  border-radius: 10px;
+  opacity: 0.8;
   background-repeat: no-repeat;
 }
 .pickupVechileImg2 {
-  background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
+  background-image: url('https://www.lumina-intelligence.com/wp-content/uploads/2019/05/GettyImages-1074272374-thegem-blog-default.jpg');
   width: 100%;
-  height: 50px;
-  background-position: center;
+  height: 200px;
+  background-position: top;
+  background-size: cover;
+  border-radius: 10px;
+  opacity: 0.8;
+
   background-repeat: no-repeat;
 }
 .pickupVechileImg3 {
-  background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
+  background-image: url('https://images.idgesg.net/images/article/2017/08/3_defer-creators-update-100732880-large.jpg');
   width: 100%;
-  height: 50px;
+  height: 200px;
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 10px;
+  opacity: 0.8;
 }

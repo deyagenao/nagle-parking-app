@@ -167,10 +167,10 @@ class MonthlyForm extends Component {
           <div className='monthlysignUpText'>
             <p className='AsMemberText'> As a monthly member: </p>
             <Container>
-              <Row>
+              <Row className='monthlybenCon'>
                 <div className='monthlybenifts col-md-4'>
                   <p className=''>
-                    You'll be able to PICK your vehicle at any time or day.
+                    You'll be able to PICK your vehicle at any time/day.
                   </p>
                   <div className='pickupVechileImg1'></div>
                 </div>
