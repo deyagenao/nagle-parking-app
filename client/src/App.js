@@ -42,10 +42,6 @@ class App extends React.Component {
       })
       .catch(err => console.log(err));
 
-  componentWillMount() {
-    this.authenticate();
-  }
-
   PrivateRoute = ({ component: Component, ...rest }) => (
     <Route
       {...rest}
@@ -63,6 +59,7 @@ class App extends React.Component {
 
   signout = () => {
     logOut();
+    this.setState({ authenticated: false });
   };
 
   render() {
