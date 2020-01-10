@@ -1,9 +1,31 @@
 .monthlysignUp {
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 100px;
   padding: 10px;
   color: rgb(41, 123, 216);
   font-weight: bold;
+}
+.monthlysignUpText {
+  background-image: url('http://www.ksj-energy.com/wp-content/uploads/2017/07/GE_MetLife_LEDOutdoorLighting_3.jpg');
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.monthlybenifts {
+  color: white;
+  margin-top: 20px;
+}
+.AsMemberText {
+  margin-top: 20px;
+  font-size: 20px;
 }
 .card-title {
   color: rgb(41, 123, 216);
@@ -24,7 +46,7 @@
   background-repeat: no-repeat;
 }
 .cardStyleMyMonthly {
-  background-color: rgb(233, 233, 233);
+  /* background-color: rgb(233, 233, 233); */
   margin: 50px auto;
   text-align: center;
   border-radius: 10px;
@@ -38,4 +60,25 @@
   text-align: left;
   margin-left: 12%;
   color: rgb(88, 189, 63);
+}
+.pickupVechileImg1 {
+  background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
+  width: 100%;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pickupVechileImg2 {
+  background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
+  width: 100%;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pickupVechileImg3 {
+  background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
+  width: 100%;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
 }

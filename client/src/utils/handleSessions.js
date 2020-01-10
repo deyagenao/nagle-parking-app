@@ -13,6 +13,5 @@ export const authenticateUser = () => {
 };
 
 export const logOut = () => {
-  Cookies.remove();
-  return API.signout();
+   Cookies.remove('userId');
 };

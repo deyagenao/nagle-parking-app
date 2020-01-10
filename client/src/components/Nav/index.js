@@ -1,6 +1,7 @@
 import React from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
+import { logOut } from '../../utils/handleSessions';
 import Logo from '../Logo/logo.js';
 
 function Nav(props) {

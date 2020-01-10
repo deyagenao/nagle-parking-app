@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { logOut } from './handleSessions';
 
 const xhrHeader = {
   headers: {
@@ -22,9 +23,6 @@ export default {
   },
   signup: function(user) {
     return axios.post('/api/user/signup', user, xhrHeader);
-  },
-  signout: function() {
-    return axios.post('/api/user/signout', xhrHeader);
   },
   authenticateUser: function() {
     return axios.post('/api/user/authenticate/', xhrHeader);

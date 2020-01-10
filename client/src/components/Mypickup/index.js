@@ -125,6 +125,7 @@ class MyPickUp extends Component {
           pickUpDate={this.state.userData.pickUpDate}
           pickUpTime={this.state.userData.pickUpTime}
         />
+        <div className='mapPic'></div>
       </div>
     );
   }

@@ -8,14 +8,14 @@ export default function PickUpInfo({ pickUpDate, pickUpTime }) {
         <Row>
           <Col size='12'>
             {/* Render of table with data */}
-            <div className='container'>
-              <div className='row'>
+            <div className='container '>
+              <div className='row pickupInformation'>
                 <table className='table table-hover'>
                   <tbody>
                     <tr>
                       <th scope='row'>
                         Date:
-                        <td>{pickUpDate}</td>
+                        <td className='pickupInformation'>{pickUpDate}</td>
                       </th>
                       {/* {''} */}
                       <th scope='row'>

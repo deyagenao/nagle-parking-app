@@ -73,24 +73,20 @@ class MonthlyForm extends Component {
       <Container fluid>
         <Row>
           <Col size='12'>
-            <h1 className='monthlysignUp '>
-              {' '}
-              Sign up to be a monthly member!{' '}
-            </h1>
+            <h1 className='monthlysignUp'> Sign up to be a monthly member! </h1>
             <Container>
               <Row>
-                <div className='card cardStyleMyMonthly col-md-4'>
+                <div className='card  btn-light cardStyleMyMonthly col-md-4'>
                   <div className='card-body'>
                     <h2 className='card-title'>Sedan</h2>
                     <h4 className='card-subtitle  text-muted'>$300/Month</h4>
                     <h6 className='card-text'>
-                      Trust Nagle Parking for we deliver excelent service all
-                      year round!
+                      We deliver excelent service all year round!
                     </h6>
                   </div>
                 </div>
 
-                <div className='card cardStyleMyMonthly col-md-4'>
+                <div className='card btn btn-light cardStyleMyMonthly col-md-4'>
                   <div className='card-body'>
                     <h2 className='card-title'>Coupé</h2>
                     <h4 className='card-subtitle mb-2 text-muted'>
@@ -102,7 +98,7 @@ class MonthlyForm extends Component {
                   </div>
                 </div>
 
-                <div className='card cardStyleMyMonthly col-md-4'>
+                <div className='card btn btn-light cardStyleMyMonthly col-md-4'>
                   <div className='card-body'>
                     <h2 className='card-title'>SUV</h2>
                     <h4 className='card-subtitle mb-2 text-muted'>
@@ -118,7 +114,7 @@ class MonthlyForm extends Component {
 
             <form className='monthlysignUp'>
               <p>Please Enter:</p>
-              <p className='cartypeLocation'>Please select vehicle type:</p>
+              {/* <p className='cartypeLocation'>Please select vehicle type:</p> */}
               <select
                 className='selectType'
                 type='text'
@@ -127,6 +123,7 @@ class MonthlyForm extends Component {
                 required=''
                 onChange={this.handleInputChange}
               >
+                <option>Vechile Type</option>
                 <option value='Sedan $250'>Sedan</option>
                 <option value='Coupé $200'>Coupé</option>
                 <option value='SUV $300'>SUV</option>
@@ -167,6 +164,29 @@ class MonthlyForm extends Component {
               </FormBtn>
             </form>
           </Col>
+          <div className='monthlysignUpText'>
+            <p className='AsMemberText'> As a monthly member: </p>
+            <Container>
+              <Row>
+                <div className='monthlybenifts col-md-4'>
+                  <p className=''>
+                    You'll be able to PICK your vehicle at any time or day.
+                  </p>
+                  <div className='pickupVechileImg1'></div>
+                </div>
+                <div className='monthlybenifts col-md-4'>
+                  <p className=''>You can tell us your honest reviews.</p>
+                  <div className='pickupVechileImg2'></div>
+                </div>
+                <div className='monthlybenifts col-md-4'>
+                  <p className=''>
+                    You can see organized details of your account.
+                  </p>
+                  <div className='pickupVechileImg3'></div>
+                </div>
+              </Row>
+            </Container>
+          </div>
         </Row>
         {this.state.userData.licensePlate ? (
           <Redirect to='/mymonthlyinformation' />
