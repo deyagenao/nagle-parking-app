@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // will need to import AdminNav, AdminSideBar, AdminViewInfo
 // import AdminNav from '../components/AdminNav';
 import AdminSideBar from '../components/AdminSideBar';
-// import AdminViewInfo from '../components/AdminViewInfo';
+import AdminViewInfo from '../components/AdminViewInfo';
 import API from '../utils/API';
 
 class AdminView extends Component {
@@ -48,7 +48,7 @@ class AdminView extends Component {
             <AdminSideBar getAllCustomers={this.getAllCustomers} 
             getAllMonthly = {this.getAllMonthly}
             getAllPickUps = {this.getAllPickUps}/> 
-            {/* <AdminViewInfo customerData={this.state.customerData}/> */}
+            <AdminViewInfo customerData={this.state.customerData}/>
         </div>
     )
   }

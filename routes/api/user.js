@@ -28,5 +28,11 @@ router.route('/findMonthlyUsers').get(userController.findMonthlyUsers);
 // Matches with '/api/user/findPickUps'
 router.route('/findPickUps').get(userController.findPickUps);
 
+
+// Matches with '/api/user/viewCustomerInfo/:id'
+router.route('/viewCustomerInfo/:id').get(userController.adminFindUserById);
+    // .put()
+    // .delete();
+
 // TO-DO: logout route (delete cookie and session - req.session.destroy)
 module.exports = router;
