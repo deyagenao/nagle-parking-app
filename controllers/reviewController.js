@@ -28,6 +28,7 @@ module.exports = {
   },
 
   findReviews: function(req, res) {
+    console.log('1');
     db.User.find({ hasReviews: true })
       .then(dbUser => res.json(dbUsers))
       .catch(err => res.status(422).json(err));

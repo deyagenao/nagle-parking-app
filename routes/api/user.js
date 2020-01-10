@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const userController = require('../../controllers/userController');
-
+const reviewController = require('../../controllers/reviewController');
 // Matches with "/api/user/signup"
 router.route('/signup').post(userController.create);
 

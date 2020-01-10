@@ -10,10 +10,11 @@ class Reviews extends Component {
   componentDidMount() {
     API.getReviews()
       .then(res =>
-        this.setState({
-          reviews: res.data.reviews,
-          firstName: res.data.firstName
-        })
+        // this.setState({
+        //   reviews: res.data.reviews,
+        //   firstName: res.data.firstName
+        // })
+        console.log('componentDidMount', res)
       )
       .catch(err => console.log(err));
   }
@@ -36,7 +37,7 @@ class Reviews extends Component {
             </div>
             <div className='row reviews'>
               <div className='col-md-4 reviewstyle'>
-                <p>{this.state.firstName}</p>
+                <p>{this.state.reviews}</p>
               </div>
               <div className='col-md-4 reviewstyle'>
                 <p>"Wil be coming back here, this is my go to parking lot!"</p>

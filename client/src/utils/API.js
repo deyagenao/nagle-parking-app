@@ -42,7 +42,7 @@ export default {
   },
 
   getReviews: function() {
-    return axios.get('/api/user/findreviews');
+    return axios.get('/api/review/findreviews');
   },
 
   // Admin Users

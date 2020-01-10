@@ -22,6 +22,12 @@ class Useraccount extends Component {
           <div className='row'>
             <div className='col-md-4'>
               <div className='accountUserImg'>{/* Users picture */}</div>
+              <label for='exampleFormControlFile1'>Example file input</label>
+              <input
+                type='file'
+                class='form-control-file'
+                id='exampleFormControlFile1'
+              ></input>
             </div>
             <div className='col-md-8'>
               <div className='row align-self-center'>

@@ -6,9 +6,9 @@ export default function HomeComponent() {
   return (
     <div>
       <div className='main-img text-center'>
-        <p className='main-quote main-quote-margin col-md-12'>
+        <h1 className='main-quote main-quote-margin col-md-12'>
           Leaders in vehicle storage
-        </p>
+        </h1>
         <p className='main-quote col-md-12'>and valet services</p>
       </div>
 
