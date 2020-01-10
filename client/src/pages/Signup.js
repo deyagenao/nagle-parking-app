@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../components/SignIn-UpStyle/signup.css';
 import API from '../utils/API';
 import { Redirect } from 'react-router-dom';
-import { Col, Row, Container } from '../components/Grid';
+import { Row, Container } from '../components/Grid';
 import { Input, FormBtn } from '../components/Form';
 
 class Signup extends Component {
@@ -175,7 +175,7 @@ class Signup extends Component {
                 </Row>
                 <p className='signUpTextinForm'>
                   <a target='' href='/signin'>
-                    Don't have an account? Sign In
+                    Already have an account? Sign In
                   </a>
                 </p>
               </div>

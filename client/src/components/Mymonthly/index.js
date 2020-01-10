@@ -73,9 +73,52 @@ class MonthlyForm extends Component {
       <Container fluid>
         <Row>
           <Col size='12'>
-            <h1 className='monthlysignUp'> Sign up to be a monthly member! </h1>
+            <h1 className='monthlysignUp '>
+              {' '}
+              Sign up to be a monthly member!{' '}
+            </h1>
+            <Container>
+              <Row>
+                <div className='card cardStyleMyMonthly col-md-4'>
+                  <div className='card-body'>
+                    <h2 className='card-title'>Sedan</h2>
+                    <h4 className='card-subtitle  text-muted'>$300/Month</h4>
+                    <h6 className='card-text'>
+                      Trust Nagle Parking for we deliver excelent service all
+                      year round!
+                    </h6>
+                  </div>
+                </div>
+
+                <div className='card cardStyleMyMonthly col-md-4'>
+                  <div className='card-body'>
+                    <h2 className='card-title'>Coupé</h2>
+                    <h4 className='card-subtitle mb-2 text-muted'>
+                      $250/Month
+                    </h4>
+                    <h6 className='card-text'>
+                      Guarenteed to be a satisfied customer!
+                    </h6>
+                  </div>
+                </div>
+
+                <div className='card cardStyleMyMonthly col-md-4'>
+                  <div className='card-body'>
+                    <h2 className='card-title'>SUV</h2>
+                    <h4 className='card-subtitle mb-2 text-muted'>
+                      $350/Month
+                    </h4>
+                    <h6 className='card-text'>
+                      Feel safe with us at Nagle Parking!
+                    </h6>
+                  </div>
+                </div>
+              </Row>
+            </Container>
+
             <form className='monthlysignUp'>
               <p>Please Enter:</p>
+              <p className='cartypeLocation'>Please select vehicle type:</p>
               <select
                 className='selectType'
                 type='text'
@@ -84,9 +127,9 @@ class MonthlyForm extends Component {
                 required=''
                 onChange={this.handleInputChange}
               >
-                <option value='Sedan $250'>Sedan $250</option>
-                <option value='Coupé $200'>Coupé $200</option>
-                <option value='SUV $300'>SUV $300</option>
+                <option value='Sedan $250'>Sedan</option>
+                <option value='Coupé $200'>Coupé</option>
+                <option value='SUV $300'>SUV</option>
               </select>
               <Input
                 value={this.state.carMake}
@@ -116,8 +159,12 @@ class MonthlyForm extends Component {
                 type='text'
                 placeholder='License Plate (required)'
               />
-
-              <FormBtn onClick={this.handleFormSubmit}>Become Monthly</FormBtn>
+              <FormBtn
+                className='btn-warning btn monthlyBtn'
+                onClick={this.handleFormSubmit}
+              >
+                Become Monthly
+              </FormBtn>
             </form>
           </Col>
         </Row>

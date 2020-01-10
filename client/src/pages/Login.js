@@ -4,7 +4,7 @@ import '../components/SignIn-UpStyle/signin.css';
 import API from '../utils/API';
 import { Redirect } from 'react-router-dom';
 
-import { Col, Row, Container } from '../components/Grid';
+import { Row, Container } from '../components/Grid';
 import { Input, FormBtn } from '../components/Form';
 
 class Login extends Component {
