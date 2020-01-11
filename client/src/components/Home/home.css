@@ -81,6 +81,12 @@ body {
   width: 150px;
 }
 
+.paragraph-container-control {
+  margin-bottom: 25px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
 /* favicon */
 
 .home-favicon {
@@ -95,7 +101,8 @@ body {
 }
 
 .scrolldown {
-  margin-top: 420px;
+  font-size: 30px;
+  margin-top: 400px;
   color: white;
   /* border: red 2px solid; */
 }

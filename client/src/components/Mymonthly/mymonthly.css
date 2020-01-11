@@ -6,10 +6,11 @@
   color: rgb(41, 123, 216);
   font-weight: bold;
 }
+
 .monthlysignUpText {
   background-color: rgb(143, 176, 199);
   width: 100%;
-  height: 400px;
+  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,6 +22,7 @@
   margin-bottom: 100px;
   margin: 0 auto;
 }
+
 .monthlybenifts {
   color: rgb(255, 255, 255);
   margin-top: 20px;
@@ -30,10 +32,12 @@
   margin-top: 20px;
   font-size: 20px;
 }
+
 .card-title {
   color: rgb(41, 123, 216);
   font-weight: bold;
 }
+
 .selectType {
   width: 75%;
   margin-top: 20px;
@@ -41,6 +45,7 @@
   height: 35px;
   border: 1px solid rgb(228, 228, 228);
 }
+
 .monthlyBottomImg {
   background-image: url('https://d368g9lw5ileu7.cloudfront.net/races/race54196-customSectionAttachment5c532b07674d79.20138924.png');
   width: 100%;
@@ -48,6 +53,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .cardStyleMyMonthly {
   /* background-color: rgb(233, 233, 233); */
   margin: 50px auto;
@@ -59,11 +65,13 @@
 .monthlyBtn {
   margin: 20px;
 }
+
 .cartypeLocation {
   text-align: left;
   margin-left: 12%;
   color: rgb(88, 189, 63);
 }
+
 .pickupVechileImg1 {
   background-image: url('http://en.arsisvip.com/dosyalar/images/driver-with-car-turkey.jpg');
   width: 100%;
@@ -74,6 +82,7 @@
   opacity: 0.8;
   background-repeat: no-repeat;
 }
+
 .pickupVechileImg2 {
   background-image: url('https://www.lumina-intelligence.com/wp-content/uploads/2019/05/GettyImages-1074272374-thegem-blog-default.jpg');
   width: 100%;
@@ -82,9 +91,9 @@
   background-size: cover;
   border-radius: 10px;
   opacity: 0.8;
-
   background-repeat: no-repeat;
 }
+
 .pickupVechileImg3 {
   background-image: url('https://images.idgesg.net/images/article/2017/08/3_defer-creators-update-100732880-large.jpg');
   width: 100%;

@@ -14,7 +14,9 @@ export default function HomeComponent() {
           <button className='btn btn-warning home-signup'> SIGN UP </button>
         </Link>
 
-        <p className='scrolldown text-muted'> Scroll Down </p>
+        <p className='scrolldown'>
+          <i className='fas fa-chevron-down'></i>
+        </p>
       </div>
 
       <div className='section-two'>
@@ -25,14 +27,14 @@ export default function HomeComponent() {
                 Leaders in vehicle storage and valet services
               </h2>
 
-              <div className='row'>
+              <div className='row paragraph-container-control'>
                 <div className='text-muted text-center'>
                   PARK MONTHLY – YOUR CAR DESERVES BETTER THAN STREET PARKING.
                 </div>
               </div>
               <div className='row'>
                 <div className='col-md-1'>
-                  <i class='fas fa-car home-favicon'></i>
+                  <i className='fas fa-car home-favicon'></i>
                 </div>
                 <div className='col-md-10 favi-paragraph'>
                   Online and email message vehicle request service
