@@ -164,30 +164,29 @@ class MonthlyForm extends Component {
               </FormBtn>
             </form>
           </Col>
-          <div className='monthlysignUpText'>
-            <p className='AsMemberText'> As a monthly member: </p>
-            <Container>
-              <Row className='monthlybenCon'>
-                <div className='monthlybenifts col-md-4'>
-                  <p className=''>
-                    You'll be able to PICK your vehicle at any time/day.
-                  </p>
-                  <div className='pickupVechileImg1'></div>
-                </div>
-                <div className='monthlybenifts col-md-4'>
-                  <p className=''>You can tell us your honest reviews.</p>
-                  <div className='pickupVechileImg2'></div>
-                </div>
-                <div className='monthlybenifts col-md-4'>
-                  <p className=''>
-                    You can see organized details of your account.
-                  </p>
-                  <div className='pickupVechileImg3'></div>
-                </div>
-              </Row>
-            </Container>
-          </div>
         </Row>
+        {/* <Container fluid>
+          <Row> */}
+        <div className='monthlysignUpText container'>
+          <p className='AsMemberText'> As a monthly member: </p>
+          <div className='row'>
+            <div className='monthlybenifts col-md-4'>
+              <p className=''>You'll be able to set a pick up day/time</p>
+              <div className='pickupVechileImg1'></div>
+            </div>
+            <div className='monthlybenifts col-md-4'>
+              <p className=''>You can tell us your honest reviews</p>
+              <div className='pickupVechileImg2'></div>
+            </div>
+            <div className='monthlybenifts col-md-4'>
+              <p className=''>You can see organized details of your account</p>
+              <div className='pickupVechileImg3'></div>
+            </div>
+          </div>
+        </div>
+        {/* </Row>
+        </Container> */}
+
         {this.state.userData.licensePlate ? (
           <Redirect to='/mymonthlyinformation' />
         ) : (
