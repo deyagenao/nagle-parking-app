@@ -21,23 +21,52 @@ export default function HomeComponent() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-6'>
-              <h1 className='text-center'>
+              <h2 className=' home-title-control'>
                 Leaders in vehicle storage and valet services
-              </h1>
-              <p>We park your car</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                fermentum iaculis viverra. Integer facilisis tincidunt
-                efficitur. Sed ullamcorper dignissim iaculis. Aliquam vulputate
-                commodo velit, ac blandit odio efficitur vel. Aliquam interdum
-                vestibulum odio nec imperdiet. Vivamus sodales commodo lobortis.
-              </p>
+              </h2>
+
               <div className='row'>
+                <div className='text-muted text-center'>
+                  PARK MONTHLY – YOUR CAR DESERVES BETTER THAN STREET PARKING.
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-md-1'>
+                  <i class='fas fa-car home-favicon'></i>
+                </div>
+                <div className='col-md-10 favi-paragraph'>
+                  Online and email message vehicle request service
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-md-1'>
+                  <i class='fas fa-exchange-alt home-favicon'></i>
+                </div>
+                <div className='col-md-10 favi-paragraph'>
+                  Unlimited in/out privileges at your home garage, whenever you
+                  want
+                </div>
+              </div>
+
+              <div className='row'>
+                <div className='col-md-1'>
+                  <i class='fas fa-user home-favicon'></i>
+                </div>
+                <div className='col-md-10 favi-paragraph'>
+                  Online account management
+                </div>
+              </div>
+
+              <div className='row home-button-control'>
                 <div className='col-md-3'>
-                  <button className='btn btn-warning'> Button </button>
+                  <button className='btn btn-warning home-button-size'>
+                    Read More
+                  </button>
                 </div>
                 <div className='col-md-3'>
-                  <button className='btn btn-warning'> Button </button>
+                  <button className='btn btn-warning home-button-size'>
+                    Become Member
+                  </button>
                 </div>
               </div>
             </div>
