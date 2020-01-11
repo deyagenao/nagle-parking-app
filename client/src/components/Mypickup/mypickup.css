@@ -15,9 +15,21 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 510px;
+  height: 550px;
+  width: 100%;
 }
 .pickupInformation {
   /* text-align: center; */
   margin: 0 auto;
+}
+.scheduleBtn {
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-left: 40%;
+  /* float: right; */
+}
+.pickupMainRow {
+  /* margin-top: 30px; */
+  margin: 0;
 }

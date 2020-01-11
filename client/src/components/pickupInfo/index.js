@@ -1,5 +1,13 @@
 import React from 'react';
 import { Col, Row, Container } from '../Grid';
+// import Moment from 'moment';
+
+// DateFormatter = date => {
+//   const format = Moment(date);
+//   format(date, 'YYYY-MM-DD').format('MMMM Do YYYY');
+//   // console.log(this.DateFormatter('2020-10-04'));
+//   return Moment(date);
+// };
 
 export default function PickUpInfo({ pickUpDate, pickUpTime }) {
   return (

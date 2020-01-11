@@ -78,6 +78,9 @@ var UserSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
+  userImage: {
+    type: String
+  },
   reviews: {
     type: String,
     trim: true

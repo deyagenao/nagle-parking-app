@@ -141,13 +141,17 @@ class UpdateUser extends Component {
                       onChange={this.handleInputChange}
                       placeholder='License Plate'
                     />
-
-                    <FormBtn
-                      // disabled={!(this.state.email && this.state.password)}
-                      onClick={this.handleFormSubmit}
-                    >
-                      Update
-                    </FormBtn>
+                    <Row>
+                      <Col size='12'>
+                        <FormBtn
+                          // disabled={!(this.state.email && this.state.password)}
+                          onClick={this.handleFormSubmit}
+                          className='btn btn-warning updateBTN'
+                        >
+                          Update
+                        </FormBtn>
+                      </Col>
+                    </Row>
                   </form>
                 </Col>
               </Row>

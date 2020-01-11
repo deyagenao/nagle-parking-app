@@ -9,6 +9,15 @@
   padding-top: 3%;
   margin-bottom: 5%;
 }
+.updateBTN {
+  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-left: 40%;
+  width: 25%;
+  font-weight: bold;
+
+  /* margin: 0 auto; */
+}
 
 .accountUserImg {
   background-image: url('https://journeypurebowlinggreen.com/wp-content/uploads/2018/05/placeholder-person.jpg');

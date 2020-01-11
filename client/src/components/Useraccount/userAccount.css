@@ -22,6 +22,13 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+.uploadBTN {
+  font-weight: bold;
+}
+.uploadBTN1 {
+  font-weight: bold;
+  background-color: rgb(230, 230, 230);
+}
 
 .userEditAccFav {
   font-size: 20px;

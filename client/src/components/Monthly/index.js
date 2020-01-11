@@ -1,5 +1,6 @@
 import React from 'react';
 import './monthly.css';
+import { Link } from 'react-router-dom';
 
 export default function MonthlyInfo() {
   return (
@@ -15,33 +16,52 @@ export default function MonthlyInfo() {
         </div>
       </div>
       {/* Container 2 */}
-      <div className='container text-center'>
-        <div className='row allRows '>
-          {/* Column 1 */}
-          <div className='col-lg-4 '>
-            {/* Row 1 */}
-            <p className='title '>Monthly Information</p>
-            <p className='titleContent'>646-964-4949</p>
-            <p className='titleContent'>Sunday-Monday</p>
-            <p className='titleContent'>Open 24 hours</p>
-          </div>
+      <div className='container monthly-section-two'>
+        <div className='row'>
+          <div className='col-md-12'>
+            <div className='row'>
+              <h1 className='monthly-title-control'>
+                Let us keep your car safe.
+              </h1>
+            </div>
 
-          {/* Column 2 */}
-          <div className='col-lg-4'>
-            {/* Row 2 */}
-            <p className='title'>Corporate Office</p>
+            <div className='row'>
+              <div className='col-md-7'>
+                <div className='row'>
+                  <h5 className='mb-0 mt-3 lead'>
+                    SIGN UP FOR MONTHLY PARKING
+                  </h5>
+                </div>
+                <div className='row text-muted mt-0 monthly-contact'>
+                  <p>Contact us if you want service over the phone</p>
+                </div>
 
-            <p className='titleContent'>31 Nagle Ave, New York, NY 10040</p>
-          </div>
+                <div className='row'>
+                  <Link to='/contact'>
+                    <button className='btn btn-warning monthly-contact-btn mt-3 mb-3'>
+                      Contact us
+                    </button>
+                  </Link>
+                </div>
 
-          {/* Column 3 */}
-          <div className='col-lg-4'>
-            {/* Row 3 */}
-            <p className='title'>Our Locations</p>
-            <p className='titleContent'>31 Nagle Ave, New York, NY 10040</p>
-            <p className='titleContent'>
-              266 West 231st Street, Bronx, NY 10463
-            </p>
+                <div className='row'>
+                  <p className='text-muted time-control mt-1'>7am-9pm</p>
+                </div>
+              </div>
+
+              <div className='col-md-4 right-column-control'>
+                <div className='row'>
+                  <h5 className='ml-4 mb-4'>Already a monthly member?</h5>
+                </div>
+                <div className='row'>
+                  <Link to='signin'>
+                    <button className='btn btn-warning monthly-contact-btn mt-3 mb-3 ml-4'>
+                      Sign in
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

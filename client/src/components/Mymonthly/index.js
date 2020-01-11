@@ -83,133 +83,138 @@ class MonthlyForm extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size='12'>
-            <h1 className='monthlysignUp'> Sign up to be a monthly member! </h1>
-            <Container>
-              <Row>
-                <div className='card  btn-light cardStyleMyMonthly col-md-4'>
-                  <div className='card-body'>
-                    <h2 className='card-title'>Sedan</h2>
-                    <h4 className='card-subtitle  text-muted'>$300/Month</h4>
-                    <h6 className='card-text'>
-                      We deliver excelent service all year round!
-                    </h6>
+      <div>
+        <Container fluid>
+          <Row>
+            <Col size='12'>
+              <h1 className='monthlysignUp'>
+                {' '}
+                Sign up to be a monthly member!{' '}
+              </h1>
+              <Container>
+                <Row>
+                  <div className='card  btn-light cardStyleMyMonthly col-md-4'>
+                    <div className='card-body'>
+                      <h2 className='card-title'>Sedan</h2>
+                      <h4 className='card-subtitle  text-muted'>$300/Month</h4>
+                      <h6 className='card-text'>
+                        We deliver excelent service all year round!
+                      </h6>
+                    </div>
                   </div>
-                </div>
 
-                <div className='card btn btn-light cardStyleMyMonthly col-md-4'>
-                  <div className='card-body'>
-                    <h2 className='card-title'>Coupé</h2>
-                    <h4 className='card-subtitle mb-2 text-muted'>
-                      $250/Month
-                    </h4>
-                    <h6 className='card-text'>
-                      Guarenteed to be a satisfied customer!
-                    </h6>
+                  <div className='card btn btn-light cardStyleMyMonthly col-md-4'>
+                    <div className='card-body'>
+                      <h2 className='card-title'>Coupé</h2>
+                      <h4 className='card-subtitle mb-2 text-muted'>
+                        $250/Month
+                      </h4>
+                      <h6 className='card-text'>
+                        Guarenteed to be a satisfied customer!
+                      </h6>
+                    </div>
                   </div>
-                </div>
 
-                <div className='card btn btn-light cardStyleMyMonthly col-md-4'>
-                  <div className='card-body'>
-                    <h2 className='card-title'>SUV</h2>
-                    <h4 className='card-subtitle mb-2 text-muted'>
-                      $350/Month
-                    </h4>
-                    <h6 className='card-text'>
-                      Feel safe with us at Nagle Parking!
-                    </h6>
+                  <div className='card btn btn-light cardStyleMyMonthly col-md-4'>
+                    <div className='card-body'>
+                      <h2 className='card-title'>SUV</h2>
+                      <h4 className='card-subtitle mb-2 text-muted'>
+                        $350/Month
+                      </h4>
+                      <h6 className='card-text'>
+                        Feel safe with us at Nagle Parking!
+                      </h6>
+                    </div>
                   </div>
-                </div>
-              </Row>
-            </Container>
+                </Row>
+              </Container>
 
-            <form className='monthlysignUp'>
-              <p>Please Enter:</p>
-              {/* <p className='cartypeLocation'>Please select vehicle type:</p> */}
-              <select
-                className='selectType'
-                type='text'
-                name='carType'
-                value={this.state.carType}
-                required=''
-                onChange={this.handleInputChange}
-              >
-                <option>Vehicle Type</option>
-                <option value='Sedan $250'>Sedan</option>
-                <option value='Coupé $200'>Coupé</option>
-                <option value='SUV $300'>SUV</option>
-              </select>
-              <Input
-                value={this.state.carMake}
-                onChange={this.handleInputChange}
-                name='carMake'
-                type='text'
-                placeholder='Make (required)'
-              />
-              <Input
-                value={this.state.carModel}
-                onChange={this.handleInputChange}
-                name='carModel'
-                type='text'
-                placeholder='Model (required)'
-              />
-              <Input
-                value={this.state.carColor}
-                onChange={this.handleInputChange}
-                name='carColor'
-                type='text'
-                placeholder='Color (required)'
-              />
-              <Input
-                value={this.state.licensePlate}
-                onChange={this.handleInputChange}
-                name='licensePlate'
-                type='text'
-                placeholder='License Plate (required)'
-              />
-              <FormBtn
-                className='btn-warning btn monthlyBtn'
-                onClick={this.handleFormSubmit}
-              >
-                Become Monthly
-              </FormBtn>
-            </form>
-          </Col>
-        </Row>
-        {/* <Container fluid>
+              <form className='monthlysignUp'>
+                <p>Please Enter:</p>
+                {/* <p className='cartypeLocation'>Please select vehicle type:</p> */}
+                <select
+                  className='selectType'
+                  type='text'
+                  name='carType'
+                  value={this.state.carType}
+                  required=''
+                  onChange={this.handleInputChange}
+                >
+                  <option>Vechile Type</option>
+                  <option value='Sedan'>Sedan</option>
+                  <option value='Coupé'>Coupé</option>
+                  <option value='SUV'>SUV</option>
+                </select>
+                <Input
+                  value={this.state.carMake}
+                  onChange={this.handleInputChange}
+                  name='carMake'
+                  type='text'
+                  placeholder='Make (required)'
+                />
+                <Input
+                  value={this.state.carModel}
+                  onChange={this.handleInputChange}
+                  name='carModel'
+                  type='text'
+                  placeholder='Model (required)'
+                />
+                <Input
+                  value={this.state.carColor}
+                  onChange={this.handleInputChange}
+                  name='carColor'
+                  type='text'
+                  placeholder='Color (required)'
+                />
+                <Input
+                  value={this.state.licensePlate}
+                  onChange={this.handleInputChange}
+                  name='licensePlate'
+                  type='text'
+                  placeholder='License Plate (required)'
+                />
+                <FormBtn
+                  className='btn-warning btn monthlyBtn'
+                  onClick={this.handleFormSubmit}
+                >
+                  Become Monthly
+                </FormBtn>
+              </form>
+            </Col>
+          </Row>
+          {/* <Container fluid>
           <Row> */}
-        <div className=''>
-          <div className='monthlysignUpText'>
-            <p className='AsMemberText'> As a monthly member: </p>
-            <div className='row'>
-              <div className='monthlybenifts col-md-4'>
-                <p className=''>You'll be able to set a pick up day/time</p>
-                <div className='pickupVechileImg1'></div>
-              </div>
-              <div className='monthlybenifts col-md-4'>
-                <p className=''>You can tell us your honest reviews</p>
-                <div className='pickupVechileImg2'></div>
-              </div>
-              <div className='monthlybenifts col-md-4'>
-                <p className=''>
-                  You can see organized details of your account
-                </p>
-                <div className='pickupVechileImg3'></div>
+          <div className=''>
+            <div className='monthlysignUpText'>
+              <p className='AsMemberText'> As a monthly member: </p>
+              <div className='row'>
+                <div className='monthlybenifts col-md-4'>
+                  <p className=''>You'll be able to set a pick up day/time</p>
+                  <div className='pickupVechileImg1'></div>
+                </div>
+                <div className='monthlybenifts col-md-4'>
+                  <p className=''>You can tell us your honest reviews</p>
+                  <div className='pickupVechileImg2'></div>
+                </div>
+                <div className='monthlybenifts col-md-4'>
+                  <p className=''>
+                    You can see organized details of your account
+                  </p>
+                  <div className='pickupVechileImg3'></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        {/* </Row>
+          {/* </Row>
         </Container> */}
 
-        {this.state.userData.licensePlate ? (
-          <Redirect to='/mymonthlyinformation' />
-        ) : (
-          <div></div>
-        )}
-      </Container>
+          {this.state.userData.licensePlate ? (
+            <Redirect to='/mymonthlyinformation' />
+          ) : (
+            <div></div>
+          )}
+        </Container>
+      </div>
     );
   }
 }
