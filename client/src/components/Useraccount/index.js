@@ -44,14 +44,6 @@ class Useraccount extends Component {
               <div className='container accountInfo'>
                 <div className='row'>
                   <table className='table table-hover'>
-                    {/* <thead>
-                    <tr>
-                      <th scope='col'>#</th>
-                      <th scope='col'>First</th>
-                      <th scope='col'>Last</th>
-                      <th scope='col'>Handle</th>
-                    </tr>
-                  </thead> */}
                     <tbody>
                       <tr>
                         <th scope='row'>Name:</th>

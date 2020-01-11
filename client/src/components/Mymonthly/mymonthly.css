@@ -18,14 +18,14 @@
   padding: 10px;
   color: rgb(0, 0, 0);
   font-weight: bold;
+  margin-bottom: 100px;
+  margin: 0 auto;
 }
 .monthlybenifts {
   color: rgb(255, 255, 255);
   margin-top: 20px;
 }
-.monthlybenCon {
-  /* padding-bottom: 50px; */
-}
+
 .AsMemberText {
   margin-top: 20px;
   font-size: 20px;
