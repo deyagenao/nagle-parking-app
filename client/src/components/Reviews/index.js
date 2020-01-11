@@ -39,7 +39,7 @@ class Reviews extends Component {
             <div className='row'>
               <div className='col-md-12 text-center '>
                 <h1 className='title-section-three'>
-                  What are our customers saying
+                  What Our Customers Are Saying
                 </h1>
               </div>
             </div>

@@ -36,6 +36,7 @@
     "mongoose": "^5.3.16",
     "morgan": "^1.9.1",
     "npm": "^6.13.4",
+    "react-moment": "^0.9.7",
     "react-typist": "^2.0.5",
     "session": "^0.1.0"
   }
