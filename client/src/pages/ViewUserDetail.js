@@ -9,7 +9,7 @@ class ViewUserDetail extends Component {
   };
 
   componentDidMount() {
-      API.viewCustomerDetail(this.props.match.params.id)
+    API.viewCustomerDetail(this.props.match.params.id)
         .then(res => {
             console.log(res.data)
             this.setState({customerData: res.data})})
@@ -17,15 +17,31 @@ class ViewUserDetail extends Component {
   };
 
   updateBillPay = (boolean) => {
-
+    API.updateUser({
+        billPaid: boolean
+    }).then(
+        this.setState({
+            customerData: {
+                billPaid: boolean
+            }
+        })
+    )
   };
 
-  updatePickUp = (boolean) => {
-
-  };
+//   updatePickUp = (boolean, newPickUpDate, newPickUpTime) => {
+//     API.updateUser({
+//         pickUpActive: boolean,
+//         pickUpDate: newPickUpDate,
+//         pickUpTime: newPickUpTime
+//     })
+//     .then(res =>
+//         )
+//   };
 
   updateAccountInfo = (newUserInfo) => {
-
+    API.updateUser(newUserInfo)
+        .then()
+        .catch()
   };
 
   deleteCustomer = (id) => {
