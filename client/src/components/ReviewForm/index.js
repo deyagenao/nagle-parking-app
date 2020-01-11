@@ -77,7 +77,7 @@ class ReviewForm extends Component {
             </div>
 
             <div className='col-md-6'>
-              <p className='happyimage'></p>
+              <p className='happyimage img-fluid mt-3'></p>
             </div>
           </div>
         </div>
