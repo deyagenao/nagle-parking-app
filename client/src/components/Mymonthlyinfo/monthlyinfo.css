@@ -2,6 +2,7 @@
   border: 1px solid rgb(182, 181, 181);
   margin: 90px auto;
   /* text-align: center; */
+  padding: 20px;
 }
 .tableCon:hover {
   background-color: rgba(246, 246, 246, 0.753);
@@ -12,31 +13,74 @@
 
 .monthlyTitle {
   margin: 50px auto;
-  color: rgb(41, 194, 100);
+  color: rgb(112, 167, 212);
   font-weight: bold;
   text-align: center;
-  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.cardmonthlyInfo {
+  margin: 30px auto;
+  width: 100%px;
+}
+.tableControl {
+  margin: 30px auto;
 }
 
 .container-fluid {
   padding-left: 0;
   padding-right: 0;
 }
-
-.secondconforTextImg {
+.conforTextImg {
   height: 300px;
   width: 100%;
-  margin-top: 100px;
-  background-image: url('https://www.geek.com/wp-content/uploads/2016/08/parking_lot_02-625x352.jpg');
+  /* background-image: url('https://images.rosendahl.dk/products/436/20/43620/v/43620-7/XXLarge/bankers-wall-clock-oe16-cm-white-black-red-arne-jacobsen-wall-1500x1500-7.jpg'); */
+  background-color: rgb(231, 231, 231);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.8;
+  text-align: center;
+}
+.reviewLinkMonthlyInfo {
+  float: left;
+}
+.conText {
+  color: rgb(67, 144, 195);
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 50px;
+}
+.clockFavicon {
+  font-size: 100px;
+}
+
+.card-img-top {
+  background-image: url('https://images.rosendahl.dk/products/436/20/43620/v/43620-7/XXLarge/bankers-wall-clock-oe16-cm-white-black-red-arne-jacobsen-wall-1500x1500-7.jpg');
+}
+.secondconforTextImg {
+  height: 300px;
+  width: 100%;
+  margin-top: 100px;
+
+  background-color: rgb(241, 241, 241);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  opacity: 0.8;
 }
 .secondCText {
-  color: white;
+  color: rgb(67, 144, 195);
   text-align: center;
   font-weight: bold;
   width: 100%;
   margin-top: 120px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.setPickUpBTN {
+  color: white;
+  font-size: bold;
+  text-align: center;
 }
