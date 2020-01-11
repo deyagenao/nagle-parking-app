@@ -16,6 +16,7 @@ body {
 .main-quote {
   font-size: 65px;
   color: white;
+  font-weight: bold;
 }
 
 .main-quote-margin {

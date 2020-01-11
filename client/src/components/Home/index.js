@@ -36,9 +36,9 @@ export default function HomeComponent() {
                 <div className='col-md-1'>
                   <i className='fas fa-car home-favicon'></i>
                 </div>
-                <div className='col-md-10 favi-paragraph'>
+                <p className='col-md-10 favi-paragraph'>
                   Online and email message vehicle request service
-                </div>
+                </p>
               </div>
               <div className='row'>
                 <div className='col-md-1'>
