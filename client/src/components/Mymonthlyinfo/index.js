@@ -43,6 +43,7 @@ class MonthlyInfo extends Component {
           <Container className='tableCon'>
             <Row>
               <div className='col-md-6'>
+                <p>Monthly Info</p>
                 <table className='table table-hover  tableControl'>
                   <tbody>
                     <tr>

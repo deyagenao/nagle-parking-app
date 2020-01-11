@@ -21,7 +21,7 @@
 }
 .cardmonthlyInfo {
   margin: 30px auto;
-  width: 100%px;
+  border-radius: 10px;
 }
 .tableControl {
   margin: 30px auto;
@@ -58,6 +58,7 @@
 
 .card-img-top {
   background-image: url('https://images.rosendahl.dk/products/436/20/43620/v/43620-7/XXLarge/bankers-wall-clock-oe16-cm-white-black-red-arne-jacobsen-wall-1500x1500-7.jpg');
+  font-size: 30px;
 }
 .secondconforTextImg {
   height: 300px;
