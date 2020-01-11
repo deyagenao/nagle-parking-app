@@ -56,6 +56,10 @@ var UserSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  billPaid: {
+    type: Boolean,
+    default: false
+  },
   pickUpActive: {
     type: Boolean,
     default: false
