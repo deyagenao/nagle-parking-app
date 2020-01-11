@@ -12,7 +12,8 @@ class MonthlyForm extends Component {
     carMake: '',
     carModel: '',
     carColor: '',
-    licensePlate: ''
+    licensePlate: '',
+    monthlyRate: '',
   };
 
   componentDidMount() {
@@ -30,6 +31,18 @@ class MonthlyForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    if(this.state.carType == 'Sedan $250') {
+      this.setState({monthlyRate: '$250'})
+    } 
+    else if (this.state.carType == 'Coupé $200') {
+      this.setState({monthlyRate: '$200'})
+    }
+    else if (this.state.carType == 'SUV $300') {
+      this.setState({monthlyRate: '$300'})
+    };
+
+    console.log(this.state);
+
     if (
       this.state.carMake &&
       this.state.carModel &&
