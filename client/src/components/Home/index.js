@@ -68,11 +68,11 @@ export default function HomeComponent() {
                   </a>
                 </div>
                 <div className='col-md-3'>
-                  <a href='/signup'>
+                  <Link to='/signup'>
                     <button className='btn btn-warning home-button-size'>
                       Become Member
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
