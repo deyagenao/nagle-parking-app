@@ -24,7 +24,7 @@ function AdminViewInfo (props) {
                             {customer.pickUpActive ?
                             (<td>{customer.pickUpDate} - {customer.pickUpTime}</td>) :
                             (<td>-----------</td>)}
-                            <td><Link to={"/admin/customer/" + customer._id}>
+                            <td><Link to={"/admin/customer/" + customer._id} className='text-secondary'>
                                 View Details
                             </Link></td>
                         </tr>)}

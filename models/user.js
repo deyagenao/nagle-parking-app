@@ -56,6 +56,8 @@ var UserSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  monthlyRate: String,
+  monthlyNumber: Number,
   billPaid: {
     type: Boolean,
     default: false
