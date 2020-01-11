@@ -81,6 +81,8 @@ body {
 
 .home-button-size {
   width: 150px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .paragraph-container-control {

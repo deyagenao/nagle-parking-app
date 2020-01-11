@@ -5,11 +5,15 @@ import './reviewlink.css';
 export default function ReviewLink() {
   return (
     <div>
-      <Link to='/reviews'>
-        <p className='text-review col-md-12  btn-warning'>
-          Love our service? Leave a review
-        </p>
-      </Link>
+      <div className='row'>
+        <div className='col-md-12'>
+          <Link to='/reviews'>
+            <p className='text-review btn-warning centered'>
+              Love our service? Leave a review
+            </p>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

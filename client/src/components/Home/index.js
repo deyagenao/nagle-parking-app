@@ -36,9 +36,9 @@ export default function HomeComponent() {
                 <div className='col-md-1'>
                   <i className='fas fa-car home-favicon'></i>
                 </div>
-                <div className='col-md-10 favi-paragraph'>
+                <p className='col-md-10 favi-paragraph'>
                   Online and email message vehicle request service
-                </div>
+                </p>
               </div>
               <div className='row'>
                 <div className='col-md-1'>
@@ -68,11 +68,11 @@ export default function HomeComponent() {
                   </a>
                 </div>
                 <div className='col-md-3'>
-                  <a href='/signup'>
+                  <Link to='/signup'>
                     <button className='btn btn-warning home-button-size'>
                       Become Member
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

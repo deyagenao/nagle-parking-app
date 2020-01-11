@@ -9,3 +9,42 @@
 .info-control {
   padding-top: 55px;
 }
+
+/* section 2 */
+
+.monthly-title-control {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: rgb(0, 110, 255);
+  font-weight: bold;
+}
+
+.monthly-section-two {
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.time-control {
+  font-size: 14px;
+}
+
+.monthly-contact {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.monthly-contact-btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 200px;
+}
+
+.right-column-control {
+  border-left: solid 1px black;
+  /* padding-left: 5px; */
+}
+
+.text {
+  border: red 1px solid;
+}
