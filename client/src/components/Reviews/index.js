@@ -19,7 +19,7 @@ class Reviews extends Component {
   }
 
   handleReview = reviews => {
-    const shufftledReview = this.shuffleArray(reviews);
+    // const shufftledReview = this.shuffleArray(reviews);
     this.setState({ reviews: this.shuffleArray });
   };
 

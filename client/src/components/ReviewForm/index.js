@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
 import { Redirect } from 'react-router-dom';
-import { Col, Row, Container } from '../Grid';
-import { Input, FormBtn } from '../Form';
+
 import './reviewform.css';
 
 class ReviewForm extends Component {
@@ -38,7 +37,10 @@ class ReviewForm extends Component {
           if (res.status === 200) {
             console.log('Review submitted succesfully');
 
-            return alert('Review has been submitted. Thank you');
+            return (
+              alert('Review has been submitted. Thank you'),
+              (<Redirect to='/myaccount' />)
+            );
           }
         })
         .catch(err => console.log(err));
@@ -81,6 +83,11 @@ class ReviewForm extends Component {
             </div>
           </div>
         </div>
+        {this.state.reviewInfo.reviews ? (
+          <Redirect to='/myaccount' />
+        ) : (
+          <div></div>
+        )}
       </div>
     );
   }

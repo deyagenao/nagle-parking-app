@@ -65,6 +65,13 @@ class MyPickUp extends Component {
               pickUpDate: this.state.pickUpDate
             }
           });
+          if (res.status === 200) {
+            console.log('Review submitted succesfully');
+
+            return alert(
+              'Pick up has been submitted. To update, simply re-submit another time. Thank you'
+            );
+          }
         })
         .catch(err => console.log(err));
     }
@@ -73,61 +80,75 @@ class MyPickUp extends Component {
   render() {
     return (
       <div>
-        <h2 className='pickUpText'>Pick Ups</h2>
+        <Container fluid className='pickupMainRow'>
+          <div className=' row'>
+            <div className='col-md-6'>
+              <h2 className='pickUpText'>Pick Ups</h2>
 
-        <Container fluid>
-          <Row>
-            <Col size='12'>
-              <form className='formCol'>
+              <Container fluid>
                 <Row>
-                  <p className='timeText col-md-10'>Enter pick up time:</p>
+                  <Col size='12'>
+                    <form className='formCol'>
+                      <Row>
+                        <p className='timeText col-md-10'>
+                          Enter pick up time:
+                        </p>
 
-                  <div className='deleteBtnRight col-md-2'>
-                    <DeleteBtn
-                      className='btn delete-btn'
-                      onClick={() =>
-                        this.deletePickUp(this.pickUpDate, this.pickUpTime)
-                      }
-                    />
-                  </div>
+                        <div className='deleteBtnRight col-md-2'>
+                          <DeleteBtn
+                            className='btn delete-btn'
+                            onClick={() =>
+                              this.deletePickUp(
+                                this.pickUpDate,
+                                this.pickUpTime
+                              )
+                            }
+                          />
+                        </div>
+                      </Row>
+
+                      <Input
+                        value={this.state.pickUpDate}
+                        onChange={this.handleInputChange}
+                        type='date'
+                        name='pickUpDate'
+                        placeholder='Date (required)'
+                      />
+                      <Input
+                        value={this.state.pickUpTime}
+                        onChange={this.handleInputChange}
+                        type='time'
+                        name='pickUpTime'
+                        placeholder='Time (required)'
+                      />
+                      <Row>
+                        <Col size='12'>
+                          <FormBtn
+                            className='scheduleBtn btn btn-warning'
+                            onClick={this.handleFormSubmit}
+                          >
+                            Schedule
+                          </FormBtn>
+                        </Col>
+                      </Row>
+                      {/* </label> */}
+                    </form>
+                  </Col>
                 </Row>
+              </Container>
 
-                <Input
-                  value={this.state.pickUpDate}
-                  onChange={this.handleInputChange}
-                  type='date'
-                  name='pickUpDate'
-                  placeholder='Date (required)'
-                />
-                <Input
-                  value={this.state.pickUpTime}
-                  onChange={this.handleInputChange}
-                  type='time'
-                  name='pickUpTime'
-                  placeholder='Time (required)'
-                />
+              {/* Displays Users pick up times */}
 
-                <FormBtn
-                  className='scheduleBtn btn btn-warning'
-                  onClick={this.handleFormSubmit}
-                >
-                  Schedule
-                </FormBtn>
-
-                {/* </label> */}
-              </form>
-            </Col>
-          </Row>
+              <PickUpInfo
+                pickUpDate={this.state.userData.pickUpDate}
+                pickUpTime={this.state.userData.pickUpTime}
+              />
+            </div>
+            <div className='col-md-6'>
+              <div className='mapPic'></div>
+            </div>
+          </div>
         </Container>
-
-        {/* Displays Users pick up times */}
-
-        <PickUpInfo
-          pickUpDate={this.state.userData.pickUpDate}
-          pickUpTime={this.state.userData.pickUpTime}
-        />
-
-        <div className='mapPic'></div>
       </div>
     );
   }
