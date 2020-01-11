@@ -61,14 +61,18 @@ export default function HomeComponent() {
 
               <div className='row home-button-control'>
                 <div className='col-md-3'>
-                  <button className='btn btn-warning home-button-size'>
-                    Read More
-                  </button>
+                  <a href='/monthly'>
+                    <button className='btn btn-warning home-button-size'>
+                      Read More
+                    </button>
+                  </a>
                 </div>
                 <div className='col-md-3'>
-                  <button className='btn btn-warning home-button-size'>
-                    Become Member
-                  </button>
+                  <a href='/signup'>
+                    <button className='btn btn-warning home-button-size'>
+                      Become Member
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

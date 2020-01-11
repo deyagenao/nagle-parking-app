@@ -121,10 +121,12 @@ class MyPickUp extends Component {
         </Container>
 
         {/* Displays Users pick up times */}
+
         <PickUpInfo
           pickUpDate={this.state.userData.pickUpDate}
           pickUpTime={this.state.userData.pickUpTime}
         />
+
         <div className='mapPic'></div>
       </div>
     );

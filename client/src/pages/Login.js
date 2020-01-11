@@ -99,7 +99,7 @@ class Login extends Component {
 
           {/* Redirect on authentication */}
           {this.props.authenticated ? (
-            <Redirect to='/myaccount' />
+            <Redirect to='/mymonthly' />
           ) : (
             <div></div>
           )}
