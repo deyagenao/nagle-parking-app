@@ -9,7 +9,7 @@ a:hover {
 }
 
 .nav-bar-margin {
-  margin-left: 45%;
+  margin-left: 40%;
 }
 
 .logo-brand {
@@ -96,8 +96,7 @@ nav ul li a:last-child {
   margin-right: 0;
 }
 
-nav ul li a::before,
-nav ul li a::after {
+nav ul li a::before, nav ul li a::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -131,14 +130,12 @@ nav ul li a::after {
   display: none;
 } */
 
-nav ul li a:hover::before,
-nav ul li a:hover::after {
+nav ul li a:hover::before, nav ul li a:hover::after {
   transform: scaleX(1);
 }
 
 @keyframes slideIn {
-  from {
-  }
+  from {}
   to {
     transform: translateX(0);
   }

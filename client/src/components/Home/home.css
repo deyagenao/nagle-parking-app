@@ -68,8 +68,41 @@ body {
   width: 150px;
 }
 
+.home-title-control {
+  /* border-bottom: dotted 1px black; */
+  /* padding-bottom: 30px; */
+}
+
+.home-button-control {
+  margin-top: 40px;
+}
+
+.home-button-size {
+  width: 150px;
+}
+
+.paragraph-container-control {
+  margin-bottom: 25px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+/* favicon */
+
+.home-favicon {
+  margin-top: 15px;
+  font-size: 35px;
+  color: rgb(0, 110, 255);
+}
+
+.favi-paragraph {
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
 .scrolldown {
-  margin-top: 420px;
+  font-size: 30px;
+  margin-top: 400px;
   color: white;
   /* border: red 2px solid; */
 }
