@@ -124,9 +124,9 @@ class MonthlyForm extends Component {
                 onChange={this.handleInputChange}
               >
                 <option>Vechile Type</option>
-                <option value='Sedan $250'>Sedan</option>
-                <option value='Coupé $200'>Coupé</option>
-                <option value='SUV $300'>SUV</option>
+                <option value='Sedan'>Sedan</option>
+                <option value='Coupé'>Coupé</option>
+                <option value='SUV'>SUV</option>
               </select>
               <Input
                 value={this.state.carMake}
