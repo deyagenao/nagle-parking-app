@@ -3,10 +3,13 @@ import API from '../../utils/API';
 import './userAccount.css';
 import { Link } from 'react-router-dom';
 import ReviewLink from '../ReviewLink';
+import { Redirect } from 'react-router-dom';
+import { Input, FormBtn } from '../Form';
 
 class Useraccount extends Component {
   state = {
-    userData: {}
+    userData: {},
+    userImage: ''
   };
 
   componentDidMount() {
@@ -14,6 +17,39 @@ class Useraccount extends Component {
       .then(res => this.setState({ userData: res.data }))
       .catch(err => console.log(err));
   }
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.userImage) {
+      console.log('Attempting to add new monthly customer Image');
+      API.updateUser({
+        userImage: this.state.userImage,
+        isMonthly: true
+      })
+
+        .then(res => {
+          console.log(res);
+
+          this.setState({
+            userData: {
+              userImage: this.state.userImage
+            }
+          });
+          if (res.status === 200) {
+            console.log('redirecting');
+
+            return <Redirect to='/myaccount' />;
+          }
+        })
+        .catch(err => console.log(err));
+    }
+  };
 
   render() {
     return (
@@ -21,13 +57,30 @@ class Useraccount extends Component {
         <div className='container accountInfoCon'>
           <div className='row'>
             <div className='col-md-4'>
-              <div className='accountUserImg'>{/* Users picture */}</div>
+              <div className='accountUserImg'>
+                {/* Users picture */}
+                {this.state.userData.userImage}
+              </div>
+              <div>
+                {/* className='btn-warning btn '
+                  onClick={this.handleFormSubmit} */}
 
-              <input
-                type='file'
-                class='form-control-file'
-                id='exampleFormControlFile1'
-              ></input>
+                <Input
+                  accept='image/*'
+                  className=' btn  form-control-file uploadBTN1'
+                  type='file'
+                  value={this.state.userImage}
+                  onChange={this.handleInputChange}
+                  name='userImage'
+                />
+                <FormBtn
+                  type='file'
+                  className='form-control-file btn btn-warning uploadBTN'
+                  onClick={this.handleFormSubmit}
+                >
+                  Upload Image
+                </FormBtn>
+              </div>
             </div>
             <div className='col-md-8'>
               <div className='row align-self-center'>
