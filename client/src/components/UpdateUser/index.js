@@ -8,6 +8,7 @@ import { Input, FormBtn } from '../Form';
 
 class UpdateUser extends Component {
   state = {
+    updates: {},
     email: '',
     firstName: '',
     lastName: '',
@@ -48,24 +49,51 @@ class UpdateUser extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-
-    API.updateUser({
-      email: this.state.email,
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      phoneNumber: this.state.phoneNumber,
-      carMake: this.state.carMake,
-      carModel: this.state.carModel,
-      carColor: this.state.carColor,
-      licensePlate: this.state.licensePlate
-    })
-      .then(res => {
-        if (res.status === 200) {
-          this.props.authenticate();
-          return <Redirect to='/myaccount' />;
-        }
+    if (
+      this.state.carMake ||
+      this.state.carModel ||
+      this.state.firstName ||
+      this.state.lastName ||
+      this.state.email ||
+      this.state.phoneNumber ||
+      this.state.licensePlate
+    ) {
+      console.log('Attempting to update  monthly customer');
+      API.updateUser({
+        email: this.state.email,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        phoneNumber: this.state.phoneNumber,
+        carMake: this.state.carMake,
+        carModel: this.state.carModel,
+        carColor: this.state.carColor,
+        licensePlate: this.state.licensePlate
       })
-      .catch(err => console.log(err));
+        .then(res => {
+          console.log(res);
+          this.setState({
+            updates: {
+              email: this.state.email,
+              firstName: this.state.firstName,
+              lastName: this.state.lastName,
+              phoneNumber: this.state.phoneNumber,
+              carMake: this.state.carMake,
+              carModel: this.state.carModel,
+              carColor: this.state.carColor,
+              licensePlate: this.state.licensePlate
+            }
+          });
+          if (res.status === 200) {
+            console.log('Update submitted succesfully');
+
+            return (
+              alert('Update has been submitted. Thank you'),
+              (<Redirect to='/myaccount' />)
+            );
+          }
+        })
+        .catch(err => console.log(err));
+    }
   };
 
   render() {
@@ -155,8 +183,14 @@ class UpdateUser extends Component {
                   </form>
                 </Col>
               </Row>
-              {/* redirect on authenticated */}
-              {this.props.authenticated ? (
+              {/* redirect  */}
+              {this.state.updates.carMake ||
+              this.state.updates.carModel ||
+              this.state.updates.firstName ||
+              this.state.updates.lastName ||
+              this.state.updates.phoneNumber ||
+              this.state.updates.licensePlate ||
+              this.state.updates.email ? (
                 <Redirect to='/myaccount' />
               ) : (
                 <div></div>
